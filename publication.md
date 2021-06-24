@@ -1,11 +1,11 @@
 ---
 layout: page
-title: List of publications & open-source activites
+title: Publications
 permalink: /publication/
 ---
 
-![Minds Lab Logo](/assets/mindslab_logo.png)
-## Publications
+<!-- ![Minds Lab Logo](/assets/mindslab_logo.png) -->
+## List of publications & open-source activites
 #### **(December 2020)** _DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis_
 - Accepted at Causal Discovery and Causality-Inspired Machine Learning Workshop at NeurIPS 2020 
 - [paper link](https://www.cmu.edu/dietrich/causality/CameraReadys-accepted%20papers/55%5cCameraReady%5cpaper.pdf)
