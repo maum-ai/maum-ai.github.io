@@ -6,8 +6,20 @@ permalink: /publication/
 
 <!-- ![Minds Lab Logo](/assets/mindslab_logo.png) -->
 ## List of publications & open-source activites
+#### **(April 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
+- Accepted to Interspeech 2021 / [arXiv:2104.02321](https://arxiv.org/abx/2104.02321)
+- [audio samples](https://mindslab-ai.github.io/nuwave)
+- [github](https://github.com/mindslab-ai/nuwave)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
+#### **(April 2021)** _Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques_
+- [arXiv:2104.00931](https://arxiv.org/abs/2104.00931)
+- [audio samples](https://mindslab-ai.github.io/assem-vc)
+- [github](https://github.com/mindslab-ai/assem-vc)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=assem-vc&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
 #### **(December 2020)** _DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis_
-- Accepted at Causal Discovery and Causality-Inspired Machine Learning Workshop at NeurIPS 2020 
+- Accepted to Causal Discovery and Causality-Inspired Machine Learning Workshop at NeurIPS 2020 
 - [paper link](https://www.cmu.edu/dietrich/causality/CameraReadys-accepted%20papers/55%5cCameraReady%5cpaper.pdf)
 
 #### **(September 2020)** _3D Room Layout Estimation Beyond the Manhattan World Assumption_
@@ -15,7 +27,7 @@ permalink: /publication/
 - 3rd place at Holistic 3D Vision Challenge track 1
 
 #### **(May 2020)** _Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data_
-- Accepted at Interspeech 2020 / [arXiv:2005.03295](https://arxiv.org/abs/2005.03295)
+- Accepted to Interspeech 2020 / [arXiv:2005.03295](https://arxiv.org/abs/2005.03295)
 - [audio samples](https://mindslab-ai.github.io/cotatron/)
 - [github](https://github.com/mindslab-ai/cotatron)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=cotatron&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
@@ -23,7 +35,7 @@ permalink: /publication/
 
 ## Open-source Activites
 #### **(October 2020)** FaceShifter
-- First successful open-source implementation of FaceShifter (arXiv:1912.13457)>
+- First successful open-source implementation of FaceShifter (arXiv:1912.13457). 
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=faceshifter&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 
 #### **(June 2020)** KoTDG
