@@ -6,6 +6,16 @@ permalink: /publication/
 
 <!-- ![Minds Lab Logo](/assets/mindslab_logo.png) -->
 ## List of publications & open-source activites
+#### **(April 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
+- Accepted at Interspeech 2021 / [arXiv:2104.02321](https://arxiv.org/abx/2104.02321)
+- [audio samples](https://mindslab-ai.github.io/nuwave)
+- [github](https://github.com/mindslab-ai/nuwave)
+
+#### **(April 2021)** _Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques_
+- [arXiv:2104.00931](https://arxiv.org/abs/2104.00931)
+- [audio samples](https://mindslab-ai.github.io/assem-vc)
+- [github](https://github.com/mindslab-ai/assem-vc)
+
 #### **(December 2020)** _DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis_
 - Accepted at Causal Discovery and Causality-Inspired Machine Learning Workshop at NeurIPS 2020 
 - [paper link](https://www.cmu.edu/dietrich/causality/CameraReadys-accepted%20papers/55%5cCameraReady%5cpaper.pdf)
