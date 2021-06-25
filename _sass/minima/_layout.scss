@@ -220,7 +220,10 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin: 0px;
+    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit;
+    border-bottom: 1px solid #cccccc;
   }
 }
 
@@ -231,7 +234,8 @@
 
 .post-link {
   display: block;
-  @include relative-font-size(1.35);
+  font-weight: 600;
+  @include relative-font-size(1.5);
 }
 
 
