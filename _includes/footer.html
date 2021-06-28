@@ -22,18 +22,19 @@
           {%- endif %}
         </ul>
       {%- endif %}
+
+      <div class="footer-col">
+        <p class='copyright'>
+          &copy; {{ site.time | date: '%Y' }}
+          <a href="https://maum.ai/?lang=ko" target='_self' title='Mindslab Inc.'>
+            MindsLab Inc.
+          </a>
+        </p> 
+      </div>
       </div>
       <div class="footer-col">
         <p>{{ site.description | escape }}</p>
       </div>
-    </div>
-
-    <div class="copyright">
-      <p> &copy; {{ site.time | date: '%Y' }}
-        <a href="https://maum.ai/?lang=ko" target='_self' title='Mindslab Inc.'>
-          MindsLab Inc.
-        </a>
-      </p> 
     </div>
 
     <div class="social-links">
