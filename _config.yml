@@ -62,3 +62,9 @@ exclude:
   - Gemfile
   - minima
   - LICENSE
+
+# See https://hard-carry.com/how-to-change-syntax-highlighter-in-jekyll/
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
