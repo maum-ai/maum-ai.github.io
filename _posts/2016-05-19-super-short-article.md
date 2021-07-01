@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Some articles are just so short that we have to make the footer stick"
+description: "Description 예시입니다."
 categories: misc
 author: 마인즈랩
 github: deepkyu

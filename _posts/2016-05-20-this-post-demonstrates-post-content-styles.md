@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "This post demonstrates post content styles"
+title: "내가 생각하는 AI Scientist는 무엇이고, gRPC는 왜 해야 하는가? 저는 딥러닝을 하려고 들어온거에요."
 categories: junk
 meta: "Springfield"
 author: deepkyu
 github: deepkyu
 ---
-
+# heading1 (h1)
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
 
 ## Some great heading (h2)
@@ -37,14 +37,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eg
 
 Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.
 
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello, World!</p>
-  </body>
-</html>
+```python
+def hello:
+  dta = 3
+  return dta
 ```
 
 
@@ -98,17 +94,17 @@ Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet b
 
 ### Tables
 
-Title 1               | Title 2               | Title 3               | Title 4
---------------------- | --------------------- | --------------------- | ---------------------
-lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
+| Title 1               | Title 2               | Title 3               | Title 4               |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ipsum dolor sit |
+| lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit |
+| lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit |
+| lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit |
 
 
-Title 1 | Title 2 | Title 3 | Title 4
---- | --- | --- | ---
-lorem | lorem ipsum | lorem ipsum dolor | lorem ipsum dolor sit
-lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit
-lorem ipsum dolor | lorem ipsum | lorem | lorem ipsum
-lorem ipsum dolor | lorem ipsum dolor sit | lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur
+| Title 1                    | Title 2                                | Title 3                    | Title 4                                |
+| -------------------------- | -------------------------------------- | -------------------------- | -------------------------------------- |
+| lorem                      | lorem ipsum                            | lorem ipsum dolor          | lorem ipsum dolor sit                  |
+| lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur | lorem ipsum dolor sit amet | lorem ipsum dolor sit                  |
+| lorem ipsum dolor          | lorem ipsum                            | lorem                      | lorem ipsum                            |
+| lorem ipsum dolor          | lorem ipsum dolor sit                  | lorem ipsum dolor sit amet | lorem ipsum dolor sit amet consectetur |

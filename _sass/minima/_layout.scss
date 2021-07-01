@@ -248,11 +248,12 @@
   margin-bottom: $spacing-unit;
 }
 
-.post-title,
-.post-content h1 {
+.post-title{
   @include relative-font-size(2.125);
   letter-spacing: -1px;
   line-height: 1.15;
+  font-weight: 600;
+  color: $mindslab-color-2;
 
   @media screen and (min-width: $on-large) {
     @include relative-font-size(2.625);
@@ -264,6 +265,14 @@
 
   h1, h2, h3 { margin-top: $spacing-unit * 2 }
   h4, h5, h6 { margin-top: $spacing-unit }
+
+  h1 {
+    @include relative-font-size(1.75);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(2);
+    }
+  }
 
   h2 {
     @include relative-font-size(1.75);

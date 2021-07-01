@@ -35,7 +35,9 @@ layout: default
           <img class="avatar avatar-small" src="https://avatars.githubusercontent.com/{{ github-id | default: "mindslab-ai" }}?s=40" alt={{ github-id | default: "mindslab-ai" }} srcset="https://avatars.githubusercontent.com/{{ github-id | default: "mindslab-ai" }}?s=40 1x, https://avatars.githubusercontent.com/{{ github-id | default: "mindslab-ai" }}?s=80 2x, https://avatars.githubusercontent.com/{{ github-id | default: "mindslab-ai" }}?s=120 3x, https://avatars.githubusercontent.com/{{ github-id | default: "mindslab-ai" }}?s=160 4x" width="32" height="32" />
         </a>
         <span class="post-meta">{{ post.author | escape }} | {{ post.date | date: date_format }}</span>
-
+        <div class="post-description">
+          <span>{{ post.description | escape }}</span>
+        <div>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
