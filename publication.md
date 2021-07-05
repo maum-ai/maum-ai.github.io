@@ -4,7 +4,7 @@ title: Publication
 permalink: /publication/
 ---
 
-<!-- ![Minds Lab Logo](/assets/mindslab_logo.png) -->
+<!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
 ## List of Publications & Open-Source Activities
 #### **(April 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
 - Accepted to Interspeech 2021 
