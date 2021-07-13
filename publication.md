@@ -6,6 +6,11 @@ permalink: /publication/
 
 <!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
 ## List of Publications & Open-Source Activities
+#### **(June 2020)** _Sharp Edge Recovery via SE(3)-Equivariant Network_
+- Presented at 2nd SHApe Recovery from Partial textured 3D scans at *CVPR 2021*
+- [talk](https://youtu.be/UVYQzQ-mH1w?t=9231)
+- 2nd place at SHAPR 2021 Challenge track 3
+
 #### **(April 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
 - Accepted to *Interspeech 2021*
 - [arXiv:2104.02321](https://arxiv.org/abs/2104.02321)
