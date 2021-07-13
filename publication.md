@@ -8,7 +8,7 @@ permalink: /publication/
 ## List of Publications & Open-Source Activities
 #### **(April 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
 - Accepted to Interspeech 2021 
-- [arXiv:2104.02321](https://arxiv.org/abx/2104.02321)
+- [arXiv:2104.02321](https://arxiv.org/abs/2104.02321)
 - [audio samples](https://mindslab-ai.github.io/nuwave)
 - [github](https://github.com/mindslab-ai/nuwave)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
@@ -37,6 +37,9 @@ permalink: /publication/
 - [talk](https://youtu.be/lnNuL8hqoh4)
 
 ## Open-Source Activities
+#### **(July 2021)** WaveGrad2
+- First successful open-source implementation of WaveGrad2 [arxiv:2106.09660](https://arxiv.org/abs/2106.09660)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=wavegrad2&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 #### **(October 2020)** FaceShifter
 - First successful open-source implementation of FaceShifter [arXiv:1912.13457](https://arxiv.org/abs/1912.13457). 
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=faceshifter&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
