@@ -119,11 +119,11 @@ Objective metric인 SNR, LSD와 subjective metric인 ABX test accuracy 모두 �
 
 ### References
 
-1. <a name="r1"></a> V. Kuleshov, S. Z. Enam, and S. Ermon, “Audio super resolution using neural networks,” in *Workshop of International Conference on Learning Representations*, 2017. [[arxiv]][1] 
-2. <a name="r2"></a> S. Kim and V. Sathe, “Bandwidth extension on raw audio via generative adversarial networks,” *arXiv preprint arXiv:1903.09027*, 2019. [[arxiv]][2]
-3. <a name="r3"></a> J. Ho, A. Jain, and P. Abbeel, “Denoising diffusion probabilistic models,” in *Advances in Neural Information Processing Systems*, 2020, pp. 6840–6851. [[arxiv]][3]
-4. <a name="r4"></a> Z. Kong, W. Ping, J. Huang, K. Zhao, and B. Catanzaro, “Diffwave: A versatile diffusion model for audio synthesis,” *arXiv preprint arXiv:2009.09761*, 2020. [[arxiv]][4]
-5. <a name="r5"></a> N. Chen, Y. Zhang, H. Zen, R. J. Weiss, M. Norouzi, and W. Chan, “Wavegrad: Estimating gradients for waveform genera- tion,” *arXiv preprint arXiv:2009.00713*, 2020. [[arxiv]][5]
+1. V. Kuleshov, S. Z. Enam, and S. Ermon, “Audio super resolution using neural networks,” in *Workshop of International Conference on Learning Representations*, 2017. [[arxiv]][1] <a name="r1"></a> 
+2. S. Kim and V. Sathe, “Bandwidth extension on raw audio via generative adversarial networks,” *arXiv preprint arXiv:1903.09027*, 2019. [[arxiv]][2] <a name="r2"></a> 
+3. J. Ho, A. Jain, and P. Abbeel, “Denoising diffusion probabilistic models,” in *Advances in Neural Information Processing Systems*, 2020, pp. 6840–6851. [[arxiv]][3] <a name="r3"></a> 
+4. Z. Kong, W. Ping, J. Huang, K. Zhao, and B. Catanzaro, “Diffwave: A versatile diffusion model for audio synthesis,” *arXiv preprint arXiv:2009.09761*, 2020. [[arxiv]][4] <a name="r4"></a> 
+5. <a name="r5"></a> N. Chen, Y. Zhang, H. Zen, R. J. Weiss, M. Norouzi, and W. Chan, “Wavegrad: Estimating gradients for waveform genera- tion,” *arXiv preprint arXiv:2009.00713*, 2020. [[arxiv]][5] <a name="r5"></a> 
 
 
 [1]: https://arxiv.org/abs/1708.00853
