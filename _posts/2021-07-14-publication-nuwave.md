@@ -69,7 +69,7 @@ GAN을 사용해서 Upsampling을 시도한 논문입니다. 구조 자체는 �
 
 
 
-Diffusion model이 audio domain에 가장 먼저 적용된 분야는 neural vocoder 인데요, neural vocoder는 Mel\-spectrogram을 input으로 받아 raw audio를 생성하는 모델입니다. *ICLR 2020*에 동시에 *DiffWave*[<sup>[4]</sup>](#r4)와 *WaveGrad*[<sup>[5]</sup>](#r5)라는 diffusion-based nerual vocoder 논문이 나왔습니다. Mel-spectrogram을 condition으로 주고  마찬가지로 noise로부터 iterative하게 sampling 합니다.
+Diffusion model이 audio domain에 가장 먼저 적용된 분야는 neural vocoder 인데요, neural vocoder는 Mel\-spectrogram을 input으로 받아 raw audio를 생성하는 모델입니다. *ICLR 2020*에 동시에 *DiffWave*[<sup>[4]</sup>](#r4)와 *WaveGrad*[[5]](#r5)라는 diffusion-based nerual vocoder 논문이 나왔습니다. Mel-spectrogram을 condition으로 주고  마찬가지로 noise로부터 iterative하게 sampling 합니다.
 
 사실 이 연구는 위의 논문들을 읽고 너무 감명 받아~~간지나서~~ 시작하게 되었습니다.
 
