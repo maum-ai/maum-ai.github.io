@@ -69,7 +69,7 @@ GAN을 사용해서 Upsampling을 시도한 논문입니다. 구조 자체는 �
 
 
 
-Diffusion model이 audio domain에 가장 먼저 적용된 분야는 neural vocoder 인데요, neural vocoder는 Mel\-spectrogram을 input으로 받아 raw audio를 생성하는 모델입니다. *ICLR 2020*에 동시에 *DiffWave*[<sup>[4]</sup>](#r4)와 *WaveGrad*[[5]](#r5)라는 diffusion-based nerual vocoder 논문이 나왔습니다. Mel-spectrogram을 condition으로 주고  마찬가지로 noise로부터 iterative하게 sampling 합니다.
+Diffusion model이 audio domain에 가장 먼저 적용된 분야는 neural vocoder 인데요, neural vocoder는 Mel\-spectrogram을 input으로 받아 raw audio를 생성하는 모델입니다. *ICLR 2020*에 동시에 *DiffWave*[<sup>[4]</sup>](#r4)와 *WaveGrad*[<sup>[5]</sup>](#r5)라는 diffusion-based nerual vocoder 논문이 나왔습니다. Mel-spectrogram을 condition으로 주고  마찬가지로 noise로부터 iterative하게 sampling 합니다.
 
 사실 이 연구는 위의 논문들을 읽고 너무 감명 받아~~간지나서~~ 시작하게 되었습니다.
 
@@ -119,19 +119,18 @@ Objective metric인 SNR, LSD와 subjective metric인 ABX test accuracy 모두 �
 
 ### References
 
-1. V. Kuleshov, S. Z. Enam, and S. Ermon, “Audio super resolution using neural networks,” in *Workshop of International Conference on Learning Representations*, 2017. [[arxiv]][1] <a name="r1"></a> 
-2. S. Kim and V. Sathe, “Bandwidth extension on raw audio via generative adversarial networks,” *arXiv preprint arXiv:1903.09027*, 2019. [[arxiv]][2] <a name="r2"></a> 
-3. J. Ho, A. Jain, and P. Abbeel, “Denoising diffusion probabilistic models,” in *Advances in Neural Information Processing Systems*, 2020, pp. 6840–6851. [[arxiv]][3] <a name="r3"></a> 
-4. Z. Kong, W. Ping, J. Huang, K. Zhao, and B. Catanzaro, “Diffwave: A versatile diffusion model for audio synthesis,” *arXiv preprint arXiv:2009.09761*, 2020. [[arxiv]][4] <a name="r4"></a> 
-5. <a name="r5"></a> N. Chen, Y. Zhang, H. Zen, R. J. Weiss, M. Norouzi, and W. Chan, “Wavegrad: Estimating gradients for waveform genera- tion,” *arXiv preprint arXiv:2009.00713*, 2020. [[arxiv]][5] <a name="r5"></a> 
+1. V. Kuleshov, S. Z. Enam, and S. Ermon, “Audio super resolution using neural networks,” in *Workshop of International Conference on Learning Representations*, 2017. [[arxiv]][a1] <a name="r1"></a> 
+2. S. Kim and V. Sathe, “Bandwidth extension on raw audio via generative adversarial networks,” *arXiv preprint arXiv:1903.09027*, 2019. [[arxiv]][a2] <a name="r2"></a> 
+3. J. Ho, A. Jain, and P. Abbeel, “Denoising diffusion probabilistic models,” in *Advances in Neural Information Processing Systems*, 2020, pp. 6840–6851. [[arxiv]][a3] <a name="r3"></a> 
+4. Z. Kong, W. Ping, J. Huang, K. Zhao, and B. Catanzaro, “Diffwave: A versatile diffusion model for audio synthesis,” *arXiv preprint arXiv:2009.09761*, 2020. [[arxiv]][a4] <a name="r4"></a> 
+5. <a name="r5"></a> N. Chen, Y. Zhang, H. Zen, R. J. Weiss, M. Norouzi, and W. Chan, “Wavegrad: Estimating gradients for waveform genera- tion,” *arXiv preprint arXiv:2009.00713*, 2020. [[arxiv]][a5] <a name="r5"></a> 
 
 
-[1]: https://arxiv.org/abs/1708.00853
-[2]: https://arxiv.org/abs/1903.09027
-
-[3]: https://arxiv.org/abs/2006.11239
-[4]: https://arxiv.org/abs/2009.09761
-[5]: https://arxiv.org/abs/2009.00713
+[a1]: https://arxiv.org/abs/1708.00853
+[a2]: https://arxiv.org/abs/1903.09027
+[a3]: https://arxiv.org/abs/2006.11239
+[a4]: https://arxiv.org/abs/2009.09761
+[a5]: https://arxiv.org/abs/2009.00713
 
 
 
