@@ -27,7 +27,7 @@ Audio Samples: https://mindslab-ai.github.io/nuwave
 
 Image domain에서의 super resolution에 해당하는 분야가 *Audio Upsampling*입니다. Audio의 경우 1초에 몇번 sampling을 하는지를 나타내는 *Sampling Rate*로 temporal resolution을 표현합니다. 이 값이 중요한 이유는 sampling rate가 정해지면 discrete-time(or digital) audio data가 가질 수 있는 maximum frequency(Nyquist frequency)가 정해지기 때문인데요. Audio domain에 익숙하지 않으신 경우 아래 그림을 보시면 이해가 빠르실 것 같습니다.
 
-- 어떤 continuous-time 데이터 ![어떤 audio data](sine.png)
+- 어떤 continuous-time 데이터 ![어떤 audio data](/assets/2021-07-14-publication-nuwave/sine.png)
 - 위 데이터를 1000Hz로 샘플링 했을때  ![1000Hz로 샘플링 했을때](/assets/2021-07-14-publication-nuwave/sr1000hz.png)
 - 위 데이터를 100Hz로 샘플링 했을때 ![100Hz 로 샘플링 했을때](/assets/2021-07-14-publication-nuwave/sr100hz.png)
 
