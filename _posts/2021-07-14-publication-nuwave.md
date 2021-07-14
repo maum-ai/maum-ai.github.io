@@ -11,7 +11,7 @@ github: junjun3518
 
 Paper(arXiv): https://arxiv.org/abs/2104.02321 
 
-Code: https://github.com/mindslab-ai/nuwave  <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+Code: https://github.com/mindslab-ai/nuwave
 
 Audio Samples: https://mindslab-ai.github.io/nuwave
 
