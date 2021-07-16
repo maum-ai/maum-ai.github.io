@@ -15,15 +15,27 @@ Table of Contents
 
 ### 1. Jekyll setup & run
 ```bash
-# you may need `apt install ruby-dev` for jekyll
-$ gem install jekyll
+$ gem install jekyll bundler
 $ git clone https://github.com/mindslab-ai/mindslab-ai.github.io.git
 $ cd mindslab-ai.github.io
-$ gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
 $ bundle install
 $ bundle exec jekyll serve
 ```
-- `gem install bundler -v ...`: Bundler 버전을 `Gemfile.lock`과 맞춰야 제대로 실행됨. [관련 링크](https://bundler.io/blog/2019/05/14/solutions-for-cant-find-gem-bundler-with-executable-bundle.html)
+  - `gem install jekyll` 실행시 아래 메시지가 나오면 `ruby-dev`를 설치(ex. `apt install ruby-dev`)한 뒤 실행해보세요
+    ```
+    ...
+
+    Building native extensions. This could take a while...
+    ERROR:  Error installing jekyll:
+    ERROR: Failed to build gem native extension.
+
+    ...
+    ```
+  - `bundle install` 실행시 아래 메시지가 나오면 `Gemfile.lock`을 지운 다음 다시 실행해보세요
+    ```
+    Can't find gem bundler (>= 0.a) with executable bundle (Gem::GemNotFoundException)
+    ```
+
 
 ### 2. 접속하기
 - 출력된 주소(ex. `127.0.0.1:4000`)에 웹브라우저를 사용해 접속합니다.
