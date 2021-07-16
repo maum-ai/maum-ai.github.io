@@ -5,7 +5,6 @@ Table of Contents
 2. [Branch 관리](#branch-관리)
 3. [포스트 작성법](#포스트-작성법)
 
----
 ## Local에서 사이트 렌더링하기
 참고: [jekyll installation](https://jekyllrb.com/docs/installation/)
 
@@ -24,13 +23,12 @@ $ gem install bundler -v "$(grep -A 1 "BUNDLED WITH" Gemfile.lock | tail -n 1)"
 $ bundle install
 $ bundle exec jekyll serve
 ```
-- `gem install bundler -v ...`: Bundler 버전을 `Gemfile.lock`과 맞춰야 제대로 실행됨 [관련 링크](https://bundler.io/blog/2019/05/14/solutions-for-cant-find-gem-bundler-with-executable-bundle.html)
+- `gem install bundler -v ...`: Bundler 버전을 `Gemfile.lock`과 맞춰야 제대로 실행됨. [관련 링크](https://bundler.io/blog/2019/05/14/solutions-for-cant-find-gem-bundler-with-executable-bundle.html)
 
 ### 2. 접속하기
 - 출력된 주소(ex. `127.0.0.1:4000`)에 웹브라우저를 사용해 접속합니다.
 
 
----
 ## Branch 관리
 ### 주요 branch
 - `master`: public 공개되는 branch입니다. 업데이트 되면 사이트 컴파일에 필요한 시간이 지난 후 `mindslab-ai.github.io`에 반영됩니다.
@@ -41,7 +39,6 @@ $ bundle exec jekyll serve
 - 업데이트 하려는 내용에 따라, `contents`또는 `designs`에서 branch를 새로 생성하여 commit 후 다시 PR합니다
 - PR 완료 후, release 결정에 따라 `contents`, `designs`을 master로 merge합니다.
 
----
 ## 포스트 작성법
 참고: [jekyll post writing](https://jekyllrb.com/docs/posts/)
 
@@ -78,7 +75,7 @@ github: mindslab-ai
     ```md
     이미지 파일은 ![alt text](/assets/{folder_name}/{name.suffix})로 입력합니다.
     ```
-- 이미지 속성은 `![alt text](path){: style="css syntaxex"}`를 통해 크기 조정이 가능합니다.
+- 이미지 속성은 `![alt text](path){: style="inline css syntax"}`를 통해 크기 조정이 가능합니다.
     ```md
     크기 조정 ![alt text](path){: style="width: 200px; height: 150px"}
     ```
