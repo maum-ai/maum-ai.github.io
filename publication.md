@@ -45,6 +45,7 @@ permalink: /publication/
 #### **(July 2021)** WaveGrad2
 - First successful open-source implementation of *WaveGrad2* [arXiv:2106.09660](https://arxiv.org/abs/2106.09660)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=wavegrad2&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+    
 #### **(October 2020)** FaceShifter
 - First successful open-source implementation of *FaceShifter* [arXiv:1912.13457](https://arxiv.org/abs/1912.13457). 
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=faceshifter&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
