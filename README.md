@@ -129,12 +129,10 @@ github: mindslab-ai
 
 - arxiv 
   - [![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=for-the-badge)](https://arxiv.org/abs/2104.02321)
-    
     ```
     [![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=for-the-badge)](https://arxiv.org/abs/2104.02321)
     ```
   - [![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2104.02321)
-    
     ```
     [![arXiv](https://img.shields.io/badge/arXiv-2104.02321-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2104.02321)
     ```
@@ -172,6 +170,6 @@ github: mindslab-ai
     ```
 
 
-
 ### 5. 수식 입력
 - (TBA)
+
