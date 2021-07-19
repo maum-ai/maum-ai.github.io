@@ -74,16 +74,16 @@ $ bundle exec jekyll serve
   ---
   본문...
   ```
-- `layout`: `post`로 기재
-- `title`: 포스트 제목
-- `description`: 포스트에 대한 설명. 포스트 목록에서 제목 아래에 표시됩니다.
-- `categories`: 글의 카테고리를 입력합니다. 목록 정해지고 확장될 예정.
-  - `publication`
-  - `paper-review`
-  - `news`
-  - etc ...
-- `author`: 작성자 이름으로 표시되는 이름
-- `github`: github 계정명. 입력하면 github 프로필 사진이 함께 표시됩니다
+  - `layout`: `post`로 기재
+  - `title`: 포스트 제목
+  - `description`: 포스트에 대한 설명. 포스트 목록에서 제목 아래에 표시됩니다.
+  - `categories`: 글의 카테고리를 입력합니다. 목록 정해지고 확장될 예정.
+    - `publication`
+    - `paper-review`
+    - `news`
+    - etc ...
+  - `author`: 작성자 이름으로 표시되는 이름
+  - `github`: github 계정명. 입력하면 github 프로필 사진이 함께 표시됩니다
 
 ### 3. 본문 작성
 - markdown 형식을 따라 작성합니다. 
@@ -114,13 +114,13 @@ $ bundle exec jekyll serve
   [a1]: https://arxiv.org/abs/1708.00853
   [a2]: https://mindslab-ai.github.io 
   ```
-- 포스트 마지막에 References 소제목을 넣습니다.
-- References 항목은 numbered list`1. 2. ...`로 작성하고, 다음과 같은 anchor를 삽입합니다. `<a name="r{reference_number}"></a>`
-- 본문 중에서 인용표시 방법(번호, 저자명, 윗첨자 등)은 자유입니다.
-  - `[1]` or `A. Authors et al` or <sup>[1]</sup> or `[paper_title]`, etc...
-- 인용표시는 항상 해당 anchor로 링크를 걸어줍니다.
-  - [[link text]](#r1) `[[link text]](#r1)` 
-- arxiv나 cvpr 링크 등 직접적인 링크는 포스트 맨 하단에 모아서 작성합니다.
+  - 포스트 마지막에 References 소제목을 넣습니다.
+  - References 항목은 numbered list`1. 2. ...`로 작성하고, 다음과 같은 anchor를 삽입합니다. `<a name="r{reference_number}"></a>`
+  - 본문 중에서 인용표시 방법(번호, 저자명, 윗첨자 등)은 자유입니다.
+    - `[1]` or `A. Authors et al` or <sup>[1]</sup> or `[paper_title]`, etc...
+  - 인용표시는 항상 해당 anchor로 링크를 걸어줍니다.
+    - [[link text]](#r1) `[[link text]](#r1)` 
+  - arxiv나 cvpr 링크 등 직접적인 링크는 포스트 맨 하단에 모아서 작성합니다.
 
 ### 6. Badge 달기
 - 참고: [shileds.io](https://shields.io)
