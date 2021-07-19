@@ -49,7 +49,7 @@ $ bundle exec jekyll serve
 ### 주요 branch
 - `master`: public 공개되는 branch입니다. 업데이트 되면 사이트 컴파일에 필요한 시간이 지난 후 `mindslab-ai.github.io`에 반영됩니다.
 - `contents`: 내용(주로 post)과 관련된 branch
-- `designs`: 사이트 디자인과 관련된 branch
+- `designs`: 사이트 디자인 및 기능(plugin)과 관련된 branch
 
 ### 업데이트
 - 업데이트 하려는 내용에 따라, `contents`또는 `designs`에서 branch를 새로 생성하여 commit 후 다시 PR합니다
