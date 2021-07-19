@@ -109,10 +109,10 @@ $ bundle exec jekyll serve
 
   ### References
   1. <a name="r1"></a>V. Kuleshov, S. Z. Enam, and S. Ermon, “Audio super resolution using neural networks,” in *Workshop of International Conference on Learning Representations*, 2017. [[arxiv]][a1] 
-  2. <a name="r2"></a> ... [[arxiv]][a2]
+  2. <a name="r2"></a> ... [[blog]][a2]
 
   [a1]: https://arxiv.org/abs/1708.00853
-  [a2]: https://mindslab-ai.github.io 
+  [a2]: https://mindslab-ai.github.io
   ```
   - 포스트 마지막에 References 소제목을 넣습니다.
   - References 항목은 numbered list`1. 2. ...`로 작성하고, 다음과 같은 anchor를 삽입합니다. `<a name="r{reference_number}"></a>`
