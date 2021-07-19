@@ -60,7 +60,7 @@ GAN을 사용해서 Upsampling을 시도한 논문입니다. 구조 자체는 �
 최근 *Denoising Diffusion Probabilistic Model*[<sup>[3]</sup>](#r3)을 필두로 *diffusion probabilistic model* (줄여서 *diffusion model*)이 핫한 생성모델로 떠오르고 있습니다. 더 넓은 범위의 *score-based model*이라는 것도 있으나 이 친구는 아마 다른 포스트로 소개할 것 같습니다. Diffusion model은 GAN이나 VAE와 다르게 output과 latent variable의 사이즈가 같습니다. latent varable은 각 step 마다 원본에 일정한 Gaussian noise가 더해진 것으로 정의됩니다. 이를 0부터 T까지의 step을 가지고 *forward/reverse* 두 개의 path를 가지는 Markov chain으로 생각합니다. Forward path의 경우 위에서 설명한대로 그 전 step에  Gaussian noise를 더하는 것으로 정의되고 reverse path 의 경우 forward path에서 더해진 Gaussian noise를 예측해서 빼는 것으로 정의됩니다. 결과적으로 Gaussian distribution으로부터 sampling한 latent variable을 여러 번 iteration을 하는 Markov Chain Monte-Carlo Sampling을 통해 noise를 제거해가면서 우리가 원하는 output으로 sampling하는 모델입니다. 
 
 ![원래_논문에_넣으려고_했던_이미지](/assets/2021-07-14-publication-nuwave/mc.png)
-*원래 논문에 넣고 싶었는데 4p라 분량이 모자라 못 넣은 Markov Chain 이미지*
+*원래 논문에 넣고 싶었는데 4p라 분량이 모자라 못 넣은 Markov Chain 이미지. forward path(점선), reverse path(직선)*
 
 
 
