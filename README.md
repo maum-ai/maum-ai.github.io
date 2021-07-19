@@ -4,12 +4,12 @@
 - [Local에서 사이트 렌더링하기](#local에서-사이트-렌더링하기)
 - [Branch 관리](#branch-관리)
 - [포스트 작성법](#포스트-작성법)
-    1. [포스트 생성](#포스트-생성)
-    2. [Front matter](#front-matter)
-    3. [본문 작성](#본문-작성)
-    4. [이미지 넣기](#이미지-넣기)
-    5. [References 작성](#references-작성)
-    6. [Badge 달기](#badge-달기)
+    1. [포스트 생성](#1-포스트-생성)
+    2. [Front matter](#2-front-matter)
+    3. [본문 작성](#3-본문-작성)
+    4. [이미지 넣기](#4-이미지-넣기)
+    5. [References 작성](#5-references-작성)
+    6. [Badge 달기](#6-badge-달기)
 ---
 
 ## Local에서 사이트 렌더링하기
