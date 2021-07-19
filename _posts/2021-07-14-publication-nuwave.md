@@ -108,6 +108,7 @@ Neural vocoder에서 사용된 값들을 upsampling에 사용하려고 하다 �
 해결 방법을 여러 가지를 시도해서 해결했다고 쓰긴 했지만 이 기간이 한 달 좀 넘었던 것 같습니다. 1월에 본격적으로 시작하여 구현은 2주안에 끝났는데 hyperparameter만 한달 넘게 고쳐가면서 정말 여러 가지를 시도해봤습니다. 한 달 넘는 시도 끝에 좋은 sample을 뽑아내는 정도가 되어 3월에는 논문 작성에 박차를 가했던 것 같습니다.
 
 ![sampling](/assets/2021-07-14-publication-nuwave/sampling.gif)
+
 *NU-Wave가 8번 만에 sampling하는 과정*
 
 
