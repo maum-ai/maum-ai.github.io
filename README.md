@@ -62,7 +62,7 @@ $ bundle exec jekyll serve
 - `_posts/` 폴더 하위에 `YYYY-MM-DD-title.md` 파일명으로 포스트를 생성합니다.
 
 ### 2. Front matter 
-- `.md` 최상단에 아래 예시를 따라 front matter을 기입합니다.
+- `.md` 최상단에 아래 예시를 따라 front matter를 기입합니다.
   ```yaml
   ---
   layout: post
