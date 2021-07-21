@@ -10,3 +10,19 @@
 .post-description {
     padding-top: $spacing-unit * 0.5;
 }
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+.resize-image-large
+{
+    width: 800px;
+}
+
+.resize-image-medium
+{
+    width: 500px;
+}
