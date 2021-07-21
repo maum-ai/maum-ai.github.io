@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Publication
-permalink: /publication/
+title: Publications
+permalink: /publications/
 ---
 
 <!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
-## List of Publications & Open-Source Activities
+## List of Publications & Open Source Activities
 #### **(June 2021)** _Sharp Edge Recovery via SE(3)-Equivariant Network_
 - Presented at 2nd SHApe Recovery from Partial textured 3D scans at *CVPR 2021*
 - [talk](https://youtu.be/UVYQzQ-mH1w?t=9231)
