@@ -9,7 +9,7 @@ use_math: true
 ---
 
 [![arXiv](https://img.shields.io/badge/arXiv-2009.04759-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2009.04759)
-[![GitHub Repo stars](https://img.shields.io/github/stars/nmaac/acon?color=yellow&label=nu-wave&logo=github&style=flat-square)](https://github.com/nmaac/acon)
+[![githubio](https://img.shields.io/static/v1?message=Official%20Repo&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://github.com/nmaac/acon)
 
 > Ma, Ningning, et al. "Activate or Not: Learning Customized Activation."  
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2021.
