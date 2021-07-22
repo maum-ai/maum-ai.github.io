@@ -99,9 +99,31 @@ $ bundle exec jekyll serve
     ```md
     크기 조정은 ![alt text](path){: style="width: 200px; height: 150px"} 이렇게 합니다.
     ```
+- predefined style
+    ```
+    .center-image
+    {
+        margin: 0 auto;
+        display: block;
+    }
+    .resize-image-large
+    {
+        width: 800px;
+    }
+    .resize-image-medium
+    {
+        width: 500px;
+    }
+    ```
+- predefined style 사용법
+    ``` 
+    ![figure1_swish.png](/assets/2021-07-12-paper-review-acon/figure1_swish.png){: .center-image }
+    ![figure4_acon.png](/assets/2021-07-12-paper-review-acon/figure4_acon.png){: .center-image .resize-image-large}
+    ![figure6_acon_example.png](/assets/2021-07-12-paper-review-acon/figure6_acon_example.png){: .center-image .resize-image-medium}
+    ```
 
 ### 5. References 작성
-- 참고: [준혁님 포스트(TBA)](/_posts/TBA.md)
+- 참고: [준혁님 포스트(TBA)](/_posts/2021-07-14-publication-nuwave.md)
 - 아래와 같이 **링크 방식을 통일합니다.**
   ```
   ... 본문 중, ASR Using Neural Net[<sup>[1]</sup>](#r1)에서는 ...
@@ -128,6 +150,8 @@ $ bundle exec jekyll serve
 [![CVF](https://img.shields.io/badge/CVF-2021.15059-9cf.svg?style=flat-square)](https://openaccess.thecvf.com/content/CVPR2021/html/Kim_SetVAE_Learning_Hierarchical_Composition_for_Generative_Modeling_of_Set-Structured_Data_CVPR_2021_paper.html)
 [![GitHub Repo stars](https://img.shields.io/github/stars/mindslab-ai/nuwave?color=yellow&label=nu-wave&logo=github&style=flat-square)](https://github.com/mindslab-ai/nuwave)
 [![githubio](https://img.shields.io/badge/GitHub.io-audio_samples-blue?logo=Github&style=flat-square)](https://mindslab-ai.github.io/nuwave/)
+[![githubio](https://img.shields.io/static/v1?message=Official%20Repo&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://github.com/mindslab-ai/nuwave)
+[![Colab](https://img.shields.io/static/v1?message=Open%20in%20Colab&logo=googlecolab&labelColor=grey&color=yellow&logoColor=white&label=%20&style=flat-square)](https://colab.research.google.com/drive/1AK3AI3lS_rXacTIYHpf0mYV4NdU56Hn6?usp=sharing)
   ```
   ## Awesome NU-WAVE!
 
@@ -137,13 +161,26 @@ $ bundle exec jekyll serve
   [![CVF](https://img.shields.io/badge/CVF-2021.15059-9cf.svg?style=flat-square)](https://openaccess.thecvf.com/content/CVPR2021/html/Kim_SetVAE_Learning_Hierarchical_Composition_for_Generative_Modeling_of_Set-Structured_Data_CVPR_2021_paper.html)
   [![GitHub Repo stars](https://img.shields.io/github/stars/mindslab-ai/nuwave?color=yellow&label=nu-wave&logo=github&style=flat-square)](https://github.com/mindslab-ai/nuwave)
   [![githubio](https://img.shields.io/badge/GitHub.io-audio_samples-blue?logo=Github&style=flat-square)](https://mindslab-ai.github.io/nuwave/)
+  [![githubio](https://img.shields.io/static/v1?message=Official%20Repo&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://github.com/mindslab-ai/nuwave)
+  [![Colab](https://img.shields.io/static/v1?message=Open%20in%20Colab&logo=googlecolab&labelColor=grey&color=yellow&logoColor=white&label=%20&style=flat-square)](https://colab.research.google.com/drive/1AK3AI3lS_rXacTIYHpf0mYV4NdU56Hn6?usp=sharing)
 
   ### The author is awesome
   ...
   ```
 
 ### 7. 수식 입력
-- (TBA)
+- 참고: [형규님 ACON 리뷰](/_posts/2021-07-19-paper-review-acon.md)
+- front matter 마지막줄에 `use_math: true` 추가
+- mathjax로 입력됨, latex과 비슷
+- `$$\operatorname{swish}(x):=x \times \sigma(\beta x)=\frac{x}{1+e^{-\beta x}}$$`과 같은 식으로 `$${equation}$$` equation block 작성가능
+- `$\beta = 0$ 일 경우, Linear function $f(x) = x/2$ 처럼 작용하게 됩니다.`inline으로 작업할때는 `${something}$` 과 같은 식으로 작성가능
+
 
 ### 8. Emoji 입력
-- (TBA)
+- slack과 비슷하게 emoji사용 가능
+- `:emoji:`와 같은 형식으로 사용가능
+- https://gist.github.com/rxaviers/7360908 : emoji list
+- :star: :+1: :tada: :shipit:
+- `:star: :+1: :tada: :shipit:`
+
+
