@@ -50,13 +50,12 @@ $ bundle exec jekyll serve
 - `master`: public 공개되는 branch입니다. 업데이트 되면 사이트 컴파일에 필요한 시간이 지난 후 `mindslab-ai.github.io`에 반영됩니다.
 - `contents`: 내용(주로 post)과 관련된 branch
 - `designs`: 사이트 디자인 및 기능(plugin)과 관련된 branch
+### 업데이트
+- 업데이트 하려는 내용에 따라, `contents`또는 `designs`에서 branch를 새로 생성하여 commit 후 다시 PR합니다
+- PR 완료 후, release 결정에 따라 `contents`, `designs`을 master로 merge합니다.
 
-Refers to various asset files within the `assets` directory.
-
-  - `assets/css/style.scss` &mdash; Imports sass files from within the `_sass` directory and gets processed into the theme's
-    stylesheet: `assets/css/styles.css`.
-  - `assets/minima-social-icons.svg` &mdash; A composite SVG file comprised of *symbols* related to various social-media icons.
-    This file is used as-is without any processing. Refer [section on social networks](#social-networks) for its usage.
+## 포스트 작성법
+참고: [jekyll post writing](https://jekyllrb.com/docs/posts/)
 
 ### 1. 포스트 생성
 - `_posts/` 폴더 하위에 `YYYY-MM-DD-title.md` 파일명으로 포스트를 생성합니다.
