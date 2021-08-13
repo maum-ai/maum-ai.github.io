@@ -13,6 +13,7 @@ url: "https://mindslab-brain.github.io"
 
 disqus:
   shortname: mindslab-brain
+google_analytics: UA-204903244-1
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
