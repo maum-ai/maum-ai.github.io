@@ -94,7 +94,7 @@ VITS에서 normalizing flow는 주로 모델을 훈련하는 중에 복잡한 �
 
 |                       VITS at training                       |                      VITS at inference                       |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![VITS at training](https://github.com/jaywalnut310/vits/raw/main/resources/fig_1a.png) | ![VITS at inference](https://github.com/jaywalnut310/vits/raw/main/resources/fig_1b.png) |
+| ![training](/assets/2021-10-19-paper-review-vits/training.png) | ![inference](/assets/2021-10-19-paper-review-vits/inference.png) |
 
 전체적으로 보면, VITS는 text encoder와 flow로 이뤄진 prior encoder, 그리고 latent $z$를 음성으로 변환하는 decoder로 이뤄진 VAE의 구조를 취하고 있습니다. 거기에 duration predictor, posterior encoder, discriminator, monotonic alignment search (MAS) 등의 모듈 및 과정이 붙은 형태입니다.
 
