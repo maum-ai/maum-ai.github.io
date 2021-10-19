@@ -60,7 +60,7 @@ VITS 또한 이러한 TTS의 특성을 인식하고, latent modeling과 SDP를 �
 2단계 합성 중 아쿠스틱 모델은 보통 인코더가 텍스트를 입력받고, 디코더가 음성을 출력하는 형태로 구성됩니다.
 그러나 입출력이 다른 길이의 시퀀스이므로, 출력 시퀀스의 특정 부분이 입력 시퀀스의 어떤 부분에 대응되는지 알아야 길이를 맞춰가며 결과물을 생성할 수 있습니다. 이러한 입출력 사이의 관계를 alignment라고 부릅니다. 사람은 텍스트를 적힌 순서대로 읽어나가므로, 달리 보면 alignment는 텍스트의 각 부분이 음성에서 얼마만큼의 길이(duration)를 차지하는지 나타낸다고 볼 수 있습니다.
 
-![attention](/assets/2021-10-12-paper-review-vits/alignment.png){: style="width: 600px;"}
+![attention](/assets/2021-10-19-paper-review-vits/alignment.png){: style="width: 600px;"}
 
 *TTS에 의해 예측된 alignment의 예시로, 각 디코더 스텝에서 특정 인코더 스텝에 대응될 확률을 나타내고 있습니다.*
 
@@ -72,7 +72,7 @@ VITS 또한 이러한 TTS의 특성을 인식하고, latent modeling과 SDP를 �
 
 Normalizing flow는 GAN이나 VAE와 같은 일종의 생성 모델입니다. 가우시안 분포 같은 단순한 분포에 일련의 가역 변환을 연쇄적으로 가하여 복잡한 분포로 변형시키는 과정을 통해 현실의 복잡한 분포를 간단한 분포에 대응시킬 수 있습니다. 따라서 약간의 계산 과정을 거치면, 현실의 확률 분포에 기반한 $x = z_K$를 단순한 분포에서 발생한 latent $z = z_0$로부터 구할 수 있다는 점이 normalizing flow의 특징이며, 일련의 가역 변환으로 구성되기 때문에 반대로 $x$에서 $z$를 구할 수도 있습니다.
 
-![flow](/assets/2021-10-12-paper-review-vits/flow.png){: style="width: 600px;"}
+![flow](/assets/2021-10-19-paper-review-vits/flow.png){: style="width: 600px;"}
 
 *Normalizing flow의 작동 과정 도식[[4]](#r4). 변환이 거듭되면서 단순한 분포가 복잡한 분포로 점차 바뀌어 나갑니다.*
 
@@ -136,7 +136,7 @@ $$
 
 (대충 넘어가도 됨. A 계산은 non-skipping, monotonic이란 조건을 충족하는 DP 써서 요로코롬 한다. 외부 aligner 필요 없음. 우왕ㅋ 굳ㅋ.)
 
-![alignment](/assets/2021-10-12-paper-review-vits/mas.png){: style="width: 600px;"}
+![alignment](/assets/2021-10-19-paper-review-vits/mas.png){: style="width: 600px;"}
 
 *Monotonic alignment search는 일정한 조건을 만족하는 텍스트 측의 hidden representation과 음성 측의 latent representation 사이의 alignment를 찾는 과정이다[[1]](#r1).*
 
@@ -167,7 +167,7 @@ Prior encoder는 텍스트를 hidden representation으로 변환하는 text enco
 
 ##### Text Encoder
 
-![text_encoder](/assets/2021-10-12-paper-review-vits/text_encoder.png)
+![text_encoder](/assets/2021-10-19-paper-review-vits/text_encoder.png)
 
 (솔직히 할 말 별로 없음 역할만 강조)
 
@@ -176,7 +176,7 @@ Text encoder에서 출력된 hidden representation은 linear projection을 거�
 
 ##### Normalizing Flow
 
-![normalizing_flow](/assets/2021-10-12-paper-review-vits/posterior_encoder.png)
+![normalizing_flow](/assets/2021-10-19-paper-review-vits/posterior_encoder.png)
 
 (affine coupling layer도 따로 추가 설명이 필요할까?)
 
@@ -186,7 +186,7 @@ Training 중에는 latent variable $z$가 정방향으로 변환되고, inferenc
 
 ##### Monotonic Alignment Search
 
-![mas](/assets/2021-10-12-paper-review-vits/prior_encoder.png)
+![mas](/assets/2021-10-19-paper-review-vits/prior_encoder.png)
 
 (alignment는 설명 따로)
 
@@ -195,7 +195,7 @@ Latent variable과 text hidden representation 쪽의 길이를 맞춰주기 위�
 
 #### Posterior Encoder
 
-![decoder](/assets/2021-10-12-paper-review-vits/decoder.png)
+![decoder](/assets/2021-10-19-paper-review-vits/decoder.png)
 
 (구조에서 gated activation unit 빼고는 latent의 분포 맞춰주는 역할임)
 
@@ -221,16 +221,16 @@ Discriminator도 decoder와 같이 HiFi-GAN의 multi-period discriminator를 쓰
 
 (제일 복잡괴기한 부분임)
 
-![figure5](/assets/2021-10-12-paper-review-vits/figure5.png){: style="width: 750px;"}
+![figure5](/assets/2021-10-19-paper-review-vits/figure5.png){: style="width: 750px;"}
 
 SDP는 text hidden representation으로부터 stochastic하게 duration을 예측하는 모듈로, 유동적인 발화 속도라는 인간 발화의 특징을 반영하기 위한 접근입니다.
 앞서 설명한 것과 같이 flow 기반의 모델로 구성되며 text hidden representation과 duration을 처리하는 condition encoder, 이 두 조건을 사용해 noise에서 random variable을 생성하는 flow-based posterior encoder, 그리고 noise와 duration을 가역변환시키는 normalizing flow $g_\theta$로 이루어져 있습니다.
 
-![figure6](/assets/2021-10-12-paper-review-vits/figure6.png){: style="width: 750px;"}
+![figure6](/assets/2021-10-19-paper-review-vits/figure6.png){: style="width: 750px;"}
 
 Conditional encoder와 flow-based network 내의 coupling layer에서 dilated and depth-separable convolutional (DDSConv) layer가 사용되는데, DDSConv를 사용한 이유는 넓은 receptive field를 유지하면서 parameter efficiency를 높이기 위함입니다. Flow-based network인 Posterior encoder와 normalizing flow가 모두 **neural spline flow**를 사용하는데, 일반적으로 flow 구현에 쓰이는 affine coupling layer보다 표현력 측면에서 효과가 좋았기 때문입니다.
 
-![stop_gradient](/assets/2021-10-12-paper-review-vits/duration_predictor.png){: style="width: 300px;"}
+![stop_gradient](/assets/2021-10-19-paper-review-vits/duration_predictor.png){: style="width: 300px;"}
 
 더하여 SDP에 stop gradient operator를 적용하여 입력 조건을 통해 다른 모듈에 영향 미치지 못하도록 제한합니다.
 이렇게 구성된 SDP는 training 시에는 alignment에서 구한 duration을 가지고 학습되고, inference 중에는 텍스트를 통해 예측한 값을 duration으로 사용합니다.
@@ -260,19 +260,19 @@ Conditional encoder와 flow-based network 내의 coupling layer에서 dilated an
 
 ##### Single Speaker
 
-![table1](/assets/2021-10-12-paper-review-vits/table1.png){: style="width: 450px;"}
+![table1](/assets/2021-10-19-paper-review-vits/table1.png){: style="width: 450px;"}
 
 기존의 2단계 합성 방식을 사용하는 모델들과 비교한 결과, fine-tuning한 경우보다도 VITS의 음질이 높았고 ground-truth인 원본 음성에도 매우 근접한 점수를 받았습니다. 더하여 SDP를 deterministic duration predictor (DDP)로 대체해 음성 길이를 고정시킨 경우도 상당히 높은 점수를 기록했습니다. 이를 통해 SDP가 음질 향상에 기여한다는 점과 VITS는 DDP를 사용해도 기존 모델들과 비교할 만한 성능을 낸다는 점을 확인할 수 있습니다.
 
 ##### Ablation
 
-![table2](/assets/2021-10-12-paper-review-vits/table2.png){: style="width: 360px;"}
+![table2](/assets/2021-10-19-paper-review-vits/table2.png){: style="width: 360px;"}
 
 VITS의 여러 요소가 얼마나 중요한지 그 영향력을 확인하기 위해, 각 부분을 제외하고 평가하는 ablation study를 진행했습니다. 그 결과, prior encoder의 normalizing flow를 제거한 경우 상당한 성능 저하가 있었고, posterior encoder의 입력은 linear-scale이 아닌 mel-scale spectrogram으로 바꿨을 때도 약간의 성능 저하가 관찰되었습니다.
 
 ##### Multi-Speakers
 
-![table3](/assets/2021-10-12-paper-review-vits/table3.png){: style="width: 450px;"}
+![table3](/assets/2021-10-19-paper-review-vits/table3.png){: style="width: 450px;"}
 
 화자별도 임베딩을 할당해 다화자 데이터로 학습한 경우, 마찬가지로 VITS가 타 모델보다 높은 음질을 보였습니다. VITS가 다화자 환경에서도 사용 가능함을 확인시켜주는 결과입니다.
 
@@ -282,19 +282,19 @@ VITS의 여러 요소가 얼마나 중요한지 그 영향력을 확인하기 �
 
 본 섹션에서는 VITS가 얼마나 다양한 특성의 음성을 합성할 수 있는지, 합성한 음성이 인간 발화의 특성을 얼마나 잘 반영하는지에 대해 다룹니다.
 
-![figure2](/assets/2021-10-12-paper-review-vits/figure2.png){: style="width: 450px;"}
+![figure2](/assets/2021-10-19-paper-review-vits/figure2.png){: style="width: 450px;"}
 
 Fig. 2a는 Tacotron 2, Glow-TTS, VITS가 "How much variation is there?"라는 문장에 대해 생성한 합성음 100개의 길이에 대해 분포를 나타낸 것입니다. Glow-TTS는 DDP를 사용해 고정된 길이의 문장만 내놓는 반면 VITS는 Tacotron 2와 비슷한 분포를 따르는데, 같은 문장에 대해서도 다양한 길이로 다르게 발화하는 것을 알 수 있습니다.
 
 Fig. 2b는 VITS가 생성한 100개 발화의 길이에 대해 분포를 화자별로 나타낸 것으로, 각 화자의 특성에 따라 발화 길이가 크게 달라지므로 VITS가 화자의 특성에 기반하여 발화 길이를 예측함을 확인할 수 있습니다.
 
-![figure3](/assets/2021-10-12-paper-review-vits/figure3.png){: style="width: 450px;"}
+![figure3](/assets/2021-10-19-paper-review-vits/figure3.png){: style="width: 450px;"}
 
 Fig. 3a, b, c는 각 모델이 생성한 발화 10개의 F<sub>0</sub> contour를 나타낸 것으로 VITS가 합성한 음성이 다양한 리듬과 높낮이를 가짐을 확인할 수 있고, Fig. 3d에서는 더 나아가 각 화자별로 다른 발화의 리듬을 잘 표현함을 알 수 있습니다.
 
 #### Synthesis Speed
 
-![table4](/assets/2021-10-12-paper-review-vits/table4.png){: style="width: 450px;"}
+![table4](/assets/2021-10-19-paper-review-vits/table4.png){: style="width: 450px;"}
 
 100개의 발화를 합성할 때 각 모델의 평균 합성 속도를 나타낸 것으로, SDP를 빼면 더 빨라지지만, SDP를 사용해도 기존의 Glow-TTS보다 빠름을 알 수 있습니다. 저자들은 이러한 결과에 대해 VITS는 mel-spectrogram 같은 고정된 형식의 중간 단계 결과물을 생성할 필요가 없으므로 샘플링 효율이 크게 상승하였다고 분석했습니다.
 
@@ -315,7 +315,7 @@ $$
 $$
 즉 기본 음성을 posterior encoder와 normalizing flow의 정변환을 거쳐 화자 정보를 제거하고 다시 normalizing flow의 역변환과 decoder를 거쳐 새로운 화자 정보를 넣어 대체해주는 과정으로 볼 수 있습니다. Independent representation을 학습하여 VC에 사용하는 방식은 이전에 Glow-TTS에서 제안된 바 있습니다. 다만 VITS는 1단계 합성이 가능하므로 mel-spectrogram이 아니라 raw waveform의 형태로 변환시킨다는 점이 다릅니다. 한 음성에 대해 여러 음성으로 변환시킨 결과는 아래와 같은데, 전반적으로 음성의 높낮이 추이가 유지됨을 보여줍니다.
 
-![figure7](/assets/2021-10-12-paper-review-vits/figure7.png){: style="width: 750px;"}
+![figure7](/assets/2021-10-19-paper-review-vits/figure7.png){: style="width: 750px;"}
 
 ### Conclusion
 
