@@ -52,7 +52,7 @@ VITS 또한 이러한 TTS의 특성을 인식하고, latent modeling과 SDP를 �
 
 ![attention](/assets/2021-10-19-paper-review-vits/alignment.png){: style="width: 600px;" .center-image}
 
-<center><span style="color: grey">TTS에 의해 예측된 alignment의 예시로, 각 디코더 스텝에서 특정 인코더 스텝에 대응될 확률을 나타내고 있습니다.</span></center>
+<center><span style="color: grey">TTS에 의해 예측된 alignment의 예시로, 각 디코더 스텝에서 특정 인코더 스텝에 대응될 확률을 나타내고 있습니다.</span></center><br>
 
 따라서 텍스트만 주어지는 상황에서 TTS는 alignment를 구하기 위해 텍스트의 각 음소(phoneme)가 음성에서 얼마나 길게 발화되는지 예측할 필요가 있습니다. Duration predictor는 이에 대한 해법 중 하나로, 텍스트 내의 각 음소의 길이를 예측해서 alignment를 계산합니다.
 
@@ -62,7 +62,7 @@ Normalizing flow는 GAN이나 VAE와 같은 일종의 생성 모델입니다. �
 
 ![flow](/assets/2021-10-19-paper-review-vits/flow.png){: style="width: 600px;" .center-image}
 
-<center><span style="color: grey">Normalizing flow의 작동 과정 도식<a href="#r4">[4]</a>. 변환이 거듭되면서 단순한 분포가 복잡한 분포로 점차 바뀌어 나갑니다.</span></center>
+<center><span style="color: grey">Normalizing flow의 작동 과정 도식<a href="#r4">[4]</a>. 변환이 거듭되면서 단순한 분포가 복잡한 분포로 점차 바뀌어 나갑니다.</span></center><br>
 
 VITS에서 normalizing flow는 주로 모델을 훈련하는 중에 복잡한 데이터 분포에서 추출된 값을 정규 분포 하의 값으로 변환하여 관계를 학습하고, 음성 합성 시에는 정규 분포에서 샘플링된 값이나 노이즈를 그에 대응하는 복잡한 분포의 값들로 역변환하는 방식으로 사용됩니다.
 
@@ -92,6 +92,7 @@ p_\theta(z|c_{text}, A) = N\big(f_\theta(z); \mu_\theta(c_{text}, A), \sigma_\th
 $$
 
 또한 decoder는 GAN의 generator에 해당되므로, generator와 discriminator의 loss를 GAN의 adversarial loss에 맞게 설정합니다. 이 때, 추가로 feature matching loss를 설정하여 discrminator의 각 레이어에서 원본 음성과 생성된 음성 feature map 사이의 L1-norm에 기반한 loss를 도입하였습니다.
+
 $$
 L_{adv}(D) = \mathbb E_{(y,z)}\bigg[\big(D(y) - 1\big)^2 + \big(D(G(z))\big)^2\bigg] \\
 L_{adv}(G) = \mathbb E_z\bigg[\big(D(G(z)) - 1\big)^2\bigg] \\
