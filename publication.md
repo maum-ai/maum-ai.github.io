@@ -6,6 +6,13 @@ permalink: /publications/
 
 <!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
 ## List of Publications & Open Source Activities
+#### **(October 2021)** _Controllable and Interpretable Singing Voice Decomposition via Assem-VC_
+- Accepted to *NeurIPS Workshop on ML for Creativity and Design 2021 (Oral)*
+- [arXiv:2110.12676](https://arxiv.org/abs/2110.12676)
+- [audio samples](https://mindslab-ai.github.io/assem-vc/singer/)
+- [github](https://github.com/mindslab-ai/assem-vc)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=assem-vc&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
 #### **(June 2021)** _Sharp Edge Recovery via SE(3)-Equivariant Network_
 - Presented at 2nd SHApe Recovery from Partial textured 3D scans at *CVPR 2021*
 - [talk](https://youtu.be/UVYQzQ-mH1w?t=9231)
@@ -42,6 +49,14 @@ permalink: /publications/
 - [talk](https://youtu.be/lnNuL8hqoh4)
 
 ## Open-Source Activities
+#### **(December 2021)** HifiFace
+- First successful open-source implementation of *HifiFace* [arXiv:2106.09965](https://arxiv.org/abs/2106.09965)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=hififace&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
+#### **(August 2021)** UnivNet
+- First successful open-source implementation of *UnivNet* [arXiv:2106.07889](https://arxiv.org/abs/2106.07889)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=univnet&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
 #### **(July 2021)** WaveGrad2
 - First successful open-source implementation of *WaveGrad2* [arXiv:2106.09660](https://arxiv.org/abs/2106.09660)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=wavegrad2&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
