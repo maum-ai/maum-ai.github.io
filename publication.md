@@ -44,12 +44,12 @@ permalink: /publications/
 - **Youseong Lee<sup>\*</sup>**
 - Presented at 2nd SHApe Recovery from Partial textured 3D scans at *CVPR 2021*
 - [talk](https://youtu.be/UVYQzQ-mH1w?t=9231)
-- 2nd place at SHAPR 2021 Challenge track 3
+- 2nd place at SHARP 2021 Challenge track 3
 
 #### **(December 2020)** _DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis_
 - Jimi Kim<sup>\*</sup>, **DongHwan Jang**, Seojin Jang, Woncheol Lee, and **Joong Kun Lee**
 - Accepted to Causal Discovery and Causality-Inspired Machine Learning *Workshop at NeurIPS 2020* 
-- [paper link](https://www.cmu.edu/dietrich/causality/CameraReadys-accepted%20papers/55%5cCameraReady%5cpaper.pdf)
+- [workshop link](https://www.cmu.edu/dietrich/causality/neurips20ws/)
 
 #### **(October 2020)** _Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data_
 - **Seung-won Park<sup>\*</sup>**, **Doo-young Kim**, and **Myun-chul Joe**
