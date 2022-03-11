@@ -6,6 +6,14 @@ permalink: /publications/
 
 <!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
 ## List of Publications & Open Source Activities
+
+#### **(2022)** _Talking Face Generation with Multilingual TTS_
+- Accepted to *CVPR Demo 2022*
+
+#### **(2022)** _Styleformer: Transformer based Generative Adversarial Networks with Style Vector_
+- Accepted to *CVPR 2022*
+- [github](https://github.com/Jeeseung-Park/Styleformer)
+
 #### **(October 2021)** _Controllable and Interpretable Singing Voice Decomposition via Assem-VC_
 - Accepted to *NeurIPS Workshop on ML for Creativity and Design 2021 (Oral)*
 - [arXiv:2110.12676](https://arxiv.org/abs/2110.12676)
@@ -26,6 +34,7 @@ permalink: /publications/
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 
 #### **(April 2021)** _Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques_
+- Accepted to *ICASSP 2022*
 - [arXiv:2104.00931](https://arxiv.org/abs/2104.00931)
 - [audio samples](https://mindslab-ai.github.io/assem-vc)
 - [github](https://github.com/mindslab-ai/assem-vc)
@@ -49,6 +58,11 @@ permalink: /publications/
 - [talk](https://youtu.be/lnNuL8hqoh4)
 
 ## Open-Source Activities
+
+#### **(February 2022)** pNLP-Mixer
+- First successful open-source implementation of *pNLP-Mixer* [arXiv:2202.04350](https://arxiv.org/abs/2202.04350)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=pnlp-mixer&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
 #### **(December 2021)** HifiFace
 - First successful open-source implementation of *HifiFace* [arXiv:2106.09965](https://arxiv.org/abs/2106.09965)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=hififace&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
