@@ -7,55 +7,56 @@ permalink: /publications/
 <!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
 ## List of Publications & Open Source Activities
 
-#### **(2022)** _Talking Face Generation with Multilingual TTS_
+#### **(June 2022)** _Talking Face Generation with Multilingual TTS_
 - Accepted to *CVPR Demo 2022*
 
-#### **(2022)** _Styleformer: Transformer based Generative Adversarial Networks with Style Vector_
+#### **(June 2022)** _Styleformer: Transformer based Generative Adversarial Networks with Style Vector_
 - Accepted to *CVPR 2022*
 - [github](https://github.com/Jeeseung-Park/Styleformer)
 
-#### **(October 2021)** _Controllable and Interpretable Singing Voice Decomposition via Assem-VC_
-- Accepted to *NeurIPS Workshop on ML for Creativity and Design 2021 (Oral)*
-- [arXiv:2110.12676](https://arxiv.org/abs/2110.12676)
-- [audio samples](https://mindslab-ai.github.io/assem-vc/singer/)
-- [github](https://github.com/mindslab-ai/assem-vc)
-    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=assem-vc&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-
-#### **(June 2021)** _Sharp Edge Recovery via SE(3)-Equivariant Network_
-- Presented at 2nd SHApe Recovery from Partial textured 3D scans at *CVPR 2021*
-- [talk](https://youtu.be/UVYQzQ-mH1w?t=9231)
-- 2nd place at SHAPR 2021 Challenge track 3
-
-#### **(April 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
-- Accepted to *Interspeech 2021*
-- [arXiv:2104.02321](https://arxiv.org/abs/2104.02321)
-- [audio samples](https://mindslab-ai.github.io/nuwave)
-- [github](https://github.com/mindslab-ai/nuwave)
-    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
-
-#### **(April 2021)** _Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques_
+#### **(May 2022)** _Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques_
 - Accepted to *ICASSP 2022*
 - [arXiv:2104.00931](https://arxiv.org/abs/2104.00931)
 - [audio samples](https://mindslab-ai.github.io/assem-vc)
 - [github](https://github.com/mindslab-ai/assem-vc)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=assem-vc&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 
+#### **(December 2021)** _Controllable and Interpretable Singing Voice Decomposition via Assem-VC_
+- Accepted to *NeurIPS Workshop on ML for Creativity and Design 2021 (Oral)*
+- [arXiv:2110.12676](https://arxiv.org/abs/2110.12676)
+- [audio samples](https://mindslab-ai.github.io/assem-vc/singer/)
+- [github](https://github.com/mindslab-ai/assem-vc)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=assem-vc&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
+#### **(August 2021)** _NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling_
+- Accepted to *Interspeech 2021*
+- [arXiv:2104.02321](https://arxiv.org/abs/2104.02321)
+- [audio samples](https://mindslab-ai.github.io/nuwave)
+- [github](https://github.com/mindslab-ai/nuwave)
+    <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
+
+#### **(June 2021)** _Sharp Edge Recovery via SE(3)-Equivariant Network_
+- Presented at 2nd SHApe Recovery from Partial textured 3D scans at *CVPR 2021*
+- [talk](https://youtu.be/UVYQzQ-mH1w?t=9231)
+- 2nd place at SHAPR 2021 Challenge track 3
+
 #### **(December 2020)** _DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis_
 - Accepted to Causal Discovery and Causality-Inspired Machine Learning *Workshop at NeurIPS 2020* 
 - [paper link](https://www.cmu.edu/dietrich/causality/CameraReadys-accepted%20papers/55%5cCameraReady%5cpaper.pdf)
 
-#### **(September 2020)** _3D Room Layout Estimation Beyond the Manhattan World Assumption_
-- Presented at Holistic Scene Structures for 3D Vision at *ECCV 2020* 
-- [arXiv:2009.02857](https://arxiv.org/abs/2009.02857)
-- 3rd place at Holistic 3D Vision Challenge track 1
-
-#### **(May 2020)** _Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data_
+#### **(October 2020)** _Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data_
 - Accepted to *Interspeech 2020* 
 - [arXiv:2005.03295](https://arxiv.org/abs/2005.03295)
 - [audio samples](https://mindslab-ai.github.io/cotatron/)
 - [github](https://github.com/mindslab-ai/cotatron)
     <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=cotatron&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>
 - [talk](https://youtu.be/lnNuL8hqoh4)
+
+#### **(September 2020)** _3D Room Layout Estimation Beyond the Manhattan World Assumption_
+- Presented at Holistic Scene Structures for 3D Vision at *ECCV 2020* 
+- [arXiv:2009.02857](https://arxiv.org/abs/2009.02857)
+- 3rd place at Holistic 3D Vision Challenge track 1
+
 
 ## Open-Source Activities
 
