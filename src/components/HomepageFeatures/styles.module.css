@@ -1,0 +1,26 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.pageContents {
+  margin: 0 auto;
+  max-width: 750px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+html[data-theme='dark'] .pageContents {
+  margin: 0 auto;
+  max-width: 750px;
+  align-items: center;
+  justify-content: center;
+}

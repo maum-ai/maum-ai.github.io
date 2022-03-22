@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  docusaurus:
+    image: node
+    container_name: docusaurus
+    environment:
+      - "LC_ALL=C.UTF-8"
+    ipc: host
+    ports:
+      - "3000:3000"
+    network_mode: bridge
+    volumes:
+      - "/Users/hksong/Mindslab/mindslab-ai.github.io:/Users/hksong/Mindslab/mindslab-ai.github.io"
