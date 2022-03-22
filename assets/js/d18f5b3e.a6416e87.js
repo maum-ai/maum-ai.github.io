@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusaurus_test=self.webpackChunkdocusaurus_test||[]).push([[4442],{4545:function(e){e.exports=JSON.parse('{"permalink":"/blog/tags/paper-review/page/2","page":2,"postsPerPage":1,"totalPages":3,"totalCount":3,"previousPage":"/blog/tags/paper-review","nextPage":"/blog/tags/paper-review/page/3","blogDescription":"Blog","blogTitle":"Blog"}')}}]);
