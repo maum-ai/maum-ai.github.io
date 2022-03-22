@@ -78,15 +78,19 @@ const config = {
           //   position: 'left',
           //   label: 'Tutorial',
           // },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: '/recruit',
-            label: 'Recruit',
-            position: 'right',
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
           },
           {
             href: '/publications',
             label: 'Publications',
+            position: 'left',
+          },
+          {
+            href: '/careers',
+            label: 'Careers',
             position: 'right',
           },
           {
@@ -107,8 +111,8 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'Tags',
-                to: '/blog/tags',
+                label: 'Publications',
+                to: '/publications',
               },
               // {
               //   label: 'Tutorial',
@@ -129,13 +133,13 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Careers',
+                to: '/careers',
               },
-              // {
-              //   label: 'GitHub',
-              //   href: 'https://github.com/mindslab-ai',
-              // },
+              {
+                label: 'Tags',
+                to: '/blog/tags',
+              },
             ],
           },
         ],
