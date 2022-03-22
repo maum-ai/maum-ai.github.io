@@ -1,0 +1,35 @@
+slorber:
+  name: Sébastien Lorber
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
+
+mindslab:
+  name: MINDsLab Brain
+  title: Brain Team
+  url: https://github.com/mindslab-ai
+  image_url: https://github.com/mindslab-ai.png
+
+junjun3518:
+  name: JunHyeok Lee
+  title: AI Scientist (Audio, Head)
+  url: https://github.com/junjun3518
+  image_url: https://github.com/junjun3518.png
+
+seungu:
+  name: Seungu Han
+  title: AI Scientist (Audio)
+  url: https://github.com/Seungwoo0326
+  image_url: https://github.com/Seungwoo0326.png
+
+hkyu:
+  name: Hyoung-Kyu Song
+  title: AI Scientist (Vision, Head)
+  url: https://github.com/deepkyu
+  image_url: https://github.com/deepkyu.png
+
+wonbin:
+  name: Wonbin Jung
+  title: AI Scientist (Audio)
+  url: https://github.com/Wonbin-Jung
+  image_url: https://github.com/Wonbin-Jung.png
