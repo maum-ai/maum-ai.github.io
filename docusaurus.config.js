@@ -38,7 +38,7 @@ const config = {
           blogSidebarTitle: 'All posts',
           showReadingTime: true,
           // Please change this to your repo.
-          postsPerPage: 2,
+          postsPerPage: 10,
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
