@@ -1,0 +1,71 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+
+div.category {
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+ul.repositories li {
+    float: left;
+    width: 46%;
+    min-height: 250px;
+    border: #d8e0e6 solid 1px;
+    border-radius: 5px;
+    padding: 20px 20px 16px;
+    margin: 0 20px 20px 0;
+}
+
+@media screen and (max-width: 996px) {
+    ul.repositories li {
+        width: 100%;
+    }
+}
+
+/* ul.repositories li:nth-child(3n) {
+    margin-right: 0;
+} */
+
+ul.repositories h3 {
+    color: #3d464d;
+    font-size: large;
+    padding-bottom: 16px;
+    border-bottom: #d8e0e6 solid 1px;
+}
+
+/* ul.repositories h3 a {
+    color: #3d464d;
+} */
+
+ul.repositories div.stars {
+    float: right;
+    text-align: right;
+    margin: 0 0 0 5px;
+}
+
+ul.repositories p {
+    margin-top: 6px;
+    margin: 0 0 0 0;
+}
+
+ul.repositories p.paper {
+    font-size: small;
+    margin: 0 0 10px 0;
+}
+
+ul.repositories p.description {
+    margin-top: 12px;
+    line-height: 160%;
+}
+
+ul.repositories p.github,
+ul.repositories p.demo,
+ul.repositories p.misc {
+    float: left;
+    padding: 0 10px 0 0;
+    font-size: medium;
+}
