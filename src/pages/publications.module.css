@@ -3,9 +3,10 @@
  * and scoped locally.
  */
 
-
 section.category {
-    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 20px 0;
 }
 
 section.category h2 {
@@ -71,6 +72,13 @@ ul.publications p.authors {
 ul.publications p.description {
     margin-top: 12px;
     line-height: 160%;
+}
+
+ul.publications span.full {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
 }
 
 ul.publications p.github,
