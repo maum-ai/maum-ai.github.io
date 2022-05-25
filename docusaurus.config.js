@@ -89,6 +89,11 @@ const config = {
             position: 'left',
           },
           {
+            href: '/open-source',
+            label: 'Open-Source',
+            position: 'left',
+          },
+          {
             href: '/careers',
             label: 'Careers',
             position: 'right',

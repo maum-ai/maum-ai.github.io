@@ -1,0 +1,116 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+section.category {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+
+section.category h2 {
+    font-size: 26px;
+    font-weight: 300;
+    padding-bottom: 24px;
+}
+
+ul.publications {
+    display: block;
+    list-style-type: none;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* padding-inline-start: 40px; */
+}
+
+ul.publications li {
+    float: left;
+    /* width: 45%; */
+    /* min-height: 230px; */
+    width: 100%;
+    min-height: 110px;
+    border: #d8e0e6 solid 1px;
+    border-radius: 5px;
+    padding: 20px 20px 16px;
+    margin: 0 20px 20px 0;
+}
+
+/* ul.publications li:nth-child(3n) {
+    margin-right: 0;
+} */
+
+ul.publications h3 {
+    color: #3d464d;
+    font-size: large;
+    padding-bottom: 16px;
+    border-bottom: #d8e0e6 solid 1px;
+}
+
+/* ul.publications h3 a {
+    color: #3d464d;
+} */
+
+ul.publications div.conference {
+    float: right;
+    min-width: 30%;
+    text-align: right;
+    margin: 0 0 0 5px;
+    font-weight: 600;
+}
+
+ul.publications p {
+    margin-top: 6px;
+    margin: 0 0 0 0;
+}
+
+ul.publications p.authors {
+    font-size: small;
+    margin: 0 0 10px 0;
+}
+
+ul.publications p.github,
+ul.publications p.demo,
+ul.publications p.misc {
+    float: left;
+    padding: 0 10px 0 0;
+    font-size: medium;
+}
+
+ul.publications p.description {
+    margin-top: 12px;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+
+ul.publications span.full {
+    font-size: 0;
+    opacity: 0;
+    max-height: 0;
+    transition: 0.25s;
+}
+
+ul.publications .expanded {
+    display: none;
+}
+
+ul.publications .expanded:checked~.description .full {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+
+ul.publications .expanded~.trigger:before {
+    float: right;
+    font-size: small;
+    cursor: pointer;
+    content: 'Show more';
+}
+
+ul.publications .expanded:checked~.trigger:before {
+    float: right;
+    font-size: small;
+    cursor: pointer;
+    content: 'Show less';
+}
