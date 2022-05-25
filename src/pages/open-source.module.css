@@ -10,6 +10,16 @@ section.category {
     margin: 0 0 20px 0;
 }
 
+ul.repositories {
+    display: block;
+    list-style-type: none;
+    /* margin-block-start: 1em;
+    margin-block-end: 1em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* padding-inline-start: 40px; */
+}
+
 ul.repositories li {
     float: left;
     width: 46%;

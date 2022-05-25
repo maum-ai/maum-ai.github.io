@@ -15,7 +15,7 @@ section.category h2 {
     padding-bottom: 24px;
 }
 
-ul {
+ul.publications {
     display: block;
     list-style-type: none;
     /* margin-block-start: 1em;
