@@ -57,6 +57,7 @@ ul.publications div.conference {
     min-width: 30%;
     text-align: right;
     margin: 0 0 0 5px;
+    font-weight: 600;
 }
 
 ul.publications p {
@@ -69,22 +70,47 @@ ul.publications p.authors {
     margin: 0 0 10px 0;
 }
 
-ul.publications p.description {
-    margin-top: 12px;
-    line-height: 160%;
-}
-
-ul.publications span.full {
-    opacity: 0;
-    max-height: 0;
-    font-size: 0;
-    transition: .25s ease;
-}
-
 ul.publications p.github,
 ul.publications p.demo,
 ul.publications p.misc {
     float: left;
     padding: 0 10px 0 0;
     font-size: medium;
+}
+
+ul.publications p.description {
+    margin-top: 12px;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+
+ul.publications span.full {
+    font-size: 0;
+    opacity: 0;
+    max-height: 0;
+    transition: 0.25s;
+}
+
+ul.publications .expanded {
+    display: none;
+}
+
+ul.publications .expanded:checked~.description .full {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+
+ul.publications .expanded~.trigger:before {
+    float: right;
+    font-size: small;
+    cursor: pointer;
+    content: 'Show more';
+}
+
+ul.publications .expanded:checked~.trigger:before {
+    float: right;
+    font-size: small;
+    cursor: pointer;
+    content: 'Show less';
 }
