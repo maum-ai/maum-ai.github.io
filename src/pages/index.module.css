@@ -49,3 +49,9 @@ html[data-theme='dark'] .heroBanner {
   width: 100%;
   position: absolute;
 }
+
+.figCenter {
+  margin: 0 auto;
+  display: block;
+  padding: 20px 0
+}
