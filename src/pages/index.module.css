@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../../static/img/algo-session.jpg);
-  background-position: center ;
+  background-position: center;
   background-size: cover;
 }
 
@@ -19,7 +19,7 @@ html[data-theme='dark'] .heroBanner {
   position: relative;
   overflow: hidden;
   background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../../static/img/algo-session.jpg);
-  background-position: center ;
+  background-position: center;
   background-size: cover;
 }
 
@@ -33,4 +33,25 @@ html[data-theme='dark'] .heroBanner {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mapResponsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.googleMap {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.figCenter {
+  margin: 0 auto;
+  display: block;
+  padding: 20px 0
 }
