@@ -15,8 +15,60 @@ import styles from './publications.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
+            <div className={styles.conference}>Interspeech</div>
+            <h3><a href="https://arxiv.org/abs/2206.12132">SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech</a></h3>
+            <p className={styles.authors}>
+                <b>Hyunjae Cho<sup>*</sup></b>, <b>Wonbin Jung</b>, <b>Junhyeok Lee</b>, and <b>Sang Hoon Woo</b>
+            </p>
+            <div>
+                <input type="checkbox" className={styles.expanded} id="post-2022-is-2" />
+                <p className={styles.description}>
+                    In this paper, we present SANE-TTS, a stable and natural end-to-end multilingual TTS model. <span className={styles.full}>By the difficulty of obtaining multilingual corpus for given speaker, training multilingual TTS model with monolingual corpora is unavoidable. We introduce speaker regularization loss that improves speech naturalness during cross-lingual synthesis as well as domain adversarial training, which is applied in other multilingual TTS models. Furthermore, by adding speaker regularization loss, replacing speaker embedding with zero vector in duration predictor stabilizes cross-lingual inference. With this replacement, our model generates speeches with moderate rhythm regardless of source speaker in cross-lingual synthesis. In MOS evaluation, SANE-TTS achieves naturalness score above 3.80 both in cross-lingual and intralingual synthesis, where the ground truth score is 3.99. Also, SANE-TTS maintains speaker similarity close to that of ground truth even in cross-lingual inference. Audio samples are available on our web page.</span>
+                </p>
+                <label for="post-2022-is-2" className={styles.trigger}></label>
+            </div>
+            <p className={styles.demo}>
+                <a href="https://mindslab-ai.github.io/sane-tts/">Demo</a>
+            </p>
+        </li>
+        <li>
+            <div className={styles.conference}>Interspeech</div>
+            <h3><a href="https://arxiv.org/abs/2206.08545">NU-Wave 2: A General Neural Audio Upsampling Model for Various Sampling Rates</a></h3>
+            <p className={styles.authors}>
+                <b>Seungu Han<sup>*</sup></b>, and <b>Junhyeok Lee</b>
+            </p>
+            <div>
+                <input type="checkbox" className={styles.expanded} id="post-2022-is-1" />
+                <p className={styles.description}>
+                    Conventionally, audio super-resolution models fixed the initial and the target sampling rates, which necessitate the model to be trained for each pair of sampling rates. <span className={styles.full}>We introduce NU-Wave 2, a diffusion model for neural audio upsampling that enables the generation of 48 kHz audio signals from inputs of various sampling rates with a single model. Based on the architecture of NU-Wave, NU-Wave 2 uses short-time Fourier convolution (STFC) to generate harmonics to resolve the main failure modes of NU-Wave, and incorporates bandwidth spectral feature transform (BSFT) to condition the bandwidths of inputs in the frequency domain. We experimentally demonstrate that NU-Wave 2 produces high-resolution audio regardless of the sampling rate of input while requiring fewer parameters than other models.</span>
+                </p>
+                <label for="post-2022-is-1" className={styles.trigger}></label>
+            </div>
+            <p className={styles.github}>
+                <a href="https://github.com/mindslab-ai/nuwave2">GitHub</a>
+            </p>
+            <p className={styles.demo}>
+                <a href="https://mindslab-ai.github.io/nuwave2/">Demo</a>
+            </p>
+        </li>
+        <li>
+            <div className={styles.conference}>PR Letters</div>
+            <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865522001076">Zero-Shot Semantic Segmentation via Spatial and Multi-Scale Aware Visual Class Embedding
+</a></h3>
+            <p className={styles.authors}>
+                <b>Sungguk Cha<sup>*</sup></b>, and Yooseung Wang<sup>*</sup>
+            </p>
+            <div>
+                <input type="checkbox" className={styles.expanded} id="post-2022-prl" />
+                <p className={styles.description}>
+                    Fully supervised semantic segmentation technologies bring a paradigm shift in scene understanding. <span className={styles.full}>However, the burden of expensive labeling cost remains as a challenge. To solve the cost problem, recent studies proposed language model based zero-shot semantic segmentation (L-ZSSS) approaches. In this paper, we address L-ZSSS has a limitation in generalization which is a virtue of zero-shot learning. Tackling the limitation, we propose a language-model-free zero-shot semantic segmentation framework, Spatial and Multi-scale aware Visual Class Embedding Network (SM-VCENet). Furthermore, leveraging vision-oriented class embedding SM-VCENet enriches visual information of the class embedding by multi-scale attention and spatial attention. We also propose a novel benchmark (PASCAL2COCO) for zero-shot semantic segmentation, which provides generalization evaluation by domain adaptation and contains visually challenging samples. In experiments, our SM-VCENet outperforms zero-shot semantic segmentation state-of-the-art by a significant margin in both PASCAL-5i and PASCAL2COCO benchmarks.</span>
+                </p>
+                <label for="post-2022-prl" className={styles.trigger}></label>
+            </div>
+        </li>
+        <li>
             <div className={styles.conference}>CVPR Demo</div>
-            <h3><a href="https://arxiv.org/abs/2205.06421">Talking Face Generation with Multilingual TTS</a></h3>
+            <h3><a href="https://openaccess.thecvf.com/content/CVPR2022/html/Song_Talking_Face_Generation_With_Multilingual_TTS_CVPR_2022_paper.html">Talking Face Generation with Multilingual TTS</a></h3>
             <p className={styles.authors}>
                 <b>Hyoung-Kyu Song<sup>*</sup></b>, <b>Sang Hoon Woo<sup>*</sup></b>, <b>Junhyeok Lee</b>, <b>Seungmin Yang</b>, <b>Hyunjae Cho</b>, <b>Dongho Choi</b>, <b>Kang-wook Kim</b>, and <b>Youseong Lee</b>
             </p>
@@ -27,6 +79,12 @@ import styles from './publications.module.css';
                 </p>
                 <label for="post-2022-cvpr-demo" className={styles.trigger}></label>
             </div>
+            <p className={styles.demo}>
+                <a href="https://huggingface.co/spaces/CVPR/ml-talking-face">🤗Demo</a>
+            </p>
+            <p className={styles.misc}>
+                <a href="https://www.youtube.com/watch?v=toqdD1F_ZsU">Screencast</a>
+            </p>
         </li>
         <li>
             <div className={styles.conference}>CVPR</div>
