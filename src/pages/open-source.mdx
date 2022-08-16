@@ -4,6 +4,8 @@ description: List of Open-Source Activities from MINDsLab Brain Team
 ---
 
 import styles from './open-source.module.css';
+import * as features from '@site/src/components/OpenSourceFeatures';
+
 
 # Open-Source Activities
 
@@ -15,31 +17,20 @@ import styles from './open-source.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.repositories}>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=assem-vc&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/assem-vc">Assem-VC</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2104.00931">Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques</a>
-            </p>
+            {/* <features.StarItem userName="mindslab-ai" repoName="assem-vc" /> */}
+            <features.StarItem repoName="assem-vc" />
+            <features.GithubLinkItem repoName="assem-vc" repoNickname="Assem-VC"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2104.00931" title="Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques" />
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=nuwave&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/nuwave">NU-Wave</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2104.02321">NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling</a>
-            </p>
+            <features.StarItem repoName="nuwave" />
+            <features.GithubLinkItem repoName="nuwave" repoNickname="NU-Wave"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2104.02321" title="NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling" />
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=cotatron&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/cotatron">Cotatron</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2005.03295">Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data</a>
-            </p>
+            <features.StarItem repoName="cotatron" />
+            <features.GithubLinkItem repoName="cotatron" repoNickname="Cotatron"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2005.03295" title="Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data" />
         </li>
     </ul>
 </section>
@@ -49,121 +40,81 @@ import styles from './open-source.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.repositories}>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=pnlp-mixer&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/pnlp-mixer">pNLP-Mixer</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2202.04350">pNLP-Mixer: an Efficient all-MLP Architecture for Language</a>
-            </p>
+            <features.StarItem repoName="pnlp-mixer" />
+            <features.GithubLinkItem repoName="pnlp-mixer" repoNickname="pNLP-Mixer"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2202.04350" title="pNLP-Mixer: an Efficient all-MLP Architecture for Language" />
             <p className={styles.description}>
                 First successful open-source implementation of <i>pNLP-Mixer</i>.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=hififace&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/hififace">HifiFace</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2106.09965">HifiFace: 3D Shape and Semantic Prior Guided High Fidelity Face Swapping</a>
-            </p>
+            <features.StarItem repoName="hififace" />
+            <features.GithubLinkItem repoName="hififace" repoNickname="HifiFace"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2106.09965" title="HifiFace: 3D Shape and Semantic Prior Guided High Fidelity Face Swapping" />
             <p className={styles.description}>
                 First successful open-source implementation of <i>HifiFace</i>.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=univnet&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/univnet">UnivNet</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2106.07889">UnivNet: A Neural Vocoder with Multi-Resolution Spectrogram Discriminators for High-Fidelity Waveform Generation</a>
-            </p>
+            <features.StarItem repoName="univnet" />
+            <features.GithubLinkItem repoName="univnet" repoNickname="UnivNet"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2106.07889" title="UnivNet: A Neural Vocoder with Multi-Resolution Spectrogram Discriminators for High-Fidelity Waveform Generation" />
             <p className={styles.description}>
                 First successful open-source implementation of <i>UnivNet</i>.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=wavegrad2&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/wavegrad2">WaveGrad2</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2106.09660">WaveGrad 2: Iterative Refinement for Text-to-Speech Synthesis</a>
-            </p>
+            <features.StarItem repoName="wavegrad2" />
+            <features.GithubLinkItem repoName="wavegrad2" repoNickname="WaveGrad2"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2106.09660" title="WaveGrad 2: Iterative Refinement for Text-to-Speech Synthesis" />
             <p className={styles.description}>
                 First successful open-source implementation of <i>WaveGrad2</i>.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=faceshifter&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/faceshifter">FaceShifter</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/1912.13457">FaceShifter: Towards High Fidelity And Occlusion Aware Face Swapping</a>
-            </p>
+            <features.StarItem repoName="faceshifter" />
+            <features.GithubLinkItem repoName="faceshifter" repoNickname="FaceShifter"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/1912.13457" title="FaceShifter: Towards High Fidelity And Occlusion Aware Face Swapping" />
             <p className={styles.description}>
                 First successful open-source implementation of <i>FaceShifter</i>.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=Rick-McCoy&repo=Reformer-pytorch&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/Rick-McCoy/Reformer-pytorch">Reformer-pytorch</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/2001.04451">Reformer: The Efficient Transformer</a>
-            </p>
+            <features.StarItem userName="Rick-McCoy" repoName="Reformer-pytorch" />
+            <features.GithubLinkItem userName="Rick-McCoy" repoName="Reformer-pytorch" repoNickname="Reformer-pytorch"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/2001.04451" title="Reformer: The Efficient Transformer" />
             <p className={styles.description}>
                 Implementation of <i>Reformer</i> in PyTorch.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=seungwonpark&repo=melgan&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/seungwonpark/melgan">MelGAN</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/1910.06711">MelGAN: Generative Adversarial Networks for Conditional Waveform Synthesis</a>
-            </p>
+            <features.StarItem userName="seungwonpark" repoName="melgan" />
+            <features.GithubLinkItem userName="seungwonpark" repoName="melgan" repoNickname="MelGAN"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/1910.06711" title="MelGAN: Generative Adversarial Networks for Conditional Waveform Synthesis" />
             <p className={styles.description}>
-                Implementation of <i>MelGAN</i> vocoder (compatible with <a href="https://github.com/NVIDIA/tacotron2">NVIDIA/tacotron2</a>
+                Implementation of <i>MelGAN</i> vocoder (compatible with <a href="https://github.com/NVIDIA/tacotron2">NVIDIA/tacotron2</a>)
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=Deepest-Project&repo=MelNet&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/Deepest-Project/MelNet">MelNet</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/1906.01083">MelNet: A Generative Model for Audio in the Frequency Domain</a>
-            </p>
+            <features.StarItem userName="Deepest-Project" repoName="MelNet" />
+            <features.GithubLinkItem userName="Deepest-Project" repoName="MelNet" repoNickname="MelNet"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/1906.01083" title="MelNet: A Generative Model for Audio in the Frequency Domain" />
             <p className={styles.description}>
                 Implementation of <i>MelNet</i>. Work done with Deepest AI (SNU Deep Learning Society).
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=seungwonpark&repo=RandWireNN&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/seungwonpark/RandWireNN">RandWireNN</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/1904.01569">Exploring Randomly Wired Neural Networks for Image Recognition</a>
-            </p>
+            <features.StarItem userName="seungwonpark" repoName="RandWireNN" />
+            <features.GithubLinkItem userName="seungwonpark" repoName="RandWireNN" repoNickname="RandWireNN"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/1904.01569" title="Exploring Randomly Wired Neural Networks for Image Recognition" />
             <p className={styles.description}>
                 Implementation of <i>RandWireNN</i>.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=mindslab-ai&repo=voicefilter&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/mindslab-ai/voicefilter">VoiceFilter</a></h3>
-            <p className={styles.paper}>
-                <a href="https://arxiv.org/abs/1810.04826">VoiceFilter: Targeted Voice Separation by Speaker-Conditioned Spectrogram Masking</a>
-            </p>
+            <features.StarItem repoName="voicefilter" />
+            <features.GithubLinkItem repoName="voicefilter" repoNickname="VoiceFilter"  />
+            <features.PaperLinkItem paperLink="https://arxiv.org/abs/1810.04826" title="VoiceFilter: Targeted Voice Separation by Speaker-Conditioned Spectrogram Masking" />
             <p className={styles.description}>
                 First successful open-source implementation of Google's <i>VoiceFilter</i>
             </p>
@@ -176,19 +127,15 @@ import styles from './open-source.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.repositories}>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=Diuven&repo=KoTDG&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/Diuven/KoTDG">KoTDG</a></h3>
+            <features.StarItem userName="Diuven" repoName="KoTDG" />
+            <features.GithubLinkItem userName="Diuven" repoName="KoTDG" repoNickname="KoTDG"  />
             <p className={styles.description}>
                 Korean Text Data Generator for OCR tasks.
             </p>
         </li>
         <li>
-            <div className={styles.stars}>
-                <iframe src="https://ghbtns.com/github-btn.html?user=ThisIsIsaac&repo=Data-Science-for-COVID-19&type=star&count=true" frameborder="0" scrolling="0" width="90" height="20" title="GitHub"></iframe>
-            </div>
-            <h3><a href="https://github.com/ThisIsIsaac/Data-Science-for-COVID-19">Data-Science-for-COVID-19</a></h3>
+            <features.StarItem userName="ThisIsIsaac" repoName="Data-Science-for-COVID-19" />
+            <features.GithubLinkItem userName="ThisIsIsaac" repoName="Data-Science-for-COVID-19" repoNickname="Data-Science-for-COVID-19"  />
             <p className={styles.description}>
                 COVID-19 Korea Dataset with patient routes and visualizer. Co-led the collaboration project.
             </p>
