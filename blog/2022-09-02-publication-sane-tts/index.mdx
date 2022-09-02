@@ -102,7 +102,7 @@ Gradient reversarial layer는 흐르는 역전파 gradient의 부호를 반대�
 #### Speaker regularization loss
 
 $$
-L_{reg} = E_{k \in K}[conv(S_k)]_2
+L_\mathrm{reg} = \lVert\mathbb{E}_{k \in K}\left[\mathrm{conv}(S_{k})\right]\lVert_2
 $$
 
 다국어 TTS 모델 훈련데이터에서 보통 한 화자는 단일언어에 대해서만 음성데이터가 있기 때문에 화자 정보는 언어에 편향될 수 있습니다.
@@ -110,8 +110,8 @@ $$
 이에 SANE-TTS는 duration predictor 내 화자 정보의 언어 편향 문제를 해결하기 위해 *speaker regularization loss*를 추가합니다.
 Speaker regularization loss의 정확한 계산식은 위와 같습니다.
 $K$는 하나의 batch를 의미하며 $S_k$는 datapoint $k$에서 화자의 speaker embedding을 의미합니다.
-또한 $conv$는 kernel size가 1인 convolution layer를 의미합니다.
-이 loss를 통해 hidden speaker representation인 $conv(S_k)$의 평균이 언어에 관계없이 영벡터로 가게 되고 화자정보는 언어와 분리되게 됩니다.
+또한 $\mathrm{conv}$는 kernel size가 1인 convolution layer를 의미합니다.
+이 loss를 통해 hidden speaker representation인 $\mathrm{conv}(S_{k})$의 평균이 언어에 관계없이 영벡터로 가게 되고 화자정보는 언어와 분리되게 됩니다.
 (Speaker regularization loss의 정확한 역할 설명은 Results 부분의 Figure 4에 나와있습니다.)
 
 #### Deterministic duration predictor
