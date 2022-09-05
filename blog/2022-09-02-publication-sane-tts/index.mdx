@@ -9,6 +9,7 @@ tags: [publication, paper-review]
 
 import clsx from 'clsx';
 import styles from '../blog.module.css';
+import audio from './audio.css';
 
 import figvits_training from './image/vits_training.png'
 import figvits_inference from './image/vits_inference.png'
@@ -19,7 +20,31 @@ import figablation from './image/ablation.png'
 import figcompare from './image/compare.png'
 import figSDP from './image/SDP.png' 
 import figt_SNE from './image/t_SNE.png' 
-import figcontent from './image/content.png' 
+import audiogt_1 from './audio/gt_1.wav'
+import audiogt_2 from './audio/gt_2.wav'
+import audiogt_3 from './audio/gt_3.wav'
+import audiogt_4 from './audio/gt_4.wav'
+import audiogt_5 from './audio/gt_5.wav'
+import audioen_1 from './audio/en_1.wav'
+import audioen_2 from './audio/en_2.wav'
+import audioen_3 from './audio/en_3.wav'
+import audioen_4 from './audio/en_4.wav'
+import audioen_5 from './audio/en_5.wav'
+import audioko_1 from './audio/ko_1.wav'
+import audioko_2 from './audio/ko_2.wav'
+import audioko_3 from './audio/ko_3.wav'
+import audioko_4 from './audio/ko_4.wav'
+import audioko_5 from './audio/ko_5.wav'
+import audioja_1 from './audio/ja_1.wav'
+import audioja_2 from './audio/ja_2.wav'
+import audioja_3 from './audio/ja_3.wav'
+import audioja_4 from './audio/ja_4.wav'
+import audioja_5 from './audio/ja_5.wav'
+import audiozh_1 from './audio/zh_1.wav'
+import audiozh_2 from './audio/zh_2.wav'
+import audiozh_3 from './audio/zh_3.wav'
+import audiozh_4 from './audio/zh_4.wav'
+import audiozh_5 from './audio/zh_5.wav'
 
 [![arXiv](https://img.shields.io/badge/arXiv-2206.12132-brightgreen.svg?style=flat-square)](https://arxiv.org/abs/2206.12132)
 [![githubio](https://img.shields.io/static/v1?message=Audio%20Samples&logo=Github&labelColor=grey&color=blue&logoColor=white&label=%20&style=flat-square)](https://mindslab-ai.github.io/sane-tts/)
@@ -185,7 +210,20 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
 
 ### Audio samples
 
-<img className={clsx(styles.figCenter, styles.small)} src={figcontent} alt="content" />
+**English Target**: I saw him come from your window, and I saw all that passed between you in the balcony.  
+**Korean Target (Romanization)**: 언젠가 들은 적이 있는 것 같거든요. (Eonjenga deul-eun jeog-i issneun geos gatgeodeun-yo.)  
+**Japanese Target (Romanization)**: 許可書がなければここへは入れない。(Kyoka-sho ga nakereba koko e wa hairenai.)  
+**Chinese Target (Hanyu Pinyin)**: 替我播放相思风雨中 (Tì wǒ bòfàng xiāngsī fēngyǔ zhōng)  
+
+| Speaker | Reference Speech | English Target | Korean Target | Japanese Target | Chinese Target |
+| :----- | :--------------: | :-------------: | :-------------: | :-------------: | :-------------: |
+| LJ | <audio controls width="100" src={audiogt_1}></audio> | <audio controls> <source src={audioen_1}/> </audio> | <audio controls> <source src={audioko_1}/> </audio> | <audio controls> <source src={audioja_1}/> </audio> | <audio controls> <source src={audiozh_1}/> </audio> |
+| LibriTTS<br/>4356 | <audio controls src={audiogt_2}></audio> | <audio controls> <source src={audioen_2}/> </audio> | <audio controls> <source src={audioko_2}/> </audio> | <audio controls> <source src={audioja_2}/> </audio> | <audio controls> <source src={audiozh_2}/> </audio> |
+| KSS | <audio controls src={audiogt_3}></audio> | <audio controls> <source src={audioen_3}/> </audio> | <audio controls> <source src={audioko_3}/> </audio> | <audio controls> <source src={audioja_3}/> </audio> | <audio controls> <source src={audiozh_3}/> </audio> |
+| jvs001 | <audio controls src={audiogt_4}></audio> | <audio controls> <source src={audioen_4}/> </audio> | <audio controls> <source src={audioko_4}/> </audio> | <audio controls> <source src={audioja_4}/> </audio> | <audio controls> <source src={audiozh_4}/> </audio> |
+| SSB0073 | <audio controls src={audiogt_5}></audio> | <audio controls> <source src={audioen_5}/> </audio> | <audio controls> <source src={audioko_5}/> </audio> | <audio controls> <source src={audioja_5}/> </audio> | <audio controls> <source src={audiozh_5}/> </audio> |
+
+
 
 **[Github sample page](https://mindslab-ai.github.io/sane-tts/)**에는 SANE-TTS로 합성한 기본적인 다국어 음성을 포함하여 다른 다국어 TTS 모델과의 비교, ablation study에서 사용한 음성들이 있습니다.
 그 외에도 약 500단어의 긴 문장을 음성으로 합성한 것과 논문에는 나와있지 않지만 code-switching을 구현한 것들도 들을 수 있습니다.
