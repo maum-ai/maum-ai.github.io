@@ -32,7 +32,7 @@ import figcontent from './image/content.png'
 
 안녕하세요. MINDsLab Brain팀에서 음성합성 연구를 하고 있는 조현재입니다.
 
-오늘은 저희 Brain 팀에서 출판하고 [INTERSPEECH 2022](https://www.interspeech2022.org)에 accept된 SANE-TTS를 소개해드리는 시간을 가지려 합니다.
+오늘은 저희 Brain팀에서 같이 쓴 SANE-TTS paper가 [INTERSPEECH 2022](https://www.interspeech2022.org)에 accept되었다는 좋은 소식과 함께 소개해드리는 시간을 가지려 합니다.
 
 ### Contributions
 
@@ -43,17 +43,20 @@ import figcontent from './image/content.png'
 
 ### Introductions
 
-다국어 (Multilingual) TTS 모델을 훈련시키는 가장 간단한 방법은 훈련 데이터셋 내에 있는 모든 화자가 모든 언어를 다룰줄 아는 다국어 화자 데이터셋을 사용하는 것입니다.
-하지만 이러한 다국어 데이터셋은 현실적으로 구하기 어렵기 때문에 대신 여러 단일언어 데이터셋을 하나로 묶은다음 훈련에 사용합니다.
-예를 들어, 한국어와 영어를 말할 수 있는 다국어 TTS 모델을 훈련시키기 위해서는 한국어 데이터셋과 영어 데이터셋을 각자따로 준비해야 합니다.
-하지만 다국어 TTS 특성상 모든 화자에 대해 훈련에서 사용된 모든 언어가 가능해야 하기 때문에 훈련 데이터셋에 영어음성만 존재하는 화자도 TTS 모델을 통해 한국어를 말할 수 있어야 합니다.
-이렇게 훈련 데이터셋에서 특정 화자가 사용한 언어와 다른 언어로 TTS 모델이 음성합성하는 것을 cross-lingual 음성합성이라 부르고 다국어 TTS 모델을 훈련시킬때 cross-lingual 음성합성을 자연스럽고 안정적으로 만드는 것은 매우 중요합니다.
+다국어 (Multilingual) TTS 모델을 훈련시키는 가장 간단한 방법은 무엇일까요?
+당장 머리에 떠오를 만한 방식은, 모델이 음성 합성을 지원할 모든 화자로부터 모델이 사용할 모든 언어에 대해 음성 데이터를 모아 만든 다국어 음성 데이터셋을 사용하는 방식일 겁니다.
+그러나 이런 방식은 현실적으로 불가능한데, 왜냐하면 이 방식이 가능하려면 우선 모든 화자가 여러 언어를 유창하게 구사할 줄 알아야 하고, 화자가 한 명 늘어날 때마다 모든 언어에 대해 데이터를 모아야 해서 상당한 비용 부담이 발생하기 때문입니다.
+그래서 현실적으로 가능한 방식은 서로 다른 화자들이 녹음한 단일언어 데이터셋을 언어별로 모아 훈련용 데이터셋을 구성하는 것입니다.
+예를 들어, 화자 A의 한국어 음성 데이터와 화자 B의 영어 음성 데이터를 모아 쓰는 것이죠.
+하지만 이 경우 화자가 데이터셋 내에서 사용하지 않은 언어로도 다국어 TTS가 발화가 가능해야 ‘모든 화자에 대해 학습에 사용된 모든 언어로 음성 합성을 한다는 목표’를 달성할 수 있습니다.
+쉽게 말하자면 화자 A의 목소리로도 자연스럽게 영어 음성을 합성할 수 있어야 합니다.
+이렇게 훈련 데이터셋에서 특정 화자가 사용한 언어와 다른 언어로 음성을 합성하는 것을 cross-lingual speech synthesis라 부르며, 위와 같은 이유로 다국어 TTS 모델을 구현하기 위해 cross-lingual speech synthesis을 자연스럽고 안정적으로 만드는 일은 매우 중요합니다.
 
-대부분의 기존 다국어 TTS 모델들은 Tacotron<a href="#r1"><sup>[1]</sup></a> 기반 모델입니다.
-하지만 Tacotron 기반 다국어 TTS 모델들은 자기회귀적 (autoregressive)이게 alignment를 계산하는 과정에서 문제가 생길 수 있습니다.<a href="#r2"><sup>[2]</sup></a>
-첫번째로 cross-lingual 음성합성에서의 attention 오류는 alignment를 잘못 계산하는 것으로 이어지게 되고 결국 단어 반복, 건너뛰기의 문제가 발생합니다.
-두번째로 자기회귀적이게 attention을 생성하다보면 duration의 직접적인 제어가 어려워져 부자연스러운 duration을 생성할 가능성이 있습니다.
-이러한 문제들을 피하기 위해 non-autoregressive한 모델들 중 VITS<a href="#r3"><sup>[3]</sup></a>를 우리 다국어 TTS 모델의 backbone 모델로 선택했습니다.
+지금까지 제안된 기존 다국어 TTS 모델들은 대부분 Tacotron<a href="#r1"><sup>[1]</sup></a> 기반 모델입니다.
+하지만 Tacotron 기반 다국어 TTS 모델들은 자기회귀적(autoregressive)으로 텍스트와 음성 사이의 alignment를 계산하기 때문에 문제가 발생할 수 있습니다.<a href="#r2"><sup>[2]</sup></a>
+우선 자기회귀적 모델은 작은 attention error에도 민감하게 반응하여 틀린 alignment를 계산하고 이는 음성 합성 시 단어를 반복 혹은 누락하는 문제로 이어집니다.
+또한, 자기회귀적으로 attention을 생성하다 보면 발화 길이의 직접적인 제어가 어려워져 부자연스러운 속도로 발화할 가능성도 있습니다.
+이러한 문제들을 피하기 위해, 저희는 비자기회귀적 모델들 중 VITS<a href="#r3"><sup>[3]</sup></a>를 기반으로 하여 SANE-TTS를 설계했습니다.
 
 ### VITS
 
@@ -79,25 +82,28 @@ VITS에 대한 더 자세한 내용은 **[VITS post](https://mindslab-ai.github.
 
 #### Language embedding
 
-다국어 TTS 모델의 경우에는 여러 언어를 사용하기 때문에 language embedding을 이용해 언어를 구별합니다.
+다국어 TTS 모델의 경우에는 여러 언어를 사용하기 때문에 SANE-TTS는 language embedding을 이용해 언어를 구별합니다.
 특히 text representation을 직접 받는 text encoder와 duration predictor 모듈에게만 language embedding을 제공하여 각 언어를 구별할 수 있도록 도와줍니다.
-기본 VITS 세팅에서의 speaker embedding과 동일하게 language embedding 역시 convolution layer에 통과시킨뒤 text representation에 더하는 식으로 language 정보를 모듈에 줍니다.
+Duration predictor에서는 기본 VITS 세팅에서의 speaker embedding과 동일하게 language embedding 역시 convolution layer에 통과시킨뒤 text representation에 더하는 식으로 language 정보를 모듈에 줍니다.
 
 
-Text encoder에서는 Nekvinda and Dusek<a href="#r5"><sup>[4]</sup></a>가 제안한 방법대로 language embedding을 통해 language 정보가 들어가 있는 parameter를 여러개 생성한 다음, text encoder의 각 부분에 더합니다.
-이 방법은 하나의 text encoder 모듈이 language embedding만 제공하면 다양한 언어에 맞는 text representation을 생성하도록 최적화합니다.
+Text encoder에서는 Nekvinda and Dusek<a href="#r4"><sup>[4]</sup></a>가 제안한 방법인 parameter generation을 사용해 language정보를 제공합니다.
+이 방법은 하나의 text encoder 모듈에서 다양한 언어에 맞는 text representation을 생성하도록 만들어줍니다.
+Parameter generator는 language embedding을 받아 언어 정보가 들어가있는 parameter를 생성한 다음, parameter들을 text encoder의 각 부분에 더합니다.
+Text encoder의 여러 부분에 언어 정보가 제공되었기 때문에 각 언어에 최적화된 text representation을 만들게 됩니다.
 
 #### Domain adversarial training
 
 훈련 데이터에서 화자마다 사용하는 text가 다르기 때문에 모델을 훈련하는 과정에서 text 정보와 화자 정보가 서로 영향을 줄 수 있습니다.
-Text representation이 화자에 따라 편향이 생기는 것을 막기 위해 domain adversarial traing (DAT)<a href="#r6"><sup>[5]</sup></a><a href="#r7"><sup>[6]</sup></a>을 도입합니다.
+이러한 편향문제를 막기 위해 기존 다국어 TTS 모델들<a href="#r4"><sup>[4]</sup></a><a href="#r5"><sup>[5]</sup></a>은 domain adversarial traing (DAT)<a href="#r6"><sup>[6]</sup></a>을 도입했습니다.
+SANE-TTS 역시 DAT를 적용하여 위의 문제를 해결했습니다.
+SANE-TTS에 DAT를 적용한 자세한 방법은 아래에 나와있습니다.
 
-DAT는 다른 다국어 TTS 모델들도 많이 사용한 방법이며 SANE-TTS에 DAT를 적용하는 자세한 방법은 다음과 같습니다.
 먼저, text encoder의 결과값인 $h_{text}$과 speaker classifier를 연결합니다.
 연결된 speaker classifier는 gradient reversal layer와 fully connected layer로 이루어져 있습니다.
 Gradient reversarial layer는 흐르는 역전파 gradient의 부호를 반대로 바꾸는 역할을 수행합니다.
 이 때 speaker classifier를 화자 분류하는 cross-entropy loss를 통해 훈련하게 된다면 오히려 $h_{text}$는 화자 정보가 없어지는 방향으로 훈련이 진행됩니다.
-따라서 DAT를 적용하면 text encoder는 화자에 독립적으로 학습하게 되고 TTS 모델은 모든 text에 대해서 음성을 생성할 수 있습니다.
+따라서 DAT를 적용하면 text encoder는 화자에 독립적으로 학습하게 되고 편향 문제가 해결됩니다.
 
 #### Speaker regularization loss
 
@@ -105,7 +111,7 @@ $$
 L_\mathrm{reg} = \lVert\mathbb{E}_{k \in K}\left[\mathrm{conv}(S_{k})\right]\lVert_2
 $$
 
-다국어 TTS 모델 훈련데이터에서 보통 한 화자는 단일언어에 대해서만 음성데이터가 있기 때문에 화자 정보는 언어에 편향될 수 있습니다.
+다국어 TTS 모델 훈련데이터에서 보통 한 화자는 단일언어에 대해서만 음성데이터가 있기 때문에 화자 정보가 언어에 편향될 수 있습니다.
 특히 duration predictor에서는 화자 정보와 언어 정보가 동시에 필요하기 때문에 화자 정보의 언어 편향이 큰 문제를 발생시킬 수 있습니다.
 이에 SANE-TTS는 duration predictor 내 화자 정보의 언어 편향 문제를 해결하기 위해 *speaker regularization loss*를 추가합니다.
 Speaker regularization loss의 정확한 계산식은 위와 같습니다.
@@ -117,7 +123,8 @@ $K$는 하나의 batch를 의미하며 $S_k$는 datapoint $k$에서 화자의 sp
 #### Deterministic duration predictor
 
 기존 VITS에서는 다양한 duration을 확률적으로 예측하는 stochastic duration predictor (SDP)를 사용했습니다.
-하지만 다국어 TTS 모델의 경우 cross-lingual 음성합성의 안정성을 높이는 것이 중요하기 때문에 deterministic duration predictor (DDP)로 교체합니다.<a href="#r8"><sup>[7]</sup></a>
+하지만 Casanova et al.<a href="#r7"><sup>[7]</sup></a>는 '여러 언어를 다뤄야 하는 상황에서는 SDP가 때때로 부자연스러운 duration을 예측한다.'라고 보고했습니다.
+다국어 TTS 모델의 경우 cross-lingual speech synthesis의 안정성을 높이는 것이 중요하기 때문에 저희 SANE-TTS에서는 SDP를 deterministic duration predictor (DDP)로 교체합니다.
 
 |                      SANE-TTS at inference                       |
 | :----------------------------------------------------------: |
@@ -125,10 +132,15 @@ $K$는 하나의 batch를 의미하며 $S_k$는 datapoint $k$에서 화자의 sp
 
 #### Inference procedure
 
-Speaker regularization loss를 통해 duration predictor에 있는 hidden speaker representation들은 영벡터 가까이에 위치하게 됩니다.
-이를 이용해 SANE-TTS는 cross-lingual 음성합성시 duration predictor에 speaker embedding 대신 영벡터를 집어넣습니다.
-따라서 SANE-TTS는 cross-lingual 음성합성을 할 때 화자가 달라지더라도 duration predictor가 동일한 duration을 예측합니다.
-이 방법을 통해 cross-lingual 음성합성의 안정성을 높이고, phoneme duration에 언어가 다른 화자 정보를 반영할때 생기는 모호함을 없앨 수 있습니다.
+영어 화자가 한국어 음성을 말할 때 기본적인 톤, 세기등은 어느정도 예측이 가능하지만 발화 duration은 예측하기 힘듭니다.
+그 이유는 톤, 세기 같은 특성들은 화자특성에 가까워 언어와 큰 관련이 없지만 발화 duration은 언어와 크게 맞닿아 있기 때문입니다.
+따라서 다국어 TTS 모델에서 영어 화자의 특성을 그대로 한국어 음소의 duration을 예측하는데 사용한다면 부자연스럽게 들릴뿐 화자특성을 반영했다고 보기 어렵습니다.
+이러한 문제를 해결하기 위해 저희는 cross-lingual inference 단계에서 약간의 수정을 가했습니다.
+
+SANE-TTS의 duration predictor에 speaker regularization loss를 추가했기 때문에 hidden speaker representation들은 영벡터 가까이에 위치하게 됩니다.
+이를 이용해 cross-lingual speech synthesis시 duration predictor에 speaker embedding 대신 영벡터를 집어넣습니다.
+따라서 SANE-TTS는 cross-lingual speech inference를 할 때 화자가 달라지더라도 duration predictor가 동일한 duration을 예측합니다.
+이 방법을 통해 cross-lingual하게 합성한 음성의 안정성을 높이고, duration에 언어가 다른 화자 정보를 반영할때 생기는 모호함을 없앨 수 있습니다.
 
 ### Experiments
 
@@ -150,8 +162,8 @@ Metric 하나를 측정하기 위해 1200개 평점의 평균을 구했고 95% �
 
 <img className={clsx(styles.figCenter, styles.medium)} src={figcompare} alt="Table23" />
 
-SANE-TTS와 다른 다국어 TTS model인 Meta-learning model<a href="#r5"><sup>[4]</sup></a><a href="#r9"><sup>[8]</sup></a>를 비교한 결과 음성의 자연스러움 (naturalness MOS)과 화자의 유사성 (similarity MOS) 모두 SANE-TTS가 더 좋은 결과를 냈습니다.
-특히 cross-lingual 음성합성시 SANE-TTS는 화자에 관계없이 일정한 duration을 예측하기 때문에 안정적인 음성을 합성할 수 있습니다.
+SANE-TTS와 다른 다국어 TTS model인 Meta-learning model<a href="#r4"><sup>[4]</sup></a><a href="#r8"><sup>[8]</sup></a>를 비교한 결과 음성의 자연스러움 (naturalness MOS)과 화자의 유사성 (similarity MOS) 모두 SANE-TTS가 더 좋은 결과를 냈습니다.
+특히 cross-lingual speech synthesis시 SANE-TTS는 화자에 관계없이 일정한 duration을 예측하기 때문에 안정적인 음성을 합성할 수 있습니다.
 
 #### Ablation study
 
