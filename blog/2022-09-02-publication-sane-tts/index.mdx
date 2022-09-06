@@ -91,7 +91,7 @@ import audiozh_5 from './audio/zh_5.wav'
 
 전체적인 VITS의 구조는 linear spectrogram을 posterior encoder를 이용해 latent $z$로 변환한 다음 다시 decoder를 통해 음성을 생성하는 VAE 구조입니다.
 이 때 text encoder를 통해 나온 결과값과 latent $z$를 flow 모듈에 넣고 나온 결과값을 이용해 input text와 target speech간의 alignment를 계산합니다.
-이 과정에서 monotonic alignment search(MAS)가 사용되며 나온 duration 정보를 통해 duration predictor를 훈련시킵니다.
+이 과정에서 monotonic alignment search가 사용되며 나온 duration 정보를 통해 duration predictor를 훈련시킵니다.
 
 Inference 과정에서는 text encoder에서 나온 결과값을 duration predictor가 예측한 duration을 통해 speech 길이에 맞게 늘려줍니다.
 그 다음 flow reverse 과정과 decoder를 거쳐 speech를 합성합니다.
@@ -113,7 +113,7 @@ Duration predictor에서는 기본 VITS 세팅에서의 speaker embedding과 동
 
 
 Text encoder에서는 Nekvinda and Dusek<a href="#r4"><sup>[4]</sup></a>가 제안한 parameter generation을 사용해 언어 정보를 전달합니다.
-이는 하나의 text encoder 모듈로 다양한 언어에 맞는 text representation을 생성하기 위한 방안으로, parameter generator가 language embedding을 받아 언어 정보가 들어가있는 parameter를 생성한 다음, parameter들을 text encoder의 각 레이어에 더하는 방식입니다.
+이는 하나의 text encoder 모듈로 다양한 언어에 맞는 text representation을 생성하기 위한 방안으로, parameter generator가 language embedding을 받아 언어 정보가 들어있는 parameter를 생성한 다음, parameter들을 text encoder의 각 레이어에 더하는 방식입니다.
 Text encoder의 여러 부분에 언어 정보가 제공되었기 때문에 각 언어에 최적화된 text representation을 만들게 됩니다.
 
 #### Domain adversarial training
@@ -126,7 +126,7 @@ SANE-TTS에 대한 DAT 적용 방식은 아래와 같습니다.
 먼저, gradient reversal layer와 fully connected layer로 이루어진 speaker classifer에 text encoder의 결과값인 $h_\mathrm{text}$를 넘겨줍니다.
 Gradient reversarial layer는 흐르는 역전파 gradient의 부호를 반대로 바꾸는 역할을 수행합니다.
 그 다음 speaker classifier를 화자 분류의 정확도를 측정하는 cross-entropy loss를 통해 훈련하게 된다면, 오히려 $h_\mathrm{text}$는 화자 분류의 정확도가 낮아지도록 화자 정보가 없어지는 방향으로 훈련이 진행됩니다.
-따라서 DAT를 적용하면 text encoder는 화자에 독립적으로 학습하게 되고 편향 문제가 해결됩니다.
+따라서 DAT를 적용하면 text encoder는 화자에 독립적으로 학습하여 편향 문제를 해결합니다.
 
 #### Speaker regularization loss
 
@@ -140,13 +140,13 @@ $$
 Speaker regularization loss의 정확한 계산식은 위와 같습니다.
 $K$는 하나의 batch를 의미하며 $S_k$는 datapoint $k$에서 화자의 speaker embedding을 의미합니다.
 또한 $\mathrm{conv}$는 kernel size가 1인 convolution layer를 의미합니다.
-이러한 loss를 통해 hidden speaker representation인 $\mathrm{conv}(S_{k})$는 평균값이 언어에 관계없이 영벡터에 가까워지도록 압력을 받게 되고 이에 따라 화자 정보는 언어와 분리되게 됩니다.
+이러한 loss를 통해 hidden speaker representation인 $\mathrm{conv}(S_{k})$는 평균값이 언어에 관계없이 영벡터에 가까워지도록 압력을 받게 되고 이에 따라 화자 정보는 언어와 분리됩니다.
 (Speaker regularization loss의 자세한 역할 설명은 Results의 Figure 4에 나와있습니다.)
 
 #### Deterministic duration predictor
 
 기존 VITS에서는 다양한 duration을 확률적으로 예측하는 stochastic duration predictor(SDP)를 사용했습니다.
-하지만 Casanova et al.<a href="#r7"><sup>[7]</sup></a>는 '여러 언어를 다뤄야 하는 상황에서는 SDP가 때때로 부자연스러운 duration을 예측한다.'라고 보고했습니다.
+하지만 Casanova et al.<a href="#r7"><sup>[7]</sup></a>는 '여러 언어를 다뤄야 하는 상황에서는 SDP가 때때로 부자연스러운 duration을 예측한다.'라고 언급한 바 있습니다.
 다국어 TTS 모델의 경우 cross-lingual speech synthesis의 안정성을 높이는 것이 중요하기 때문에 저희 SANE-TTS에서는 SDP를 deterministic duration predictor(DDP)로 교체합니다.
 
 |                      SANE-TTS at inference                       |
@@ -160,7 +160,7 @@ $K$는 하나의 batch를 의미하며 $S_k$는 datapoint $k$에서 화자의 sp
 따라서 다국어 TTS 모델에서 영어 화자의 특성을 그대로 사용하여 한국어 음소의 duration을 예측한다면 부자연스럽게 들릴 뿐 화자 특성이 반영된다고 보기 어렵습니다.
 이러한 문제를 해결하기 위해 저희는 cross-lingual inference 단계에서 약간의 수정을 가했습니다.
 
-SANE-TTS의 duration predictor에 speaker regularization loss를 추가했기 때문에 hidden speaker representation들은 영벡터 가까이에 위치하게 됩니다.
+SANE-TTS의 duration predictor에 speaker regularization loss를 추가했기 때문에 hidden speaker representation들은 영벡터 근처에 위치하게 됩니다.
 이를 이용해 cross-lingual speech synthesis 과정에서 duration predictor에 speaker embedding 대신 가까운 값인 영벡터를 집어넣습니다.
 따라서 SANE-TTS는 cross-lingual speech inference를 할 때 화자가 달라지더라도 duration predictor가 동일한 duration을 예측합니다.
 이 방법을 통해 cross-lingual하게 합성한 음성의 안정성을 높이고, duration에 언어가 다른 화자 정보를 반영할때 생기는 모호함을 없앨 수 있습니다.
@@ -170,7 +170,7 @@ SANE-TTS의 duration predictor에 speaker regularization loss를 추가했기 �
 <img className={clsx(styles.figCenter, styles.medium)} src={figdataset} alt="Table1" />
 
 훈련 데이터셋에는 영어(EN), 한국어(KO), 일본어(JA), 중국어(ZH) 화자가 있습니다.
-위 표에 나와있듯이 총 472명의 화자와 203.4 시간의 음성을 사용하고 음성 데이터의 5%는 validation에 사용됩니다.
+위 표에 나와있듯이 총 472명의 화자와 203.4시간의 음성을 사용하고 음성 데이터의 5%는 validation에 사용됩니다.
 
 음성의 품질을 측정하기 위해 MOS 평가를 진행합니다.
 MOS 평가는 음성의 품질을 평가하기 위해 사용되는 주관적 기법으로, 평가자들이 음성에 대해 1~5점 사이의 평점을 매겨 평점이 높을수록 성능이 높다고 판단하는 방식입니다.
@@ -192,7 +192,7 @@ SANE-TTS와 다른 다국어 TTS model인 Meta-learning model<a href="#r4"><sup>
 DAT를 적용하는 것과 speaker regularization loss를 추가하는 것 모두 음성의 자연스러움과 화자의 유사성을 향상시킵니다.
 반면에 SDP를 사용하는 것과 기본인 DDP를 사용하는 것에는 통계상으로 유의미한 차이가 보이지 않습니다.
 하지만 SDP는 종종 부자연스러운 duration을 생성한다는 문제점이 존재합니다.
-Figure 3에 나와있는 예시를 보시면 SDP가 잘못된 duration을 생성하여 합성된 음성의 중간에 긴 침묵이 나오게 됐습니다.
+Figure 3에 나와있는 예시를 보시면 SDP가 잘못된 duration을 생성하여 합성된 음성의 중간에 긴 침묵이 발생합니다.
 이런 잘못된 경우를 방지하기 위해 SANE-TTS는 비교적 안정적으로 duration을 생성하는 DDP를 사용합니다.
 
 | Figure 3: DDP와 SDP를 사용한 모델이 생성한 alignments와 mel spectrograms figure입니다. 사용한 text는 “What was the good of living, and why should he live now?”이고, 화자는 KSS입니다. DDP를 사용한 모델은 정상적인 (a) alignment와 (b) mel spectrogram을 생성한 반면, SDP를 사용한 모델은 때때로 부자연스러운 (c) alignment와 (d) mel spectrogram을 생성하고 음성 중간에 긴 침묵이 생깁니다. |
@@ -225,8 +225,8 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
 **Japanese Target (Romanization)**: 許可書がなければここへは入れない。(Kyoka-sho ga nakereba koko e wa hairenai.)  
 **Chinese Target (Hanyu Pinyin)**: 替我播放相思风雨中 (Tì wǒ bòfàng xiāngsī fēngyǔ zhōng)  
 
-**[Github sample page](https://mindslab-ai.github.io/sane-tts/)**에는 SANE-TTS로 합성한 기본적인 다국어 음성을 포함하여 다른 다국어 TTS 모델과의 비교, ablation study에서 사용한 음성들이 있습니다.
-그 외에도 약 500단어의 긴 문장을 음성으로 합성한 것과 논문에는 나와있지 않지만 code-switching을 구현한 것들도 들을 수 있습니다.
+**[Github sample page](https://mindslab-ai.github.io/sane-tts/)**에는 SANE-TTS로 합성한 기본적인 다국어 음성을 포함하여 다른 다국어 TTS 모델과의 비교, ablation study 음성 샘플들이 있습니다.
+약 500단어의 긴 문장을 자연스럽게 발화하거나, 논문에는 나와있지 않지만 code-switching이 적용된 음성 샘플들도 들을 수 있습니다.
 
 ### Conclusions
 
