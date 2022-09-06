@@ -51,7 +51,7 @@ import audiozh_5 from './audio/zh_5.wav'
 
 > Hyunjae Cho, Wonbin Jung, Junhyeok Lee, and Sang Hoon Woo. "SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech." 
 >
-> Interspeech 2022
+> INTERSPEECH 2022
 
 ## SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech
 
@@ -175,8 +175,6 @@ SANE-TTS의 duration predictor에 speaker regularization loss를 추가했기 �
 음성의 품질을 측정하기 위해 MOS 평가를 진행합니다.
 MOS 평가는 음성의 품질을 평가하기 위해 사용되는 주관적 기법으로, 평가자들이 음성에 대해 1~5점 사이의 평점을 매겨 평점이 높을수록 성능이 높다고 판단하는 방식입니다.
 Metric으로는 naturalness MOS와 similarity MOS를 사용하는데, 각각 naturalness MOS는 합성된 음성이 얼마나 자연스럽게 들리는지, similarity MOS는 합성된 음성의 화자가 원래 음성의 화자와 얼마나 비슷하게 들리는지에 대한 MOS 평가 점수입니다.
-한 언어당 10명의 화자, 한 화자당 동일한 30개의 문장을 사용하여 한 모델의 품질을 측정하는데 총 1200개의 음성을 사용합니다.
-따라서 metric 하나를 측정하기 위해 1200개 평점의 평균을 구했고 95% 신뢰구간을 계산했습니다.
 
 ### Results
 
@@ -185,7 +183,7 @@ Metric으로는 naturalness MOS와 similarity MOS를 사용하는데, 각각 nat
 <img className={clsx(styles.figCenter, styles.medium)} src={figcompare} alt="Table23" />
 
 SANE-TTS와 다른 다국어 TTS model인 Meta-learning model<a href="#r4"><sup>[4]</sup></a><a href="#r8"><sup>[8]</sup></a>를 비교한 결과 음성의 자연스러움(naturalness MOS)과 화자의 유사성(similarity MOS) 모두 SANE-TTS가 더 좋은 결과를 냈습니다.
-특히 cross-lingual speech synthesis시 SANE-TTS는 화자에 관계없이 일정한 duration을 예측하기 때문에 안정적인 음성을 합성할 수 있습니다.
+특히 cross-lingual speech synthesis 시 SANE-TTS는 화자에 관계없이 일정한 duration을 예측하기 때문에 안정적인 음성을 합성할 수 있습니다.
 
 #### Ablation study
 
@@ -205,7 +203,7 @@ Figure 3에 나와있는 예시를 보시면 SDP가 잘못된 duration을 생성
 Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 언어끼리 화자 정보가 뭉치게 되지만, speaker regularization loss를 추가한 (a)의 경우 언어에 상관없이 영벡터를 중심으로 분포하고 있습니다.
 이 t-SNE plot은 다국어 TTS 모델에 speaker regularization loss를 추가하면 화자 정보가 언어와 분리되고 영벡터가 hidden speaker representation의 대표 역할을 할 수 있음을 보여주고 있습니다.
 
-| Figure 4: (a) Speaker regularization loss 를 추가했을 때, (b) speaker regularization loss를 추가하지 않았을 때 472명의 모든 화자에 대한 duration predictor의 hidden speaker representation을  t-SNE plot으로 그린 figure입니다. |
+| Figure 4: (a) Speaker regularization loss 를 추가했을 때, (b) speaker regularization loss를 추가하지 않았을 때 472명의 모든 화자에 대한 duration predictor의 hidden speaker representation을 t-SNE plot으로 그린 figure입니다. |
 | :---------------------------------------------------------- |
 | <img className={clsx(styles.figCenter, styles.medium)} src={figt_SNE} alt="t-SNE" /> |
 
@@ -234,7 +232,8 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
 
 저희 논문에서는 speaker regularization loss과 함께 cross-lingual speech synthesis 과정에서 speaker embedding 대신 영벡터를 집어넣는 방식을 제안했고, 그 결과 안정적이고 자연스러운 음성을 합성하는 다국어 TTS 모델인 SANE-TTS를 만들었습니다.
 
-**이상으로 긴 글 읽어주셔서 대단히 감사합니다!**
+**이상으로 긴 글 읽어주셔서 대단히 감사합니다.**
+**INTERSPEECH 2022에서 만나요!**
 
 ### References
 
