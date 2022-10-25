@@ -44,8 +44,8 @@ NU-Wave 2의 베이스가 되는 NU-Wave는 Diffusion Model을 적용해 최초�
 NU-Wave 2의 전체적인 모델 구조는 NU-Wave와 동일합니다. 다만 크게 다른 점은 Short-Time Fourier Convolution (STFC)와 Bandwidth Spectral Feature Transform (BSFT)를 적용시켰다는 점입니다. 이 두가지 모듈, STFC와 BSFT에 대해 차례대로 설명해드리겠습니다.
 
 | NU-Wave Architecture       | NU-Wave 2 Architecture       |
-| --------------------------- | --------------------------- |
-| ![nuwave](./image/nuwave.png) | ![nuwave2](./image/nuwave2.png) |
+| -------------------------- | -------------------------- |
+| <center><img src="./image/nuwave.png" width="90%"></center> | <center><img src="./image/nuwave2.png" height="100%"></center> |
 
 <img className={styles.figCenter} src={figstfc} alt="stfc" />
 
@@ -61,7 +61,7 @@ STFC는 Fast Fourier Convolution (FFC)[<sup>[1]</sup>](#r2)를 약간 수정한 
 
 | Input                       | Output                      | Bandwidth Embedding      |
 | --------------------------- | --------------------------- | --------------------------- |
-| ![input](./image/input.png) | ![output](./image/output.png) | ![bandwidth](./image/bandwidth.png) |
+| <center><img src="./image/input.png" width="100%"></center> | <center><img src="./image/output.png" width="92%"></center> | <center><img src="./image/bandwidth.png" width="58%"></center>  |
 
 이런 맥락에서 vision domain에서의 feature normalization에 사용된 아이디어를 가져와 적용한 연산은 간단합니다. $h$를 STFC 안에서 frequency domain으로 바뀐 feature, $\gamma$와 $\beta$를 bandwidth embedding으로부터 구해진 scaling, shifting parameters라고 했을 때 BSFT에서의 연산은 
 $$
