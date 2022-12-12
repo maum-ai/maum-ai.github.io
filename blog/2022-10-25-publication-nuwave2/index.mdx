@@ -54,7 +54,7 @@ NU-Wave 2의 전체적인 모델 구조는 NU-Wave와 동일합니다. 다만 �
 <img className={styles.figCenter} src={figstfc} alt="stfc" />
 
 #### Short-Time Fourier Convolution (STFC)
-STFC는 Fast Fourier Convolution (FFC)[<sup>[1]</sup>](#r2)를 약간 수정한 모듈입니다. FFC는 vision 분야에서 제안된 구조로 local branch와 global branch로 이루어져 있습니다. local branch는 일반적으로 사용되는 convolution과 동일하고 global branch는 frequency domain에서의 convolution이 됩니다. 여기서 어떻게 frquency domain에서 convolution을 해주냐면 바로 Fast Fourier Transform (FFT)을 통해 feature를 frequency domain에서의 feature로 바꿔주고 1 \times 1 convolution 연산을 해줍니다. Convolution theorem에 따르면 이 연산은 변환되기 전의 feature에 global하게 convolution을 해준 것과 같게 됩니다. 그렇기 때문에 global branch라고 부르는 것이고 덕분에 넓은 receptive field를 가질 수 있었습니다. 뿐만 아니라 FFC를 사용한 inpainting model인 LAMA[<sup>[1]</sup>](#r3)에서는 FFC가 주기적인 구조를 생성해내는 데에 잘 맞는다고 얘기했습니다. 이런 장점들을 활용하기 위해 저희는 이 FFC를 저희 모델에 적용시키려했는데 한 가지 문제가 있었습니다. 기존 FFC에서 feature를 frequency domain으로 보내주기 위해서 사용한 FFT는 image와 같이 고정된 길이의 데이터들에 대해서는 문제가 없었지만 길이가 다양한 audio에 대해서는 적용시킬 수 없다는 점입니다. 그래서 저희는 FFT 대신에 Short-time Fourier Transform (STFT)를 사용했고 이를 Short-Time Fourier Convolution (STFC)라고 명명했습니다. 결론적으로 FFC의 장점은 가져오되 audio 데이터에 맞춰 수정하여 STFC에게 NU-Wave의 문제였던 harmonic 성분을 더 잘 만들어주는 동시에 receptive field도 넓혀주는 효과를 기대했습니다.
+STFC는 Fast Fourier Convolution (FFC)[<sup>[1]</sup>](#r2)를 약간 수정한 모듈입니다. FFC는 vision 분야에서 제안된 구조로 local branch와 global branch로 이루어져 있습니다. local branch는 일반적으로 사용되는 convolution과 동일하고 global branch는 frequency domain에서의 convolution이 됩니다. 여기서 어떻게 frquency domain에서 convolution을 해주냐면 바로 Fast Fourier Transform (FFT)을 통해 feature를 frequency domain에서의 feature로 바꿔주고 1 $\times$ 1 convolution 연산을 해줍니다. Convolution theorem에 따르면 이 연산은 변환되기 전의 feature에 global하게 convolution을 해준 것과 같게 됩니다. 그렇기 때문에 global branch라고 부르는 것이고 덕분에 넓은 receptive field를 가질 수 있었습니다. 뿐만 아니라 FFC를 사용한 inpainting model인 LAMA[<sup>[1]</sup>](#r3)에서는 FFC가 주기적인 구조를 생성해내는 데에 잘 맞는다고 얘기했습니다. 이런 장점들을 활용하기 위해 저희는 이 FFC를 저희 모델에 적용시키려했는데 한 가지 문제가 있었습니다. 기존 FFC에서 feature를 frequency domain으로 보내주기 위해서 사용한 FFT는 image와 같이 고정된 길이의 데이터들에 대해서는 문제가 없었지만 길이가 다양한 audio에 대해서는 적용시킬 수 없다는 점입니다. 그래서 저희는 FFT 대신에 Short-time Fourier Transform (STFT)를 사용했고 이를 Short-Time Fourier Convolution (STFC)라고 명명했습니다. 결론적으로 FFC의 장점은 가져오되 audio 데이터에 맞춰 수정하여 STFC에게 NU-Wave의 문제였던 harmonic 성분을 더 잘 만들어주는 동시에 receptive field도 넓혀주는 효과를 기대했습니다.
 
 #### Bandwidth Spectral Feature Transform (BSFT)
 그 다음으로는 BSFT에 대해 설명해드리겠습니다. BSFT는 vision domain에서의 feature normalization에 대한 연구들에서 영감을 얻었은 모듈입니다. SPADE[<sup>[1]</sup>](#r4)]라는 논문은 주어진 input semantic layout에 맞는 이미지를 생성해내는 연구입니다. 아래 그림을 보시면 어떤 연구인지 쉽게 이해하실 수 있을 것 같습니다.
@@ -108,7 +108,7 @@ harmonic 생성에 관련된 얘기를 하기 위해 2~6 kHz에 해당하는 spe
 
 <a name="r2"></a>
 
-2. Chi, Lu, Borui Jiang, and Yadong Mu. "Fast fourier convolution." in *Advances in Neural Information Processing Systems*, 2020, pp. 4479-4488.
+2. Chi, Lu, Borui Jiang, and Yadong Mu. "Fast fourier convolution." in *Advances in Neural Information Processing Systems*, 2020, pp. 4479-4488. [[nips](https://papers.nips.cc/paper/2020/hash/2fd5d41ec6cfab47e32164d5624269b1-Abstract.html)]
 
 <a name="r3"></a>
 
