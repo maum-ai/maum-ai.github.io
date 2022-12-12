@@ -11,7 +11,7 @@ mindslab:
   image_url: https://github.com/mindslab-ai.png
 
 junjun3518:
-  name: JunHyeok Lee
+  name: Junhyeok Lee
   title: AI Scientist (Audio, Head)
   url: https://github.com/junjun3518
   image_url: https://github.com/junjun3518.png
@@ -33,3 +33,21 @@ wonbin:
   title: AI Scientist (Audio)
   url: https://github.com/Wonbin-Jung
   image_url: https://github.com/Wonbin-Jung.png
+
+wookladin:
+  name: Kang-wook Kim
+  title: AI Scientist (Audio)
+  url: https://github.com/wookladin
+  image_url: https://github.com/wookladin.png
+
+hyunjae:
+  name: Hyunjae Cho
+  title: AI Scientist (Audio)
+  url: https://github.com/chohyunjae1
+  image_url: https://github.com/chohyunjae1.png
+
+tonyswoo:
+  name: Sang Hoon Woo
+  title: AI Scientist (Audio)
+  url: https://github.com/tonyswoo
+  image_url: https://github.com/tonyswoo.png

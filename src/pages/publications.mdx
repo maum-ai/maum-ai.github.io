@@ -4,6 +4,7 @@ description: List of Publications from MINDsLab Brain Team
 ---
 
 import styles from './publications.module.css';
+import * as features from '@site/src/components/PublicationFeatures';
 
 
 
@@ -15,114 +16,65 @@ import styles from './publications.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <div className={styles.conference}>Interspeech</div>
-            <h3><a href="https://arxiv.org/abs/2206.12132">SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech</a></h3>
-            <p className={styles.authors}>
-                <b>Hyunjae Cho<sup>*</sup></b>, <b>Wonbin Jung</b>, <b>Junhyeok Lee</b>, and <b>Sang Hoon Woo</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2022-is-2" />
-                <p className={styles.description}>
-                    In this paper, we present SANE-TTS, a stable and natural end-to-end multilingual TTS model. <span className={styles.full}>By the difficulty of obtaining multilingual corpus for given speaker, training multilingual TTS model with monolingual corpora is unavoidable. We introduce speaker regularization loss that improves speech naturalness during cross-lingual synthesis as well as domain adversarial training, which is applied in other multilingual TTS models. Furthermore, by adding speaker regularization loss, replacing speaker embedding with zero vector in duration predictor stabilizes cross-lingual inference. With this replacement, our model generates speeches with moderate rhythm regardless of source speaker in cross-lingual synthesis. In MOS evaluation, SANE-TTS achieves naturalness score above 3.80 both in cross-lingual and intralingual synthesis, where the ground truth score is 3.99. Also, SANE-TTS maintains speaker similarity close to that of ground truth even in cross-lingual inference. Audio samples are available on our web page.</span>
-                </p>
-                <label for="post-2022-is-2" className={styles.trigger}></label>
-            </div>
-            <p className={styles.demo}>
-                <a href="https://mindslab-ai.github.io/sane-tts/">Demo</a>
-            </p>
+            <features.ConferenceItem conference="Preprint"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2211.04610" title="PhaseAug: A Differentiable Augmentation for Speech Synthesis to Simulate One-to-Many Mapping"/>
+            <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han", "Hyunjae Cho", "Wonbin Jung"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
+            <features.PaperDescription preview="In this paper, we present PhaseAug, a differentiable augmentation for speech synthesis "
+            description="Previous generative adversarial network (GAN)-based neural vocoders are trained to reconstruct the exact ground truth waveform from the paired mel-spectrogram and do not consider the one-to-many relationship of speech synthesis. This conventional training causes overfitting for both the discriminators and the generator, leading to the periodicity artifacts in the generated audio signal. In this work, we present PhaseAug, the first differentiable augmentation for speech synthesis that rotates the phase of each frequency bin to simulate one-to-many mapping. With our proposed method, we outperform baselines without any architecture modification. Code and audio samples will be available at https://github.com/mindslab-ai/phaseaug."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/phaseaug" />
+            <features.DemoItem link="https://mindslab-ai.github.io/phaseaug/" />
         </li>
         <li>
-            <div className={styles.conference}>Interspeech</div>
-            <h3><a href="https://arxiv.org/abs/2206.08545">NU-Wave 2: A General Neural Audio Upsampling Model for Various Sampling Rates</a></h3>
-            <p className={styles.authors}>
-                <b>Seungu Han<sup>*</sup></b>, and <b>Junhyeok Lee</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2022-is-1" />
-                <p className={styles.description}>
-                    Conventionally, audio super-resolution models fixed the initial and the target sampling rates, which necessitate the model to be trained for each pair of sampling rates. <span className={styles.full}>We introduce NU-Wave 2, a diffusion model for neural audio upsampling that enables the generation of 48 kHz audio signals from inputs of various sampling rates with a single model. Based on the architecture of NU-Wave, NU-Wave 2 uses short-time Fourier convolution (STFC) to generate harmonics to resolve the main failure modes of NU-Wave, and incorporates bandwidth spectral feature transform (BSFT) to condition the bandwidths of inputs in the frequency domain. We experimentally demonstrate that NU-Wave 2 produces high-resolution audio regardless of the sampling rate of input while requiring fewer parameters than other models.</span>
-                </p>
-                <label for="post-2022-is-1" className={styles.trigger}></label>
-            </div>
-            <p className={styles.github}>
-                <a href="https://github.com/mindslab-ai/nuwave2">GitHub</a>
-            </p>
-            <p className={styles.demo}>
-                <a href="https://mindslab-ai.github.io/nuwave2/">Demo</a>
-            </p>
+            <features.ConferenceItem conference="Interspeech"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2206.12132" title="SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech"/>
+            <features.AuthorItem authors={["Hyunjae Cho", "Wonbin Jung", "Junhyeok Lee", "Sang Hoon Woo"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
+            <features.PaperDescription preview="In this paper, we present SANE-TTS, a stable and natural end-to-end multilingual TTS model. "
+            description="By the difficulty of obtaining multilingual corpus for given speaker, training multilingual TTS model with monolingual corpora is unavoidable. We introduce speaker regularization loss that improves speech naturalness during cross-lingual synthesis as well as domain adversarial training, which is applied in other multilingual TTS models. Furthermore, by adding speaker regularization loss, replacing speaker embedding with zero vector in duration predictor stabilizes cross-lingual inference. With this replacement, our model generates speeches with moderate rhythm regardless of source speaker in cross-lingual synthesis. In MOS evaluation, SANE-TTS achieves naturalness score above 3.80 both in cross-lingual and intralingual synthesis, where the ground truth score is 3.99. Also, SANE-TTS maintains speaker similarity close to that of ground truth even in cross-lingual inference. Audio samples are available on our web page."/>
+            <features.DemoItem link="https://mindslab-ai.github.io/sane-tts/" />
         </li>
         <li>
-            <div className={styles.conference}>PR Letters</div>
-            <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0167865522001076">Zero-Shot Semantic Segmentation via Spatial and Multi-Scale Aware Visual Class Embedding
-</a></h3>
-            <p className={styles.authors}>
-                <b>Sungguk Cha<sup>*</sup></b>, and Yooseung Wang<sup>*</sup>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2022-prl" />
-                <p className={styles.description}>
-                    Fully supervised semantic segmentation technologies bring a paradigm shift in scene understanding. <span className={styles.full}>However, the burden of expensive labeling cost remains as a challenge. To solve the cost problem, recent studies proposed language model based zero-shot semantic segmentation (L-ZSSS) approaches. In this paper, we address L-ZSSS has a limitation in generalization which is a virtue of zero-shot learning. Tackling the limitation, we propose a language-model-free zero-shot semantic segmentation framework, Spatial and Multi-scale aware Visual Class Embedding Network (SM-VCENet). Furthermore, leveraging vision-oriented class embedding SM-VCENet enriches visual information of the class embedding by multi-scale attention and spatial attention. We also propose a novel benchmark (PASCAL2COCO) for zero-shot semantic segmentation, which provides generalization evaluation by domain adaptation and contains visually challenging samples. In experiments, our SM-VCENet outperforms zero-shot semantic segmentation state-of-the-art by a significant margin in both PASCAL-5i and PASCAL2COCO benchmarks.</span>
-                </p>
-                <label for="post-2022-prl" className={styles.trigger}></label>
-            </div>
+            <features.ConferenceItem conference="Interspeech"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2206.08545" title="NU-Wave 2: A General Neural Audio Upsampling Model for Various Sampling Rates"/>
+            <features.AuthorItem authors={["Seungu Han", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
+            <features.PaperDescription preview="Conventionally, audio super-resolution models fixed the initial and the target sampling rates, which necessitate the model to be trained for each pair of sampling rates. "
+            description="We introduce NU-Wave 2, a diffusion model for neural audio upsampling that enables the generation of 48 kHz audio signals from inputs of various sampling rates with a single model. Based on the architecture of NU-Wave, NU-Wave 2 uses short-time Fourier convolution (STFC) to generate harmonics to resolve the main failure modes of NU-Wave, and incorporates bandwidth spectral feature transform (BSFT) to condition the bandwidths of inputs in the frequency domain. We experimentally demonstrate that NU-Wave 2 produces high-resolution audio regardless of the sampling rate of input while requiring fewer parameters than other models."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/nuwave2" />
+            <features.DemoItem link="https://mindslab-ai.github.io/nuwave2/" />
         </li>
         <li>
-            <div className={styles.conference}>CVPR Demo</div>
-            <h3><a href="https://openaccess.thecvf.com/content/CVPR2022/html/Song_Talking_Face_Generation_With_Multilingual_TTS_CVPR_2022_paper.html">Talking Face Generation with Multilingual TTS</a></h3>
-            <p className={styles.authors}>
-                <b>Hyoung-Kyu Song<sup>*</sup></b>, <b>Sang Hoon Woo<sup>*</sup></b>, <b>Junhyeok Lee</b>, <b>Seungmin Yang</b>, <b>Hyunjae Cho</b>, <b>Dongho Choi</b>, <b>Kang-wook Kim</b>, and <b>Youseong Lee</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2022-cvpr-demo" />
-                <p className={styles.description}>
-                    In this work, we propose a joint system combining a talking face generation system with a text-to-speech system that can generate multilingual talking face videos from only the text input. <span className={styles.full}>Our system can synthesize natural multilingual speeches while maintaining the vocal identity of the speaker, as well as lip movements synchronized to the synthesized speech. We demonstrate the generalization capabilities of our system by selecting four languages (Korean, English, Japanese, and Chinese) each from a different language family. We also compare the outputs of our talking face generation model to outputs of a prior work that claims multilingual support. For our demo, we add a translation API to the preprocessing stage and present it in the form of a neural dubber so that users can utilize the multilingual property of our system more easily.</span>
-                </p>
-                <label for="post-2022-cvpr-demo" className={styles.trigger}></label>
-            </div>
-            <p className={styles.demo}>
-                <a href="https://huggingface.co/spaces/CVPR/ml-talking-face">🤗Demo</a>
-            </p>
-            <p className={styles.misc}>
-                <a href="https://www.youtube.com/watch?v=toqdD1F_ZsU">Screencast</a>
-            </p>
+            <features.ConferenceItem conference="PR Letters"/>
+            <features.PaperTitle paperLink="https://www.sciencedirect.com/science/article/abs/pii/S0167865522001076" title="Zero-Shot Semantic Segmentation via Spatial and Multi-Scale Aware Visual Class Embedding"/>
+            <features.AuthorItem authors={["Sungguk Cha", "Yooseung Wang"]} numFirstAuthor={2} isBrainTeam={[true, false]}/>
+            <features.PaperDescription preview="Fully supervised semantic segmentation technologies bring a paradigm shift in scene understanding. "
+            description="However, the burden of expensive labeling cost remains as a challenge. To solve the cost problem, recent studies proposed language model based zero-shot semantic segmentation (L-ZSSS) approaches. In this paper, we address L-ZSSS has a limitation in generalization which is a virtue of zero-shot learning. Tackling the limitation, we propose a language-model-free zero-shot semantic segmentation framework, Spatial and Multi-scale aware Visual Class Embedding Network (SM-VCENet). Furthermore, leveraging vision-oriented class embedding SM-VCENet enriches visual information of the class embedding by multi-scale attention and spatial attention. We also propose a novel benchmark (PASCAL2COCO) for zero-shot semantic segmentation, which provides generalization evaluation by domain adaptation and contains visually challenging samples. In experiments, our SM-VCENet outperforms zero-shot semantic segmentation state-of-the-art by a significant margin in both PASCAL-5i and PASCAL2COCO benchmarks."/>
         </li>
         <li>
-            <div className={styles.conference}>CVPR</div>
-            <h3><a href="https://arxiv.org/abs/2106.07023">Styleformer: Transformer based Generative Adversarial Networks with Style Vector</a></h3>
-            <p className={styles.authors}>
-                Jeeseung Park<sup>*</sup>, and <b>Younggeun Kim<sup>*</sup></b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2022-cvpr" />
-                <p className={styles.description}>
-                    We propose Styleformer, which is a style-based generator for GAN architecture, but a convolution-free transformer-based generator. <span className={styles.full}>In our paper, we explain how a transformer can generate high-quality images, overcoming the disadvantage that convolution operations are difficult to capture global features in an image. Furthermore, we change the demodulation of StyleGAN2 and modify the existing transformer structure (e.g., residual connection, layer normalization) to create a strong style-based generator with a convolution-free structure. We also make Styleformer lighter by applying Linformer, enabling Styleformer to generate higher resolution images and result in improvements in terms of speed and memory. We experiment with the low-resolution image dataset such as CIFAR-10, as well as the high-resolution image dataset like LSUN-church. Styleformer records FID 2.82 and IS 9.94 on CIFAR-10, a benchmark dataset, which is comparable performance to the current state-of-the-art and outperforms all GAN-based generative models, including StyleGAN2-ADA with fewer parameters on the unconditional setting. We also both achieve new state-of-the-art with FID 15.17, IS 11.01, and FID 3.66, respectively on STL-10 and CelebA.</span>
-                </p>
-                <label for="post-2022-cvpr" className={styles.trigger}></label>
-            </div>
-            <p className={styles.github}>
-                <a href="https://github.com/Jeeseung-Park/Styleformer">GitHub</a>
-            </p>
+            <features.ConferenceItem conference="CVPR Demo"/>
+            <features.PaperTitle paperLink="https://openaccess.thecvf.com/content/CVPR2022/html/Song_Talking_Face_Generation_With_Multilingual_TTS_CVPR_2022_paper.html" title="Talking Face Generation with Multilingual TTS"/>
+            <features.AuthorItem authors={["Hyoung-Kyu Song", "Sang Hoon Woo", "Junhyeok Lee", "Seungmin Yang", "Hyunjae Cho", "Dongho Choi", "Kang-wook Kim", "Youseong Lee"]} numFirstAuthor={2} isBrainTeam={[true, true, true, true, true, true, true, true]}/>
+            <features.PaperDescription preview="In this work, we propose a joint system combining a talking face generation system with a text-to-speech system that can generate multilingual talking face videos from only the text input. "
+            description="Our system can synthesize natural multilingual speeches while maintaining the vocal identity of the speaker, as well as lip movements synchronized to the synthesized speech. We demonstrate the generalization capabilities of our system by selecting four languages (Korean, English, Japanese, and Chinese) each from a different language family. We also compare the outputs of our talking face generation model to outputs of a prior work that claims multilingual support. For our demo, we add a translation API to the preprocessing stage and present it in the form of a neural dubber so that users can utilize the multilingual property of our system more easily."/>
+            <features.DemoItem link="https://huggingface.co/spaces/CVPR/ml-talking-face" customName="🤗Demo" />
+            <features.MiscItem link="https://www.youtube.com/watch?v=toqdD1F_ZsU" customName="Screencast" />
         </li>
         <li>
-            <div className={styles.conference}>ICASSP</div>
-            <h3><a href="https://arxiv.org/abs/2104.00931">Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques</a></h3>
-            <p className={styles.authors}>
-                <b>Kang-wook Kim<sup>*</sup></b>, <b>Seung-won Park</b>, <b>Junhyeok Lee</b>, and <b>Myun-chul Joe</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2022-icassp" />
-                <p className={styles.description}>
-                    Recent works on voice conversion (VC) focus on preserving the rhythm and the intonation as well as the linguistic content. <span className={styles.full}>To preserve these features from the source, we decompose current non-parallel VC systems into two encoders and one decoder. We analyze each module with several experiments and reassemble the best components to propose Assem-VC, a new state-of-the-art any-to-many non-parallel VC system. We also examine that PPG and Cotatron features are speaker-dependent, and attempt to remove speaker identity with adversarial training.</span>
-                </p>
-                <label for="post-2022-icassp" className={styles.trigger}></label>
-            </div>
-            <p className={styles.github}>
-                <a href="https://github.com/mindslab-ai/assem-vc">GitHub</a>
-            </p>
+            <features.ConferenceItem conference="CVPR"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2106.07023" title="Styleformer: Transformer based Generative Adversarial Networks with Style Vector"/>
+            <features.AuthorItem authors={["Jeeseung Park", "Younggeun Kim"]} numFirstAuthor={2} isBrainTeam={[false, true]}/>
+            <features.PaperDescription preview="We propose Styleformer, which is a style-based generator for GAN architecture, but a convolution-free transformer-based generator. "
+            description="In our paper, we explain how a transformer can generate high-quality images, overcoming the disadvantage that convolution operations are difficult to capture global features in an image. Furthermore, we change the demodulation of StyleGAN2 and modify the existing transformer structure (e.g., residual connection, layer normalization) to create a strong style-based generator with a convolution-free structure. We also make Styleformer lighter by applying Linformer, enabling Styleformer to generate higher resolution images and result in improvements in terms of speed and memory. We experiment with the low-resolution image dataset such as CIFAR-10, as well as the high-resolution image dataset like LSUN-church. Styleformer records FID 2.82 and IS 9.94 on CIFAR-10, a benchmark dataset, which is comparable performance to the current state-of-the-art and outperforms all GAN-based generative models, including StyleGAN2-ADA with fewer parameters on the unconditional setting. We also both achieve new state-of-the-art with FID 15.17, IS 11.01, and FID 3.66, respectively on STL-10 and CelebA."/>
+            <features.GithubItem link="https://github.com/Jeeseung-Park/Styleformer" />
+        </li>
+        <li>
+            <features.ConferenceItem conference="ICASSP"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2104.00931" title="Assem-VC: Realistic Voice Conversion by Assembling Modern Speech Synthesis Techniques"/>
+            <features.AuthorItem authors={["Kang-wook Kim", "Seung-won Park", "Junhyeok Lee", "Myun-chul Joe"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
+            <features.PaperDescription preview="Recent works on voice conversion (VC) focus on preserving the rhythm and the intonation as well as the linguistic content. "
+            description="To preserve these features from the source, we decompose current non-parallel VC systems into two encoders and one decoder. We analyze each module with several experiments and reassemble the best components to propose Assem-VC, a new state-of-the-art any-to-many non-parallel VC system. We also examine that PPG and Cotatron features are speaker-dependent, and attempt to remove speaker identity with adversarial training."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/assem-vc" />
         </li>
     </ul>
 </section>
-
 
 
 ### 2021
@@ -130,54 +82,28 @@ import styles from './publications.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <div className={styles.conference}>NeurIPS Workshop (Oral)</div>
-            <h3><a href="https://arxiv.org/abs/2110.12676">Controllable and Interpretable Singing Voice Decomposition via Assem-VC</a></h3>
-            <p className={styles.authors}>
-               <b>Kang-wook Kim<sup>*</sup></b> and <b>Junhyeok Lee</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2021-nips-workshop" />
-                <p className={styles.description}>
-                    We propose a singing decomposition system that encodes time-aligned linguistic content, pitch, and source speaker identity via Assem-VC.<span className={styles.full}> With decomposed speaker-independent information and the target speaker's embedding, we could synthesize the singing voice of the target speaker. In conclusion, we made a perfectly synced duet with the user's singing voice and the target singer's converted singing voice.</span>
-                </p>
-                <label for="post-2021-nips-workshop" className={styles.trigger}></label>
-            </div>
-            <p className={styles.github}>
-                <a href="https://github.com/mindslab-ai/assem-vc">GitHub</a>
-            </p>
-            <p className={styles.demo}>
-                <a href="https://mindslab-ai.github.io/assem-vc/singer/">Demo</a>
-            </p>
+            <features.ConferenceItem conference="NeurIPS Workshop (Oral)"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2110.12676" title="Controllable and Interpretable Singing Voice Decomposition via Assem-VC"/>
+            <features.AuthorItem authors={["Kang-wook Kim", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
+            <features.PaperDescription preview="We propose a singing decomposition system that encodes time-aligned linguistic content, pitch, and source speaker identity via Assem-VC. "
+            description="With decomposed speaker-independent information and the target speaker's embedding, we could synthesize the singing voice of the target speaker. In conclusion, we made a perfectly synced duet with the user's singing voice and the target singer's converted singing voice."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/assem-vc" />
+            <features.DemoItem link="https://mindslab-ai.github.io/assem-vc/singer/" />
         </li>
         <li>
-            <div className={styles.conference}>Interspeech</div>
-            <h3><a href="https://arxiv.org/abs/2104.02321">NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling</a></h3>
-            <p className={styles.authors}>
-               <b>Junhyeok Lee<sup>*</sup></b> and <b>Seungu Han</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2021-is" />
-                <p className={styles.description}>
-                    In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. <span className={styles.full}>NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on neural vocoders. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), log-spectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity (3.0M parameters) than baselines (5.4-21%).</span>
-                </p>
-                <label for="post-2021-is" className={styles.trigger}></label>
-            </div>
-            <p className={styles.github}>
-                <a href="https://github.com/mindslab-ai/nuwave">GitHub</a>
-            </p>
-            <p className={styles.demo}>
-                <a href="https://mindslab-ai.github.io/nuwave">Demo</a>
-            </p>
+            <features.ConferenceItem conference="Interspeech"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2104.02321" title="NU-Wave: A Diffusion Probabilistic Model for Neural Audio Upsampling"/>
+            <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
+            <features.PaperDescription preview="In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. "
+            description="NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on neural vocoders. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), log-spectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity (3.0M parameters) than baselines (5.4-21%)."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/nuwave" />
+            <features.DemoItem link="https://mindslab-ai.github.io/nuwave" />
         </li>
         <li>
-            <div className={styles.conference}>CVPR Workshop</div>
-            <h3><a>Sharp Edge Recovery via SE(3)-Equivariant Network</a></h3>
-            <p className={styles.authors}>
-               <b>Youseong Lee<sup>*</sup></b>
-            </p>
-            <p className={styles.misc}>
-                <a href="https://youtu.be/UVYQzQ-mH1w?t=9231">Talk</a>
-            </p>
+            <features.ConferenceItem conference="CVPR Workshop"/>
+            <features.PaperTitle paperLink="" title="Sharp Edge Recovery via SE(3)-Equivariant Network"/>
+            <features.AuthorItem authors={["Youseong Lee"]} numFirstAuthor={1} isBrainTeam={[true]}/>
+            <features.MiscItem link="https://youtu.be/UVYQzQ-mH1w?t=9231" customName="Talk"/>
         </li>
     </ul>
 </section>
@@ -188,51 +114,27 @@ import styles from './publications.module.css';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <div className={styles.conference}>NeurIPS Workshop</div>
-            <h3><a>DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis</a></h3>
-            <p className={styles.authors}>
-               Jimi Kim<sup>*</sup>, <b>DongHwan Jang</b>, Seojin Jang, Woncheol Lee, and <b>Joong Kun Lee</b>
-            </p>
-            <p className={styles.misc}>
-                <a href="https://www.cmu.edu/dietrich/causality/neurips20ws/">Workshop</a>
-            </p>
+            <features.ConferenceItem conference="NeurIPS Workshop"/>
+            <features.PaperTitle paperLink="" title="DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis"/>
+            <features.AuthorItem authors={["Jimi Kim", "DongHwan Jang", "Seojin Jang", "Woncheol Lee", "Joong Kun Lee"]} numFirstAuthor={1} isBrainTeam={[false, true, false, false, true]}/>
+            <features.MiscItem link="https://www.cmu.edu/dietrich/causality/neurips20ws/" customName="Workshop"/>
         </li>
         <li>
-            <div className={styles.conference}>Interspeech</div>
-            <h3><a href="https://arxiv.org/abs/2005.03295">Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data</a></h3>
-            <p className={styles.authors}>
-               <b>Seung-won Park<sup>*</sup></b>, <b>Doo-young Kim</b>, and <b>Myun-chul Joe</b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2020-is" />
-                <p className={styles.description}>
-                    We propose Cotatron, a transcription-guided speech encoder for speaker-independent linguistic representation. <span className={styles.full}>Cotatron is based on the multispeaker TTS architecture and can be trained with conventional TTS datasets. We train a voice conversion system to reconstruct speech with Cotatron features, which is similar to the previous methods based on Phonetic Posteriorgram (PPG). By training and evaluating our system with 108 speakers from the VCTK dataset, we outperform the previous method in terms of both naturalness and speaker similarity. Our system can also convert speech from speakers that are unseen during training, and utilize ASR to automate the transcription with minimal reduction of the performance.</span>
-                </p>
-                <label for="post-2020-is" className={styles.trigger}></label>
-            </div>
-            <p className={styles.github}>
-                <a href="https://github.com/mindslab-ai/cotatron">GitHub</a>
-            </p>
-            <p className={styles.demo}>
-                <a href="https://mindslab-ai.github.io/cotatron/">Demo</a>
-            </p>
-            <p className={styles.misc}>
-                <a href="https://youtu.be/lnNuL8hqoh4">Talk</a>
-            </p>
+            <features.ConferenceItem conference="Interspeech"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2005.03295" title="Cotatron: Transcription-Guided Speech Encoder for Any-to-Many Voice Conversion without Parallel Data"/>
+            <features.AuthorItem authors={["Seung-won Park", "Doo-young Kim", "Myun-chul Joe"]} numFirstAuthor={1} isBrainTeam={[true, true, true]}/>
+            <features.PaperDescription preview="We propose Cotatron, a transcription-guided speech encoder for speaker-independent linguistic representation. "
+            description="Cotatron is based on the multispeaker TTS architecture and can be trained with conventional TTS datasets. We train a voice conversion system to reconstruct speech with Cotatron features, which is similar to the previous methods based on Phonetic Posteriorgram (PPG). By training and evaluating our system with 108 speakers from the VCTK dataset, we outperform the previous method in terms of both naturalness and speaker similarity. Our system can also convert speech from speakers that are unseen during training, and utilize ASR to automate the transcription with minimal reduction of the performance."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/cotatron" />
+            <features.DemoItem link="https://mindslab-ai.github.io/cotatron/" />
+            <features.MiscItem link="https://youtu.be/lnNuL8hqoh4" customName="Talk"/>
         </li>
         <li>
-            <div className={styles.conference}>ECCV Workshop</div>
-            <h3><a href="https://arxiv.org/abs/2009.02857">3D Room Layout Estimation Beyond the Manhattan World Assumption</a></h3>
-            <p className={styles.authors}>
-               <b>Dongho Choi<sup>*</sup></b>
-            </p>
-            <div>
-                <input type="checkbox" className={styles.expanded} id="post-2020-eccvw" />
-                <p className={styles.description}>
-                    Predicting 3D room layout from single image is a challenging task with many applications. <span className={styles.full}>In this paper, we propose a new training and post-processing method for 3D room layout estimation, built on a recent state-of-the-art 3D room layout estimation model. Experimental results show our method outperforms state-of-the-art approaches by a large margin in predicting visible room layout. Our method has obtained the 3rd place in 2020 Holistic Scene Structures for 3D Vision Workshop.</span>
-                </p>
-                <label for="post-2020-eccvw" className={styles.trigger}></label>
-            </div>
+            <features.ConferenceItem conference="ECCV Workshop"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2009.02857" title="3D Room Layout Estimation Beyond the Manhattan World Assumption"/>
+            <features.AuthorItem authors={["Dongho Choi"]} numFirstAuthor={1} isBrainTeam={[true]}/>
+            <features.PaperDescription preview="Predicting 3D room layout from single image is a challenging task with many applications. "
+            description="In this paper, we propose a new training and post-processing method for 3D room layout estimation, built on a recent state-of-the-art 3D room layout estimation model. Experimental results show our method outperforms state-of-the-art approaches by a large margin in predicting visible room layout. Our method has obtained the 3rd place in 2020 Holistic Scene Structures for 3D Vision Workshop."/>
         </li>
     </ul>
 </section>
