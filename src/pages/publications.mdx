@@ -16,6 +16,15 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
+            <features.ConferenceItem conference="Preprint"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2211.04610" title="PhaseAug: A Differentiable Augmentation for Speech Synthesis to Simulate One-to-Many Mapping"/>
+            <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han", "Hyunjae Cho", "Wonbin Jung"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
+            <features.PaperDescription preview="In this paper, we present PhaseAug, a differentiable augmentation for speech synthesis "
+            description="Previous generative adversarial network (GAN)-based neural vocoders are trained to reconstruct the exact ground truth waveform from the paired mel-spectrogram and do not consider the one-to-many relationship of speech synthesis. This conventional training causes overfitting for both the discriminators and the generator, leading to the periodicity artifacts in the generated audio signal. In this work, we present PhaseAug, the first differentiable augmentation for speech synthesis that rotates the phase of each frequency bin to simulate one-to-many mapping. With our proposed method, we outperform baselines without any architecture modification. Code and audio samples will be available at https://github.com/mindslab-ai/phaseaug."/>
+            <features.GithubItem link="https://github.com/mindslab-ai/phaseaug" />
+            <features.DemoItem link="https://mindslab-ai.github.io/phaseaug/" />
+        </li>
+        <li>
             <features.ConferenceItem conference="Interspeech"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2206.12132" title="SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech"/>
             <features.AuthorItem authors={["Hyunjae Cho", "Wonbin Jung", "Junhyeok Lee", "Sang Hoon Woo"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
