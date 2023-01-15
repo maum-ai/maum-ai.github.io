@@ -50,4 +50,10 @@ tonyswoo:
   name: Sang Hoon Woo
   title: AI Scientist (Audio)
   url: https://github.com/tonyswoo
-  image_url: https://github.com/tonyswoo.png
+  image_url: https://github.com/tonyswoo.png 
+  
+lukems:
+  name: Minsuk Kim
+  title: AI Scientist (NLP) 
+  url: https://github.com/puzzlecollector
+  image_url: https://github.com/puzzlecollector.png 
