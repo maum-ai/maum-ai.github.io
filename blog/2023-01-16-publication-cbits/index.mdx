@@ -112,7 +112,7 @@ Test set에 대해서 단순 accuracy와 F1 점수보다는 실제로 이 트레
 | <img className={styles.figCenter} src={liverun} alt="liverun" /> |
 
 몇가지 limitation들도 보였는데 일단은 take profit이 0.75%이기 때문에 게속 상승만 하는 구간에서는 단순 long이나 buy and hold 전략보다 수익률이 작을 수 있습니다. 반대로 계속 하락하는 구간에서는 단순 short 전략보다 수익률이 적을 수 있습니다.
-그리고 마땅한 stop loss mechanism도 없다는게 큰 단점입니다. [Secretary problem](https://en.wikipedia.org/wiki/Secretary_problem) 같은 방식을 응용한 exit 기법이나 언제 exit하는게 최적인지 판단하는 stop loss전략을 도입해봐도 좋을 것 같습니다.
+그리고 마땅한 stop loss mechanism도 없다는게 큰 단점입니다. [Secretary problem](https://en.wikipedia.org/wiki/Secretary_problem) 같은 방식을 응용한 exit 기법이나 언제 exit하는게 최적인지 판단하는 강화학습 기반 stop loss전략을 도입해봐도 좋을 것 같습니다.
 
 ### Future Work
 - 단순하게 sentiment score를 활용하는 모델보다는 text들의 임베딩을 뽑아서 차트 피처의 임베딩과 모델 내부에서 결합되고, text와 chart의 임베딩을 뽑는 인코더들을 전부 end-to-end로 학습시키는 모델을 생각해볼 수 있습니다.
