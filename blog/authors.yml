@@ -10,6 +10,12 @@ mindslab:
   url: https://github.com/mindslab-ai
   image_url: https://github.com/mindslab-ai.png
 
+maum-ai:
+  name: maum.ai Brain
+  title: Brain Team
+  url: https://github.com/maum-ai
+  image_url: https://github.com/maum-ai.png
+
 junjun3518:
   name: Junhyeok Lee
   title: AI Scientist (Audio, Head)
