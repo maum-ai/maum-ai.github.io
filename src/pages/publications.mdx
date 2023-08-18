@@ -17,22 +17,21 @@ import * as features from '@site/src/components/PublicationFeatures';
     <ul className={styles.publications}>
         <li>
             <features.ConferenceItem conference="Interspeech"/>
-            <features.PaperTitle paperLink="https://arxiv.org/abs/2206.08545" title="NU-Wave 2: A General Neural Audio Upsampling Model for Various Sampling Rates"/>
-            <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han, Hyungjae Cho, Wonbin Jung"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
-            <features.PaperDescription preview="Conventionally, audio super-resolution models fixed the initial and the target sampling rates, which necessitate the model to be trained for each pair of sampling rates. "
-            description="We introduce NU-Wave 2, a diffusion model for neural audio upsampling that enables the generation of 48 kHz audio signals from inputs of various sampling rates with a single model. Based on the architecture of NU-Wave, NU-Wave 2 uses short-time Fourier convolution (STFC) to generate harmonics to resolve the main failure modes of NU-Wave, and incorporates bandwidth spectral feature transform (BSFT) to condition the bandwidths of inputs in the frequency domain. We experimentally demonstrate that NU-Wave 2 produces high-resolution audio regardless of the sampling rate of input while requiring fewer parameters than other models."/>
-            <features.GithubItem link="https://github.com/maum-ai/nuwave2" />
-            <features.DemoItem link="https://maum-ai.github.io/nuwave2/" />
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2302.12391" title="PITS: Variational Pitch Inference without Fundamental Frequency for End-to-End Pitch-controllable TTS"/>
+            <features.AuthorItem authors={["Junhyeok Lee", "Wonbin Jung", "Hyungjae Cho", "Jaeyeon Kim", "Jaehwan Kim"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true]}/>
+            <features.PaperDescription preview="Previous pitch-controllable text-to-speech (TTS) models rely on directly modeling fundamental frequency, leading to low variance in synthesized speech."
+            description="To address this issue, we propose PITS, an end-to-end pitch-controllable TTS model that utilizes variational inference to model pitch. Based on VITS, PITS incorporates the Yingram encoder, the Yingram decoder, and adversarial training of pitch-shifted synthesis to achieve pitch-controllability. Experiments demonstrate that PITS generates high-quality speech that is indistinguishable from ground truth speech and has high pitch-controllability without quality degradation."/>
+            <features.GithubItem link="https://github.com/anonymous-pits/pits" />
+            <features.DemoItem link="https://huggingface.co/spaces/anonymous-pits/pits" />
         </li>
         <li>
             <features.ConferenceItem conference="ICML Workshop"/>
             <features.PaperTitle paperLink="https://openreview.net/forum?id=qL47xtuEuv" title="E3-VITS: Emotional End-to-End TTS with Cross-speaker Style Transfer"/>
-            <features.AuthorItem authors={["Seungu Han", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
-            <features.PaperDescription preview="Conventionally, audio super-resolution models fixed the initial and the target sampling rates, which necessitate the model to be trained for each pair of sampling rates. "
-            description="We introduce NU-Wave 2, a diffusion model for neural audio upsampling that enables the generation of 48 kHz audio signals from inputs of various sampling rates with a single model. Based on the architecture of NU-Wave, NU-Wave 2 uses short-time Fourier convolution (STFC) to generate harmonics to resolve the main failure modes of NU-Wave, and incorporates bandwidth spectral feature transform (BSFT) to condition the bandwidths of inputs in the frequency domain. We experimentally demonstrate that NU-Wave 2 produces high-resolution audio regardless of the sampling rate of input while requiring fewer parameters than other models."/>
-            <features.GithubItem link="https://github.com/maum-ai/nuwave2" />
-            <features.DemoItem link="https://maum-ai.github.io/nuwave2/" />
-            
+            <features.AuthorItem authors={["Wonbin Jung", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
+            <features.PaperDescription preview="Since previous emotional TTS models are based on a two-stage pipeline or additional labels, their training process is complex and requires a high labeling cost. "
+            description="To deal with this problem, this paper presents E3-VITS, an end-to-end emotional TTS model that addresses the limitations of existing models. E3-VITS synthesizes high-quality speeches for multi-speaker conditions, supports both reference speech and textual description-based emotional speech synthesis, and enables cross-speaker emotion transfer with a disjoint dataset. To implement E3-VITS, we propose batch-permuted style perturbation, which generates audio samples with unpaired emotion to increase the quality of cross-speaker emotion transfer. Results show that E3-VITS outperforms the baseline model in terms of naturalness, speaker and emotion similarity, and inference speed."/>
+            <features.GithubItem link="https://github.com/Wonbin-Jung/e3-vits" />
+            <features.DemoItem link="https://wonbin-jung.github.io/e3-vits/" />
         </li>
         <li>
             <features.ConferenceItem conference="ICASSP"/>
