@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>MINDsLab BRAIN Team Blog</title>
-        <link>https://mindslab-ai.github.io/blog</link>
-        <description>MINDsLab BRAIN Team Blog</description>
+        <title>maum.ai BRAIN Team Blog</title>
+        <link>https://maum-ai.github.io/blog</link>
+        <description>maum.ai BRAIN Team Blog</description>
         <lastBuildDate>Sun, 04 Jun 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
             <title><![CDATA[BIRP: Bitcoin Information Retrieval Prediction Model Based on Multimodal Pattern Matching]]></title>
-            <link>https://mindslab-ai.github.io/blog/birp</link>
+            <link>https://maum-ai.github.io/blog/birp</link>
             <guid>birp</guid>
             <pubDate>Sun, 04 Jun 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[크립토 언어모델과 TS2Vec 모델을 활용해서 암호화폐 속보와 차트 데이터 기반 패턴 매칭 방법을 소개하고 이 기술을 간단한 트레이딩 봇에 접목시켜봤습니다.]]></description>
@@ -35,7 +35,7 @@
         </item>
         <item>
             <title><![CDATA[CBITS: CryptoBERT Incorporated Trading System]]></title>
-            <link>https://mindslab-ai.github.io/blog/cbits</link>
+            <link>https://maum-ai.github.io/blog/cbits</link>
             <guid>cbits</guid>
             <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[암호화폐 관련 텍스트로 사전학습되고, 비트코인 뉴스 감성 분류 테스크에 대해서 파인튜닝된 언어모델을 소개합니다.]]></description>
@@ -66,7 +66,7 @@ Fine-tuning후에 downstream task에서의 성능을 저희 crypto LM들과 공�
         </item>
         <item>
             <title><![CDATA[NU-Wave 2: A General Neural Audio Upsampling Model for Various Sampling Rates]]></title>
-            <link>https://mindslab-ai.github.io/blog/nu-wave2</link>
+            <link>https://maum-ai.github.io/blog/nu-wave2</link>
             <guid>nu-wave2</guid>
             <pubDate>Tue, 25 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[어떤 음성이든 48 kHz로 upsampling 해주는 모델인 NU-Wave 2를 소개합니다.]]></description>
@@ -78,7 +78,7 @@ Fine-tuning후에 downstream task에서의 성능을 저희 crypto LM들과 공�
         </item>
         <item>
             <title><![CDATA[SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech]]></title>
-            <link>https://mindslab-ai.github.io/blog/sane-tts</link>
+            <link>https://maum-ai.github.io/blog/sane-tts</link>
             <guid>sane-tts</guid>
             <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[안정적이고 자연스러운 다국어 TTS 모델인 SANE-TTS를 소개합니다.]]></description>
@@ -145,7 +145,7 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
         </item>
         <item>
             <title><![CDATA[Assem-VC and Assem-Singer:]]></title>
-            <link>https://mindslab-ai.github.io/blog/assem-vc</link>
+            <link>https://maum-ai.github.io/blog/assem-vc</link>
             <guid>assem-vc</guid>
             <pubDate>Fri, 19 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[From Speech Conversion to Singing Voice Manipulation]]></description>
@@ -158,7 +158,7 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
         </item>
         <item>
             <title><![CDATA[CES 2022에 참석한 마인즈랩, AI Human]]></title>
-            <link>https://mindslab-ai.github.io/blog/ces-2022-review</link>
+            <link>https://maum-ai.github.io/blog/ces-2022-review</link>
             <guid>ces-2022-review</guid>
             <pubDate>Thu, 17 Feb 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Brain팀을 대표하여 CES 2022 참석한 후기를 전달드리고, AI Human 관련한 Brain팀의 연구를 소개합니다.]]></description>
@@ -177,7 +177,7 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
         </item>
         <item>
             <title><![CDATA[VITS: Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech]]></title>
-            <link>https://mindslab-ai.github.io/blog/vits</link>
+            <link>https://maum-ai.github.io/blog/vits</link>
             <guid>vits</guid>
             <pubDate>Tue, 19 Oct 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[복잡다단한 End-to-End TTS 모델인 VITS를 소개합니다.]]></description>
@@ -190,7 +190,7 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
         </item>
         <item>
             <title><![CDATA[Activate or Not: Learning Customized Activation]]></title>
-            <link>https://mindslab-ai.github.io/blog/acon</link>
+            <link>https://maum-ai.github.io/blog/acon</link>
             <guid>acon</guid>
             <pubDate>Mon, 19 Jul 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[Swish와 ReLU와의 관계를 설명하고, 학습이 가능한 활성함수를 소개합니다.]]></description>
@@ -204,7 +204,7 @@ Speaker regularization loss를 사용하지 않은 (b)의 경우에는 같은 �
         </item>
         <item>
             <title><![CDATA[NU-Wave(Interspeech):]]></title>
-            <link>https://mindslab-ai.github.io/blog/nu-wave</link>
+            <link>https://maum-ai.github.io/blog/nu-wave</link>
             <guid>nu-wave</guid>
             <pubDate>Wed, 14 Jul 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[최초로 48kHz로 upsampling을 성공한 저희 연구를 소개합니다.]]></description>
