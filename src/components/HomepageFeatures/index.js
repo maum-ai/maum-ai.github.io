@@ -79,7 +79,7 @@ export default function HomepageFeatures() {
           <br />
 
           <p>
-            안녕하세요 <strong>MINDsLab Brain</strong>입니다. Brain팀은 <a href="https://maum.ai" target="_blank" rel="noopener noreferrer"><strong>MINDsLab</strong></a>의 연구조직으로, 회사에서 서비스하(려)는 ML/DL 알고리즘을 연구 및 개발하고 있습니다.
+            안녕하세요 <strong>maum.ai Brain</strong>입니다. Brain팀은 <a href="https://maum.ai" target="_blank" rel="noopener noreferrer"><strong>maum.ai</strong></a>의 연구조직으로, 회사에서 서비스하(려)는 ML/DL 알고리즘을 연구 및 개발하고 있습니다.
           </p>
 
           <p>
@@ -99,7 +99,7 @@ export default function HomepageFeatures() {
           </h3>
 
           <p>
-            Brain팀의 연구는 AI research community의 많은 글과 오픈소스로부터 도움을 받아 이뤄지고, 또한 <a href="https://mindslab-ai.github.io" target="_blank" rel="noopener noreferrer">논문과 코드 공개를 통해 기여</a>하고 있습니다. 사실 논문과 코드라는 결실은 Brain팀에서의 수많은 토의와 아이디어들을 기반으로 맺게 되는데요. Brain팀에서 진행하는 DL/ML에 대한 이야기들 중 가치 있는 이야기들을 모아 이 블로그에서 공유하려고 합니다. 물론, 논문과 코드 공개 소식도 이 블로그에서 제일 먼저 공유할 예정입니다!
+            Brain팀의 연구는 AI research community의 많은 글과 오픈소스로부터 도움을 받아 이뤄지고, 또한 <a href="https://maum-ai.github.io" target="_blank" rel="noopener noreferrer">논문과 코드 공개를 통해 기여</a>하고 있습니다. 사실 논문과 코드라는 결실은 Brain팀에서의 수많은 토의와 아이디어들을 기반으로 맺게 되는데요. Brain팀에서 진행하는 DL/ML에 대한 이야기들 중 가치 있는 이야기들을 모아 이 블로그에서 공유하려고 합니다. 물론, 논문과 코드 공개 소식도 이 블로그에서 제일 먼저 공유할 예정입니다!
           </p>
           <br />
 
@@ -110,7 +110,7 @@ export default function HomepageFeatures() {
           </h3>
 
           <p>
-            위에서도 잠깐 말씀드렸지만, MINDsLab Brain팀 블로그에서는 아래와 같은 내용들을 공유하려고 합니다.
+            위에서도 잠깐 말씀드렸지만, maum.ai Brain팀 블로그에서는 아래와 같은 내용들을 공유하려고 합니다.
           </p>
 
           <ul>

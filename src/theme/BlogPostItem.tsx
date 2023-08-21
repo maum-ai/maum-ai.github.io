@@ -20,7 +20,7 @@ function BlogPostItem(props) {
             const script = document.createElement("script");
 
             script.src = "https://utteranc.es/client.js";
-            script.setAttribute("repo", "mindslab-ai/mindslab-ai.github.io");
+            script.setAttribute("repo", "maum-ai/maum-ai.github.io");
             script.setAttribute("issue-term", "pathname");
             script.setAttribute("label", "comments💬");
             script.setAttribute("theme", utterancesTheme);

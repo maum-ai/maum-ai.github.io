@@ -1,6 +1,6 @@
 ---
 title: Publications
-description: List of Publications from MINDsLab Brain Team
+description: List of Publications from maum.ai Brain Team
 ---
 
 import styles from './publications.module.css';
@@ -8,29 +8,55 @@ import * as features from '@site/src/components/PublicationFeatures';
 
 
 
-<!-- ![Minds Lab Logo](assets/mindslab_logo.png) -->
+<!-- ![maum.ai Logo](assets/maumai_BI.png) -->
 ## Publications
+
+### 2023
+
+<section id="activities" className={styles.category}>
+    <ul className={styles.publications}>
+        <li>
+            <features.ConferenceItem conference="Interspeech"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2302.12391" title="PITS: Variational Pitch Inference without Fundamental Frequency for End-to-End Pitch-controllable TTS"/>
+            <features.AuthorItem authors={["Junhyeok Lee", "Wonbin Jung", "Hyungjae Cho", "Jaeyeon Kim", "Jaehwan Kim"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true]}/>
+            <features.PaperDescription preview="Previous pitch-controllable text-to-speech (TTS) models rely on directly modeling fundamental frequency, leading to low variance in synthesized speech."
+            description="To address this issue, we propose PITS, an end-to-end pitch-controllable TTS model that utilizes variational inference to model pitch. Based on VITS, PITS incorporates the Yingram encoder, the Yingram decoder, and adversarial training of pitch-shifted synthesis to achieve pitch-controllability. Experiments demonstrate that PITS generates high-quality speech that is indistinguishable from ground truth speech and has high pitch-controllability without quality degradation."/>
+            <features.GithubItem link="https://github.com/anonymous-pits/pits" />
+            <features.DemoItem link="https://huggingface.co/spaces/anonymous-pits/pits" />
+        </li>
+        <li>
+            <features.ConferenceItem conference="ICML Workshop"/>
+            <features.PaperTitle paperLink="https://openreview.net/forum?id=qL47xtuEuv" title="E3-VITS: Emotional End-to-End TTS with Cross-speaker Style Transfer"/>
+            <features.AuthorItem authors={["Wonbin Jung", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
+            <features.PaperDescription preview="Since previous emotional TTS models are based on a two-stage pipeline or additional labels, their training process is complex and requires a high labeling cost. "
+            description="To deal with this problem, this paper presents E3-VITS, an end-to-end emotional TTS model that addresses the limitations of existing models. E3-VITS synthesizes high-quality speeches for multi-speaker conditions, supports both reference speech and textual description-based emotional speech synthesis, and enables cross-speaker emotion transfer with a disjoint dataset. To implement E3-VITS, we propose batch-permuted style perturbation, which generates audio samples with unpaired emotion to increase the quality of cross-speaker emotion transfer. Results show that E3-VITS outperforms the baseline model in terms of naturalness, speaker and emotion similarity, and inference speed."/>
+            <features.GithubItem link="https://github.com/Wonbin-Jung/e3-vits" />
+            <features.DemoItem link="https://wonbin-jung.github.io/e3-vits/" />
+        </li>
+        <li>
+            <features.ConferenceItem conference="ICASSP"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2211.04610" title="PhaseAug: A Differentiable Augmentation for Speech Synthesis to Simulate One-to-Many Mapping"/>
+            <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han", "Hyunjae Cho", "Wonbin Jung"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
+            <features.PaperDescription preview="In this paper, we present PhaseAug, a differentiable augmentation for speech synthesis "
+            description="Previous generative adversarial network (GAN)-based neural vocoders are trained to reconstruct the exact ground truth waveform from the paired mel-spectrogram and do not consider the one-to-many relationship of speech synthesis. This conventional training causes overfitting for both the discriminators and the generator, leading to the periodicity artifacts in the generated audio signal. In this work, we present PhaseAug, the first differentiable augmentation for speech synthesis that rotates the phase of each frequency bin to simulate one-to-many mapping. With our proposed method, we outperform baselines without any architecture modification. Code and audio samples will be available at https://github.com/maum-ai/phaseaug."/>
+            <features.GithubItem link="https://github.com/maum-ai/phaseaug" />
+            <features.DemoItem link="https://maum-ai.github.io/phaseaug/" />
+        </li>
+    </ul>
+</section>
+
 
 ### 2022
 
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="Preprint"/>
-            <features.PaperTitle paperLink="https://arxiv.org/abs/2211.04610" title="PhaseAug: A Differentiable Augmentation for Speech Synthesis to Simulate One-to-Many Mapping"/>
-            <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han", "Hyunjae Cho", "Wonbin Jung"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
-            <features.PaperDescription preview="In this paper, we present PhaseAug, a differentiable augmentation for speech synthesis "
-            description="Previous generative adversarial network (GAN)-based neural vocoders are trained to reconstruct the exact ground truth waveform from the paired mel-spectrogram and do not consider the one-to-many relationship of speech synthesis. This conventional training causes overfitting for both the discriminators and the generator, leading to the periodicity artifacts in the generated audio signal. In this work, we present PhaseAug, the first differentiable augmentation for speech synthesis that rotates the phase of each frequency bin to simulate one-to-many mapping. With our proposed method, we outperform baselines without any architecture modification. Code and audio samples will be available at https://github.com/mindslab-ai/phaseaug."/>
-            <features.GithubItem link="https://github.com/mindslab-ai/phaseaug" />
-            <features.DemoItem link="https://mindslab-ai.github.io/phaseaug/" />
-        </li>
-        <li>
             <features.ConferenceItem conference="Interspeech"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2206.12132" title="SANE-TTS: Stable And Natural End-to-End Multilingual Text-to-Speech"/>
             <features.AuthorItem authors={["Hyunjae Cho", "Wonbin Jung", "Junhyeok Lee", "Sang Hoon Woo"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
             <features.PaperDescription preview="In this paper, we present SANE-TTS, a stable and natural end-to-end multilingual TTS model. "
             description="By the difficulty of obtaining multilingual corpus for given speaker, training multilingual TTS model with monolingual corpora is unavoidable. We introduce speaker regularization loss that improves speech naturalness during cross-lingual synthesis as well as domain adversarial training, which is applied in other multilingual TTS models. Furthermore, by adding speaker regularization loss, replacing speaker embedding with zero vector in duration predictor stabilizes cross-lingual inference. With this replacement, our model generates speeches with moderate rhythm regardless of source speaker in cross-lingual synthesis. In MOS evaluation, SANE-TTS achieves naturalness score above 3.80 both in cross-lingual and intralingual synthesis, where the ground truth score is 3.99. Also, SANE-TTS maintains speaker similarity close to that of ground truth even in cross-lingual inference. Audio samples are available on our web page."/>
-            <features.DemoItem link="https://mindslab-ai.github.io/sane-tts/" />
+            <features.DemoItem link="https://maum-ai.github.io/sane-tts/" />
         </li>
         <li>
             <features.ConferenceItem conference="Interspeech"/>
@@ -38,8 +64,8 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.AuthorItem authors={["Seungu Han", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
             <features.PaperDescription preview="Conventionally, audio super-resolution models fixed the initial and the target sampling rates, which necessitate the model to be trained for each pair of sampling rates. "
             description="We introduce NU-Wave 2, a diffusion model for neural audio upsampling that enables the generation of 48 kHz audio signals from inputs of various sampling rates with a single model. Based on the architecture of NU-Wave, NU-Wave 2 uses short-time Fourier convolution (STFC) to generate harmonics to resolve the main failure modes of NU-Wave, and incorporates bandwidth spectral feature transform (BSFT) to condition the bandwidths of inputs in the frequency domain. We experimentally demonstrate that NU-Wave 2 produces high-resolution audio regardless of the sampling rate of input while requiring fewer parameters than other models."/>
-            <features.GithubItem link="https://github.com/mindslab-ai/nuwave2" />
-            <features.DemoItem link="https://mindslab-ai.github.io/nuwave2/" />
+            <features.GithubItem link="https://github.com/maum-ai/nuwave2" />
+            <features.DemoItem link="https://maum-ai.github.io/nuwave2/" />
         </li>
         <li>
             <features.ConferenceItem conference="PR Letters"/>
@@ -71,7 +97,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.AuthorItem authors={["Kang-wook Kim", "Seung-won Park", "Junhyeok Lee", "Myun-chul Joe"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true]}/>
             <features.PaperDescription preview="Recent works on voice conversion (VC) focus on preserving the rhythm and the intonation as well as the linguistic content. "
             description="To preserve these features from the source, we decompose current non-parallel VC systems into two encoders and one decoder. We analyze each module with several experiments and reassemble the best components to propose Assem-VC, a new state-of-the-art any-to-many non-parallel VC system. We also examine that PPG and Cotatron features are speaker-dependent, and attempt to remove speaker identity with adversarial training."/>
-            <features.GithubItem link="https://github.com/mindslab-ai/assem-vc" />
+            <features.GithubItem link="https://github.com/maum-ai/assem-vc" />
         </li>
     </ul>
 </section>
@@ -87,8 +113,8 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.AuthorItem authors={["Kang-wook Kim", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
             <features.PaperDescription preview="We propose a singing decomposition system that encodes time-aligned linguistic content, pitch, and source speaker identity via Assem-VC. "
             description="With decomposed speaker-independent information and the target speaker's embedding, we could synthesize the singing voice of the target speaker. In conclusion, we made a perfectly synced duet with the user's singing voice and the target singer's converted singing voice."/>
-            <features.GithubItem link="https://github.com/mindslab-ai/assem-vc" />
-            <features.DemoItem link="https://mindslab-ai.github.io/assem-vc/singer/" />
+            <features.GithubItem link="https://github.com/maum-ai/assem-vc" />
+            <features.DemoItem link="https://maum-ai.github.io/assem-vc/singer/" />
         </li>
         <li>
             <features.ConferenceItem conference="Interspeech"/>
@@ -96,8 +122,8 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.AuthorItem authors={["Junhyeok Lee", "Seungu Han"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
             <features.PaperDescription preview="In this work, we introduce NU-Wave, the first neural audio upsampling model to produce waveforms of sampling rate 48kHz from coarse 16kHz or 24kHz inputs, while prior works could generate only up to 16kHz. "
             description="NU-Wave is the first diffusion probabilistic model for audio super-resolution which is engineered based on neural vocoders. NU-Wave generates high-quality audio that achieves high performance in terms of signal-to-noise ratio (SNR), log-spectral distance (LSD), and accuracy of the ABX test. In all cases, NU-Wave outperforms the baseline models despite the substantially smaller model capacity (3.0M parameters) than baselines (5.4-21%)."/>
-            <features.GithubItem link="https://github.com/mindslab-ai/nuwave" />
-            <features.DemoItem link="https://mindslab-ai.github.io/nuwave" />
+            <features.GithubItem link="https://github.com/maum-ai/nuwave" />
+            <features.DemoItem link="https://maum-ai.github.io/nuwave" />
         </li>
         <li>
             <features.ConferenceItem conference="CVPR Workshop"/>
@@ -125,8 +151,8 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.AuthorItem authors={["Seung-won Park", "Doo-young Kim", "Myun-chul Joe"]} numFirstAuthor={1} isBrainTeam={[true, true, true]}/>
             <features.PaperDescription preview="We propose Cotatron, a transcription-guided speech encoder for speaker-independent linguistic representation. "
             description="Cotatron is based on the multispeaker TTS architecture and can be trained with conventional TTS datasets. We train a voice conversion system to reconstruct speech with Cotatron features, which is similar to the previous methods based on Phonetic Posteriorgram (PPG). By training and evaluating our system with 108 speakers from the VCTK dataset, we outperform the previous method in terms of both naturalness and speaker similarity. Our system can also convert speech from speakers that are unseen during training, and utilize ASR to automate the transcription with minimal reduction of the performance."/>
-            <features.GithubItem link="https://github.com/mindslab-ai/cotatron" />
-            <features.DemoItem link="https://mindslab-ai.github.io/cotatron/" />
+            <features.GithubItem link="https://github.com/maum-ai/cotatron" />
+            <features.DemoItem link="https://maum-ai.github.io/cotatron/" />
             <features.MiscItem link="https://youtu.be/lnNuL8hqoh4" customName="Talk"/>
         </li>
         <li>

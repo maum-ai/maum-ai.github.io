@@ -9,15 +9,15 @@ const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'MINDsLab BRAIN Team',
+  title: 'maum.ai BRAIN Team',
   tagline: 'AI in Brain',
-  url: 'https://mindslab-ai.github.io/',
+  url: 'https://maum-ai.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'mindslab-ai', // Usually your GitHub org/user name.
-  projectName: 'mindslab-ai.github.io', // Usually your repo name.
+  organizationName: 'maum-ai', // Usually your GitHub org/user name.
+  projectName: 'maum-ai.github.io', // Usually your repo name.
   trailingSlash: false,
 
 
@@ -68,7 +68,7 @@ const config = {
         // title: 'Placeholder',
         title: '',
         logo: {
-          alt: 'MINDsLab BRAIN Team',
+          alt: 'maum.ai BRAIN Team',
           src: 'img/mindslab_brain.svg',
         },
         items: [
@@ -99,7 +99,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/mindslab-ai',
+            href: 'https://github.com/maum-ai',
             label: 'GitHub',
             position: 'right',
           },
@@ -130,7 +130,7 @@ const config = {
             items: [
               {
                 label: 'Github',
-                href: 'https://github.com/mindslab-ai',
+                href: 'https://github.com/maum-ai',
               },
             ],
           },
@@ -148,7 +148,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} MINDsLab BRAIN Team. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} maum.ai BRAIN Team. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
