@@ -11,6 +11,28 @@ import * as features from '@site/src/components/PublicationFeatures';
 <!-- ![maum.ai Logo](assets/maumai_BI.png) -->
 ## Publications
 
+### 2024
+<section id="activities" className={styles.category}>
+    <ul className={styles.publications}>
+    <li>
+            <features.ConferenceItem conference="ICASSP"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2211.04610" title="EnCLAP: Combining Neural Audio Codec and Audio-Text Joint Embedding for Automated Audio Captioning"/>
+            <features.AuthorItem authors={["Jaeyeon Kim", "Jaeyoon Jung", "Jinjoo Lee", "Sang Hoon Woo"]} numFirstAuthor={1} isBrainTeam={[true, true, true, false]}/>
+            <features.PaperDescription preview="We propose EnCLAP, a novel framework for automated audio captioning. "
+            description="EnCLAP employs two acoustic representation models, EnCodec and CLAP, along with a pretrained language model, BART. We also introduce a new training objective called masked codec modeling that improves acoustic awareness of the pretrained language model. Experimental results on AudioCaps and Clotho demonstrate that our model surpasses the performance of baseline models. Source code will be available at https://github.com/jaeyeonkim99/EnCLAP. An online demo is available at https://huggingface.co/spaces/enclap-team/enclap."/>
+            <features.GithubItem link="https://github.com/jaeyeonkim99/EnCLAP" />
+            <features.DemoItem link="https://huggingface.co/spaces/enclap-team/enclap" />
+        </li>
+        <li>
+            <features.ConferenceItem conference="ICASSP"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2402.01298" title="Learning Semantic Information from Raw Audio Signal Using Both Contextual and Phonetic Representations"/>
+            <features.AuthorItem authors={["Jaeyeon Kim", "Injune Hwang", "Kyogu Lee"]} numFirstAuthor={1} isBrainTeam={[true, false, false]}/>
+            <features.PaperDescription preview="We propose a framework to learn semantics from raw audio signals using two types of representations, encoding contextual and phonetic information respectively."
+            description=" Specifically, we introduce a speech-to-unit processing pipeline that captures two types of representations with different time resolutions. For the language model, we adopt a dual-channel architecture to incorporate both types of representation. We also present new training objectives, masked context reconstruction and masked context prediction, that push models to learn semantics effectively. Experiments on the sSIMI metric of Zero Resource Speech Benchmark 2021 and Fluent Speech Command dataset show our framework learns semantics better than models trained with only one type of representation."/>
+        </li>
+    </ul>
+</section>
+
 ### 2023
 
 <section id="activities" className={styles.category}>
