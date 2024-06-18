@@ -99,6 +99,11 @@ const config = {
             position: 'right',
           },
           {
+            href: '/internship',
+            label: 'Internship',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/maum-ai',
             label: 'GitHub',
             position: 'right',
