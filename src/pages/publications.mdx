@@ -15,7 +15,7 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="NeurIPS Workshop OWA Accepted, ICRA Under Review"/>
+            <features.ConferenceItem conference="ICRA Under Review"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2410.01273" title="CANVAS: Commonsense-Aware Navigation System for Intuitive Human-Robot Interaction"/>
             <features.AuthorItem authors={["Suhwan Choi", "Yongjun Cho", "Minchan Kim", "Jaeyoon Jung", "Myunchul Joe", "Yubeen Park", "Minseo Kim", "Sungwoong Kim", "Sungjae Lee", "Hwiseong Park", "Jiwan Chung", "Youngjae Yu"]} numFirstAuthor={4} isBrainTeam={[true, true, true, true, true, false, false, false, false, false, false, false]}/>
             <features.PaperDescription preview="Real-life robot navigation involves more than just reaching a destination; it requires optimizing movements while addressing scenario-specific goals. "
@@ -24,7 +24,16 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.DemoItem link="https://worv-ai.github.io/canvas/" />
         </li>
         <li>
-            <features.ConferenceItem conference="EMNLP Workshop (Oral)"/>
+            <features.ConferenceItem conference="NeurIPS Workshop OWA (Oral)"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2410.01273" title="Integrating Visual and Linguistic Instructions for Context-Aware Navigation Agents"/>
+            <features.AuthorItem authors={["Suhwan Choi", "Yongjun Cho", "Minchan Kim", "Jaeyoon Jung", "Myunchul Joe", "Yubeen Park", "Minseo Kim", "Sungwoong Kim", "Sungjae Lee", "Hwiseong Park", "Jiwan Chung", "Youngjae Yu"]} numFirstAuthor={4} isBrainTeam={[true, true, true, true, true, false, false, false, false, false, false, false]}/>
+            <features.PaperDescription preview="Real-life robot navigation involves more than simply reaching a destination; it requires optimizing movements while considering scenario-specific goals. "
+            description="Humans often express these goals through abstract cues, such as verbal commands or rough sketches. While this guidance may be vague or noisy, we still expect robots to navigate as intended. For robots to interpret and execute these abstract instructions in line with human expectations, they need to share a basic understanding of navigation concepts with humans. To address this challenge, we introduce CANVAS, a novel framework that integrates both visual and linguistic instructions for commonsense-aware navigation. CANVAS leverages imitation learning, enabling robots to learn from human navigation behavior. We also present COMMAND, a comprehensive dataset that includes human-annotated navigation results spanning over 48 hours and 219 kilometers, specifically designed to train commonsense-aware navigation systems in simulated environments. Our experiments demonstrate that CANVAS outperforms the strong rule-based ROS NavStack system across all environments, excelling even with noisy instructions. In particular, in the orchard environment where ROS NavStack achieved a 0% success rate, CANVAS reached a 67% success rate. CANVAS also closely aligns with human demonstrations and commonsense constraints, even in unseen environments. Moreover, real-world deployment of CANVAS shows impressive Sim2Real transfer, with a total success rate of 69%, highlighting the potential of learning from human demonstrations in simulated environments for real-world applications."/>
+            <features.GithubItem link="https://github.com/worv-ai/canvas" />
+            <features.DemoItem link="https://worv-ai.github.io/canvas/" />
+        </li>
+        <li>
+            <features.ConferenceItem conference="EMNLP Workshop FEVER (Oral)"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2410.12377" title="HerO at AVeriTeC: The Herd of Open Large Language Models for Verifying Real-World Claims"/>
             <features.AuthorItem authors={["Yejun Yoon", "Jaeyoon Jung", "Seunghyun Yoon", "Kunwoo Park"]} numFirstAuthor={2} isBrainTeam={[false, true, false, false]}/>
             <features.PaperDescription preview="To tackle the AVeriTeC shared task hosted by the FEVER-24, we introduce a system that only employs publicly available large language models (LLMs) "
