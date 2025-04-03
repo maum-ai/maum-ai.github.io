@@ -97,6 +97,14 @@ export function MiscItem({link, customName="Misc"}) {
     );
 }
 
+export function LeaderboardItem({link, customName="Leaderboard"}) {
+    return (
+        <p className={styles.leaderboard}>
+            <a href={link} target="_blank" rel="noopener noreferrer">{customName}</a>
+        </p>
+    );
+}
+
 
 
 export default {
@@ -106,5 +114,6 @@ export default {
     PaperDescription: PaperDescription,
     GithubItem: GithubItem,
     DemoItem: DemoItem,
-    MiscItem: MiscItem
+    MiscItem: MiscItem,
+    LeaderboardItem: LeaderboardItem,
 }
