@@ -15,6 +15,13 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
+            <features.ConferenceItem conference="ACL Findings"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2504.14175" title="Hypothetical Documents or Knowledge Leakage? Rethinking LLM-based Query Expansion"/>
+            <features.AuthorItem authors={["Yejun Yoon", "Jaeyoon Jung", "Seunghyun Yoon", "Kunwoo Park"]} numFirstAuthor={1} isBrainTeam={[false, true, false, false]}/>
+            <features.PaperDescription preview="Query expansion methods powered by large language models (LLMs) have demonstrated effectiveness in zero-shot retrieval tasks. "
+            description="These methods assume that LLMs can generate hypothetical documents that, when incorporated into a query vector, enhance the retrieval of real evidence. However, we challenge this assumption by investigating whether knowledge leakage in benchmarks contributes to the observed performance gains. Using fact verification as a testbed, we analyzed whether the generated documents contained information entailed by ground truth evidence and assessed their impact on performance. Our findings indicate that performance improvements occurred consistently only for claims whose generated documents included sentences entailed by ground truth evidence. This suggests that knowledge leakage may be present in these benchmarks, inflating the perceived performance of LLM-based query expansion methods, particularly in real-world scenarios that require retrieving niche or novel knowledge."/>
+        </li>
+        <li>
             <features.ConferenceItem conference="CVPR Workshop"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2503.23730" title="KOFFVQA: An Objectively Evaluated Free-form VQA Benchmark for Large Vision-Language Models in the Korean Language"/>
             <features.AuthorItem authors={["Yoonshik Kim", "Jaeyoon Jung"]} numFirstAuthor={4} isBrainTeam={[true, true]}/>

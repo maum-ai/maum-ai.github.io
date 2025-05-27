@@ -23,7 +23,7 @@ import figHome from './image/maum-home.png';
 
 지원 가능한 직군은 아래와 같습니다.
 - AI Scientist (Brain팀)
-- ML Engineer (Brain팀)
+- ~~ML Engineer (Brain팀)~~ (현재 ML Engineer는 지원을 받고 있지 않습니다.)
 
 문의 사항이 있을 경우, brain-hr@maum.ai 로 문의주시면 최대한 빠르게 답변드릴 수 있도록 하겠습니다.
 
@@ -46,18 +46,18 @@ import figHome from './image/maum-home.png';
 ### 핵심 업무
 
 <Tabs groupId="job-position">
-<TabItem value="requirements" label="ML Engineer" default>
+<TabItem value="requirements" label="ML Engineer">
 
 - ML/DL 모델을 효율적으로 서빙하기 위한 시스템 개발 및 설계
 - ML/DL 모델의 학습 및 서빙 성능을 높이는 최신 최적화/양자화 기법 탐색 및 적용
 - 기존 학습/서빙 시스템의 성능을 높이기 위한 개선 방안 연구 및 구현
 
 </TabItem>
-<TabItem value="ai-scientist" label="AI Scientist">
+<TabItem value="ai-scientist" label="AI Scientist" default>
 
 - 현실 세계의 문제를 해결하기 위한 최적의 ML/DL 알고리즘을 설계
 - 기존 알고리즘 및 모델의 상업적 가치와 성능을 높이기 위한 개선 연구
-- 주 연구 분야: Audio(STT, TTS), Vision(Face generation), NLP(LLM, Retrieval, Dialog)
+- 주 연구 분야: Audio(STT, TTS), Vision(VLM, VLA), NLP(LLM, Retrieval, Dialog)
 
 </TabItem>
 </Tabs>
@@ -68,14 +68,14 @@ import figHome from './image/maum-home.png';
 ### 자격 요건
 
 <Tabs groupId="job-position">
-<TabItem value="requirements" label="ML Engineer" default>
+<TabItem value="requirements" label="ML Engineer">
 
 - Python, C++에 능숙하여 원하는 것을 구현할 수 있는 능력
 - Docker를 사용하여 서비스를 구성할 수 있는 능력
 - PyTorch 기반의 프레임워크로 작성된 코드를 이해하고 모델 아키텍처를 파악할 수 있는 능력
 
 </TabItem>
-<TabItem value="ai-scientist" label="AI Scientist">
+<TabItem value="ai-scientist" label="AI Scientist" default>
 
 - ML/DL 알고리즘을 깊이 이해할 수 있는 수준의 수학적 능력 및 모델링 능력
 - TensorFlow, PyTorch 등 DL framework 활용 및 모델 구현에 자유로울 수 있는 수준의 개발 능력
@@ -90,14 +90,14 @@ import figHome from './image/maum-home.png';
 ### 우대 요건
 
 <Tabs groupId="job-position">
-<TabItem value="requirements" label="ML Engineer" default>
+<TabItem value="requirements" label="ML Engineer">
 
 - 유관 전공 석사 이상의 경력 또는 관련 학회 논문 제출 경험
 - OpenMP, MPI, CUDA 등 multi-core CPU나 가속기를 활용하여 프로그램의 성능을 최적화 해본 경험
 - ONNX, ONNX Runtime을 사용해 PyTorch 모델을 변환하고 edge device에서 실행 해본 경험
 
 </TabItem>
-<TabItem value="ai-scientist" label="AI Scientist">
+<TabItem value="ai-scientist" label="AI Scientist" default>
 
 - 유관 전공 석사 이상의 경력 또는 관련 학회 논문 제출 경험
 - 금융, 의료, 교육, 패션 등 산업별 실제 데이터 기반 AI 프로젝트 경험
@@ -123,7 +123,7 @@ Brain팀은 시차출퇴근제를 진행하고 있습니다.
 **코어타임은 10시 30분부터 17시까지**로, 오전 8시 ~ 오전 10시 30분 사이에 각자가 정한 시간에 출근합니다.  
 **산업기능요원, 전문연구요원으로 복무하시는 분들도 시차출퇴근제 적용이 가능**합니다!
 
-병역이 아니신 정규직 분들은 재택과 병행하여 하이브리드 근무가 가능합니다. 😉
+병역이 아니신 정규직 분들은 **재택과 병행**하여 하이브리드 근무가 가능합니다. 😉
 
 <br/>
 
@@ -131,7 +131,7 @@ Brain팀은 시차출퇴근제를 진행하고 있습니다.
 
 Brain팀 구성원에게는 **입사 시 GPU 탑재 데스크탑부터 MacBook까지 원하는 기기를 지원**해드리며, **모니터 및 모니터암을 기본으로 제공**하여 Brain팀 구성원분들의 목 건강도 책임집니다! 💪
 
-Brain팀에는 **연구용으로만 On-premise로 V100 10대, A100 30대, H100 96대 이상을 운용**하고 있고, 인원당 On-premise GPU를 최소 2대 이상 사용하실 수 있게끔 연구 및 개발환경을 구축하고 있습니다. (2024년 12월 기준)
+Brain팀에는 **연구용으로만 On-premise로 V100 10대, A100 30대, H100 96대 이상을 운용**하고 있고, 인원당 On-premise GPU를 최소 2대 이상 사용하실 수 있게끔 연구 및 개발환경을 구축하고 있습니다. (2025년 5월 기준)
 
 <img className={styles.figCenter} src={figBrainRoom} alt="brain-room" />
 
@@ -144,7 +144,7 @@ Brain팀 AI Scientist는 회사의 사업 방향에 따른 연구인 **Strategic
 
 <img className={styles.figCenter} src={figHome} alt="home" />
 
-maum.ai는 전 직원 **점심 식사 식대를 제공**합니다.(1일 16000원) 판교 사옥 근처의 많은 식당을 자유롭게 이용할 수 있습니다!
+maum.ai는 전 직원 **점심 식사 식대를 제공**합니다.(1일 10000원) 판교 사옥 근처의 많은 식당을 자유롭게 이용할 수 있습니다!
 
 또한 사옥 내에도 로봇 바리스타가 비치되어 있어 자유롭게 음료 음용이 가능합니다. 🍹
 
