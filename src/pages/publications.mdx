@@ -11,11 +11,27 @@ import * as features from '@site/src/components/PublicationFeatures';
 <!-- ![maum.ai Logo](assets/maumai_BI.png) -->
 ## Publications
 
-### 2024
+### 2025
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="ICRA Under Review"/>
+            <features.ConferenceItem conference="ACL Findings"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2504.14175" title="Hypothetical Documents or Knowledge Leakage? Rethinking LLM-based Query Expansion"/>
+            <features.AuthorItem authors={["Yejun Yoon", "Jaeyoon Jung", "Seunghyun Yoon", "Kunwoo Park"]} numFirstAuthor={1} isBrainTeam={[false, true, false, false]}/>
+            <features.PaperDescription preview="Query expansion methods powered by large language models (LLMs) have demonstrated effectiveness in zero-shot retrieval tasks. "
+            description="These methods assume that LLMs can generate hypothetical documents that, when incorporated into a query vector, enhance the retrieval of real evidence. However, we challenge this assumption by investigating whether knowledge leakage in benchmarks contributes to the observed performance gains. Using fact verification as a testbed, we analyzed whether the generated documents contained information entailed by ground truth evidence and assessed their impact on performance. Our findings indicate that performance improvements occurred consistently only for claims whose generated documents included sentences entailed by ground truth evidence. This suggests that knowledge leakage may be present in these benchmarks, inflating the perceived performance of LLM-based query expansion methods, particularly in real-world scenarios that require retrieving niche or novel knowledge."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="CVPR Workshop"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2503.23730" title="KOFFVQA: An Objectively Evaluated Free-form VQA Benchmark for Large Vision-Language Models in the Korean Language"/>
+            <features.AuthorItem authors={["Yoonshik Kim", "Jaeyoon Jung"]} numFirstAuthor={4} isBrainTeam={[true, true]}/>
+            <features.PaperDescription preview="The recent emergence of Large Vision-Language Models(VLMs) has resulted in a variety of different benchmarks for evaluating such models. "
+            description="Despite this, we observe that most existing evaluation methods suffer from the fact that they either require the model to choose from pre-determined responses, sacrificing open-endedness, or evaluate responses using a judge model, resulting in subjective and unreliable evaluation. In addition, we observe a lack of benchmarks for VLMs in the Korean language, which are necessary as a separate metric from more common English language benchmarks, as the performance of generative language models can differ significantly based on the language being used. Therefore, we present KOFFVQA, a general-purpose free-form visual question answering benchmark in the Korean language for the evaluation of VLMs. Our benchmark consists of 275 carefully crafted questions each paired with an image and grading criteria covering 10 different aspects of VLM performance. The grading criteria eliminate the problem of unreliability by allowing the judge model to grade each response based on a pre-determined set of rules. By defining the evaluation criteria in an objective manner, even a small open-source model can be used to evaluate models on our benchmark reliably. In addition to evaluating a large number of existing VLMs on our benchmark, we also experimentally verify that our method of using pre-existing grading criteria for evaluation is much more reliable than existing methods. Our evaluation code is available at https://github.com/maum-ai/KOFFVQA."/>
+            <features.GithubItem link="https://github.com/maum-ai/KOFFVQA" />
+            <features.LeaderboardItem link="https://huggingface.co/spaces/maum-ai/KOFFVQA-Leaderboard" />
+        </li>
+        <li>
+            <features.ConferenceItem conference="ICRA"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2410.01273" title="CANVAS: Commonsense-Aware Navigation System for Intuitive Human-Robot Interaction"/>
             <features.AuthorItem authors={["Suhwan Choi", "Yongjun Cho", "Minchan Kim", "Jaeyoon Jung", "Myunchul Joe", "Yubeen Park", "Minseo Kim", "Sungwoong Kim", "Sungjae Lee", "Hwiseong Park", "Jiwan Chung", "Youngjae Yu"]} numFirstAuthor={4} isBrainTeam={[true, true, true, true, true, false, false, false, false, false, false, false]}/>
             <features.PaperDescription preview="Real-life robot navigation involves more than just reaching a destination; it requires optimizing movements while addressing scenario-specific goals. "
@@ -23,6 +39,12 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.GithubItem link="https://github.com/worv-ai/canvas" />
             <features.DemoItem link="https://worv-ai.github.io/canvas/" />
         </li>
+    </ul>
+</section>
+
+### 2024
+<section id="activities" className={styles.category}>
+    <ul className={styles.publications}>
         <li>
             <features.ConferenceItem conference="NeurIPS Workshop OWA (Oral)"/>
             <features.PaperTitle paperLink="https://openreview.net/forum?id=U6wyOnPt1U" title="Integrating Visual and Linguistic Instructions for Context-Aware Navigation Agents"/>
