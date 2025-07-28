@@ -1,0 +1,161 @@
+---
+title: maum.ai Brain팀 체험형 인턴 채용
+description: maum.ai Brain팀 체험형 인턴에 지원하세요!
+image: img/maumai_Symbol.png
+---
+
+import Link from '@docusaurus/Link';
+import styles from './index.module.css';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import figinternbanner from './image/maumai_intern_banner3.png';
+import figAlgoSession from './image/algo-session.jpg';
+import figBrainRoom from './image/brain-room.png';
+import figHome from './image/maum-home.png';
+import figGPU from './image/h100-gpu.png';
+
+<img className={styles.figCenter} src={figinternbanner} alt="internbanner" />
+
+# maum.ai Brain팀 체험형 인턴에 지원하세요!
+
+maum.ai Brain팀에서 여름 - 가을 기간 (약 3개월) 동안 함께하실 체험형 인턴을 모집합니다. 최소 세 달 안에 성과가 날 수 있고, 현업과 밀접하게 맞닿아있는 프로젝트를 진행할 수 있도록 구성하여 두 가지의 트랙을 선정했으며, 지원자는 두 가지 트랙 중 관심 있는 주제 하나를 선택해서 수행합니다.
+
+회사에서 주어지는 풍부한 자원을 활용하여 프로젝트를 진행하고, 최종 결과물을 발표하게 됩니다. 또한, 프로젝트 진행 중에는 Brain팀의 다양한 멤버들과 함께 협업하며, 실무 경험을 쌓을 수 있습니다. 😎
+
+<div className={styles.buttons}>
+    <Link
+        className="button button--primary button--lg"
+        style={{backgroundColor: "darkblue"}}
+        to="https://forms.gle/BY3Wk1WtP9gjovMm8">
+        Brain팀 체험형 인턴 지원하기
+    </Link>
+</div><br/>
+
+---
+
+## Track 1: Vision-Language Models in Your Pocket
+> VLM/VLA 등 멀티모달 언어 모델을 이해하고 최적화하여 on-device 환경에서 사용 가능한 고성능 추론 엔진을 개발합니다.
+
+##### 연구 방향
+VLM (Visual Language Model) 은 시각 정보와 자연어를 함께 이해하고 처리하는 생성형 모델로, 이미지 캡셔닝, 비주얼 질문 응답 (VQA), 멀티모달 검색 등 다양한 분야에서 빠르게 활용 범위를 넓혀가고 있습니다.
+하지만 이러한 모델은 LLM에 비해 연산량이 방대하여 클라우드가 아닌 모바일/엣지 디바이스에서 실시간으로 실행하기에 어려움이 많습니다.
+본 트랙에서는 VLM/VLA의 구조적 특성을 분석하고, 연산 최적화, token pruning 기법 등을 통해 on-device 환경에서 실행 가능한 고성능 멀티모달 추론 엔진을 구현합니다.
+VLM/VLA를 구성하는 컴포넌트 별 연산량, 메모리 사용량, 에너지 효율 등을 고려한 end-to-end 최적화가 핵심 과제입니다.
+
+##### 이런 일을 함께 할 거예요
+- VLM/VLA 등 멀티모달 언어 모델을 이해하고 작동 원리를 파헤치기
+- On-device 환경에서 NPU를 활용해 모델 실행하기
+- 성능 최적화를 위한 최신 기술 습득 및 현장 적용하기
+
+##### 이런 분을 찾고 있어요
+- C/C++, Python 등 범용 프로그래밍 언어로 원하는 기능을 구현할 수 있으신 분
+- ML 시스템 관련 논문을 읽고 이해할 수 있을 정도의 영어 실력과 CS 기초 지식을 가지신 분
+- 배움에 대한 열정과 도전 정신이 있으신 분
+
+##### 이런 분들은 꼭꼭 지원하세요!
+- 임베디드 및 모바일 환경에서 생성 모델을 실행하고 최적화 해보신 분
+- 멀티모달 언어 모델을 구현 및 최적화 해보신 분
+- 생성 모델 서빙 최적화 기법을 적용하거나 연구해보신 분
+
+---
+
+## Track 2: Dieting Bits - Smaller, Faster, Still Smart
+> 최신 양자화 알고리즘을 습득하고 이를 on-device 환경에 적용하여 경량화된 고성능 추론 엔진을 개발합니다.
+
+##### 연구 방향
+양자화 (quantization) 는 파라미터와 연산을 정수 또는 저비트 표현으로 바꾸어 모델을 작고 빠르게 만드는 기술입니다.
+특히 대형 멀티모달 모델처럼 연산량이 큰 모델을 엣지 디바이스에서 실행하기 위해서는 정밀도 손실을 최소화하면서 모델을 효율적으로 양자화하는 것이 핵심입니다.
+본 트랙에서는 최신 양자화 알고리즘을 습득하고 이를 VLM/VLA 모델에 적용하여, 실제 온디바이스 환경에서 빠르고 정확하게 동작하는 추론 시스템을 구현합니다.
+양자화 민감도 분석, calibration, weight/activation quantization 등 다양한 기술 스택을 다루며, 모델의 성능 저하를 최소화하면서 하드웨어의 특성을 고려한 효율적인 경량화가 목표입니다.
+
+##### 이런 일을 함께 할 거예요
+- 최신 양자화 기법 및 양자화 알고리즘의 작동 원리를 파헤치기
+- On-device 환경에서 heterogeneous architecture를 활용해 양자화 알고리즘 실행하기
+- 성능 최적화를 위한 고급 양자화 기법 탐색 및 적용하기
+
+##### 이런 분을 찾고 있어요
+- C/C++, Python 등 범용 프로그래밍 언어로 원하는 기능을 구현할 수 있으신 분
+- ML 시스템 관련 논문을 읽고 이해할 수 있을 정도의 영어 실력과 CS 기초 지식을 가지신 분
+- 배움에 대한 열정과 도전 정신이 있으신 분
+
+##### 이런 분들은 꼭꼭 지원하세요!
+- ML 컴파일러를 사용해 생성 모델을 실행하고 최적화 해보신 분
+- 멀티모달 언어 모델을 컴파일 및 경량화 해보신 분
+- 최신 양자화 기법을 적용하거나 연구해보신 분
+
+---
+
+## 제출 서류
+
+- 이력서 (필수)
+- 포트폴리오 URL (선택사항)
+
+## 전형 절차
+
+- 서류 접수 기간: 7월 28일 - 8월 10일 (23:59까지)
+- 기술진 면접 (화상): 8월 13일 - 8월 14일 예정 (2일 중 택1, 1시간 화상 면접)
+- 최종 합격자 발표: 8월 15일 예정
+- 전형 절차: 서류 전형 → 기술진 면접(화상) → 최종 합격자 발표
+
+인턴 기간: 여름 - 가을 약 3개월
+(8월 18일 - 11월 17일, 지원자의 학사일정에 따라 달라질 수 있음)
+
+전형절차는 변동될 수 있으며, 기술진 면접 결과에 따라 임원진 면접 절차가 추가될 수 있습니다.<br/>
+서류 합/불 여부 및 기술진 면접 시간 조율은 모든 지원자에게 8월 12일경 발송될 예정입니다.
+
+## 지원 기타
+
+- 해당 전형은 체험형 인턴으로 진행되며, 복학 여부, 평과 결과에 따라 계약 연장을 검토할 수 있습니다.
+- 문의 사항이 있을 경우, brain-hr@maum.ai 로 문의주시면 최대한 빠르게 답변드릴 수 있도록 하겠습니다.
+
+<br/><br/>
+
+## 근무 환경 및 복지
+
+<br/>
+
+<img className={styles.figCenter} src={figAlgoSession} alt="algo-session" />
+
+<br/>
+
+### 근무 형태
+
+Brain팀은 시차출퇴근제를 진행하고 있습니다.
+**코어타임은 10시 30분부터 17시까지**로, 오전 8시 ~ 오전 10시 30분 사이에 각자가 정한 시간에 출근합니다. 이후 8시간 근무 후 퇴근하시면 됩니다.
+
+업무 중 보여주시는 퍼포먼스에 따라 학기 중 주 2회 재택근무도 실시할 예정입니다. 😉
+
+<br/>
+
+### 근무 환경
+
+Brain팀 구성원에게는 **입사 시 GPU 탑재 데스크탑부터 MacBook까지 원하는 기기를 지원**해드리며, **모니터 및 모니터암을 기본으로 제공**하여 Brain팀 구성원분들의 목 건강도 책임집니다! 💪
+
+<img className={styles.figCenter} src={figGPU} alt="gpu" />
+
+Brain팀에는 **연구용으로만 On-premise로 V100 10대, A100 30대, H100 96대 이상을 운용**하고 있고, 인원당 On-premise GPU를 최소 2대 이상 사용하실 수 있게끔 연구 및 개발환경을 구축하고 있습니다. (2025년 5월 기준)
+
+<img className={styles.figCenter} src={figHome} alt="home" />
+
+maum.ai는 전 직원 **점심 식사 식대를 제공**합니다.(1일 10000원) 판교 사옥 근처의 많은 식당을 자유롭게 이용할 수 있습니다!
+
+또한 사옥 내에도 로봇 바리스타가 비치되어 있어 자유롭게 음료 음용이 가능합니다. 🍹
+
+<br/>
+
+### 사무실 위치
+
+maum.ai Brain팀에서 함께 하시게 될 경우, **판교 본사 오피스 및 연구소**에서 근무하시게 됩니다.
+
+maum.ai 판교 본사 오피스는 **판교IT센터 4층**에 위치하고 있습니다.
+
+<div className={styles.mapResponsive}>
+<iframe className={styles.googleMap} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.0726295115574!2d127.09005017586666!3d37.411758172079104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca75847776f07%3A0x7739a77102bd032!2zKOyjvCnrp4jsnYzsl5DsnbTslYTsnbQ!5e0!3m2!1sko!2skr!4v1718269729881!5m2!1sko!2skr" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<br/>
+
+#### 오시는 길
+
+판교역 2번 출구 '판교역동편' 정류장에서 55, 310 등 시내버스 탑승 후 '기업성장센터' 정류장에서 하차하시면 됩니다. 버스로 15분 가량 소요됩니다.
