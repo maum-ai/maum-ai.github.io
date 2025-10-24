@@ -11,9 +11,51 @@ import * as features from '@site/src/components/PublicationFeatures';
 <!-- ![maum.ai Logo](assets/maumai_BI.png) -->
 ## Publications
 
+### 2026
+
+<section id="activities" className={styles.category}>
+    <ul className={styles.publications}>
+        <li>
+            <features.ConferenceItem conference="Submitted to WWW"/>
+            <features.PaperTitle paperLink="" title="Is a Picture Worth Thousands of Words? Adaptive Agentic Multimodal Fact-Checking with Visual Evidence Necessity"/>
+            <features.AuthorItem authors={["Jaeyoon Jung", "Yejun Yoon", "Kunwoo Park"]} numFirstAuthor={1} isBrainTeam={[true, false, false]}/>
+            <features.PaperDescription preview="Automated fact-checking is a crucial task not only in journalism but also across web platforms, where it underpins a responsible web ecosystem and mitigates the harms of misinformation. "
+            description="While recent research has advanced from text-only to multimodal fact-checking, a prevailing assumption is that incorporating visual evidence universally enhances performance. In this work, we challenge that assumption and show that indiscriminate use of multimodal evidence can reduce accuracy, as quantitative and qualitative analyses reveal that the usefulness of visual evidence varies across claims. To address this gap, we propose AMuFC—Adaptive Agentic Multimodal Fact-Checking with Visual Evidence Necessity—a novel agentic fact-verification framework. AMuFC employs a VLM-based Analyzer that determines whether visual evidence is essential for claim verification, and a Verifier that predicts claim veracity conditioned on both the retrieved evidence and the Analyzer's judgment. Experimental results demonstrate that incorporating the Analyzer's assessment of visual evidence necessity into the Verifier's prediction substantially improves verification accuracy. A case study using web search highlights the retriever-agnostic effectiveness of the approach and supports its generalizability in real-world contexts."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="Submitted to ICLR"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2510.05684" title="D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI"/>
+            <features.AuthorItem authors={["Suwhan Choi", "Jaeyoon Jung", "Haebin Seong", "Minchan Kim", "Minyeong Kim", "Yongjun Cho", "Yoonshik Kim", "Yubeen Park", "Youngjae Yu", "Yunsung Lee"]} numFirstAuthor={3} isBrainTeam={[true, true, true, true, false, true, true, true, false, true]}/>
+            <features.PaperDescription preview="Large language models leverage internet-scale text data, yet embodied AI remains constrained by the prohibitive costs of physical trajectory collection. "
+            description="Desktop environments—particularly gaming—offer a compelling alternative: they provide rich sensorimotor interactions at scale while maintaining the structured observation-action coupling essential for embodied learning. We present D2E (Desktop to Embodied AI), a framework that demonstrates desktop interactions can serve as an effective pretraining substrate for robotics embodied AI tasks. Unlike prior work that remained domain-specific (e.g., VPT for Minecraft) or kept data proprietary (e.g., SIMA), D2E establishes a complete pipeline from scalable desktop data collection to verified transfer in embodied domains. Our framework comprises three components: (1) the OWA Toolkit that unifies diverse desktop interactions into a standardized format with 152x compression, (2) the Generalist-IDM that achieves strong zero-shot generalization across unseen games through timestamp-based event prediction, enabling internet-scale pseudo-labeling, and (3) VAPT that transfers desktop-pretrained representations to physical manipulation and navigation. Using 1.3K+ hours of data (259 hours of human demonstrations, and 1K+ hours of pseudo-labeled gameplay), we achieve a total of 96.6% success rate on LIBERO manipulation and 83.3% on CANVAS navigation benchmarks. This validates that sensorimotor primitives in digital interactions exhibit sufficient invariance to transfer meaningfully to physical embodied tasks, establishing desktop pretraining as a practical paradigm for robotics. We will make all our work public, including the OWA toolkit, datasets of human-collected and pseudo-labeled, and VAPT-trained models available at https://worv-ai.github.io/d2e/."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="Submitted to ICASSP"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2509.15389" title="Exploring Fine-Tuning of Large Audio Language Models for Spoken Language Understanding under Limited Speech data"/>
+            <features.AuthorItem authors={["Youngwon Choi", "Jaeyoon Jung", "Hyeonyu Kim", "Huu-Kim Nguyen", "Hwayeon Kim"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true]}/>
+            <features.PaperDescription preview="Large Audio Language Models (LALMs) have emerged as powerful tools for speech-related tasks but remain underexplored for fine-tuning, especially with limited speech data. "
+            description="To bridge this gap, we systematically examine how different fine-tuning schemes including text-only, direct mixing, and curriculum learning affect spoken language understanding (SLU), focusing on scenarios where text-label pairs are abundant while paired speech-label data are limited. Results show that LALMs already achieve competitive performance with text-only fine-tuning, highlighting their strong generalization ability. Adding even small amounts of speech data (2-5%) yields substantial further gains, with curriculum learning particularly effective under scarce data. In cross-lingual SLU, combining source-language speech data with target-language text and minimal target-language speech data enables effective adaptation. Overall, this study provides practical insights into the LALM fine-tuning under realistic data constraints."/>
+        </li>
+    </ul>
+</section>
+
 ### 2025
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
+        <li>
+            <features.ConferenceItem conference="BMVC"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2508.20379" title="Audio-Guided Visual Editing with Complex Multi-Modal Prompts"/>
+            <features.AuthorItem authors={["Hyeonyu Kim", "Seokhoon Jeong", "Seonghee Han", "Chanhyuk Choi", "Taehwan Kim"]} numFirstAuthor={1} isBrainTeam={[true, false, false, false, false]}/>
+            <features.PaperDescription preview="Visual editing with diffusion models has made significant progress but often struggles with complex scenarios that textual guidance alone could not adequately describe, highlighting the need for additional non-text editing prompts. "
+            description="In this work, we introduce a novel audio-guided visual editing framework that can handle complex editing tasks with multiple text and audio prompts without requiring additional training. Existing audio-guided visual editing methods often necessitate training on specific datasets to align audio with text, limiting their generalization to real-world situations. We leverage a pre-trained multi-modal encoder with strong zero-shot capabilities and integrate diverse audio into visual editing tasks, by alleviating the discrepancy between the audio encoder space and the diffusion model's prompt encoder space. Additionally, we propose a novel approach to handle complex scenarios with multiple and multi-modal editing prompts through our separate noise branching and adaptive patch selection. Our comprehensive experiments on diverse editing tasks demonstrate that our framework excels in handling complicated editing scenarios by incorporating rich information from audio, where text-only approaches fail."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="UIST"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2508.18918" title="DESAMO: A Device for Elder-Friendly Smart Homes Powered by Embedded LLM with Audio Modality"/>
+            <features.AuthorItem authors={["Youngwon Choi", "Donghyuk Jung", "Hwayeon Kim"]} numFirstAuthor={1} isBrainTeam={[true, false, true]}/>
+            <features.PaperDescription preview="We present DESAMO, an on-device smart home system for elder-friendly use powered by Audio LLM, that supports natural and private interactions. "
+            description="While conventional voice assistants rely on ASR-based pipelines or ASR-LLM cascades, often struggling with the unclear speech common among elderly users and unable to handle non-speech audio, DESAMO leverages an Audio LLM to process raw audio input directly, enabling a robust understanding of user intent and critical events, such as falls or calls for help."/>
+        </li>
         <li>
             <features.ConferenceItem conference="ACL Findings"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2504.14175" title="Hypothetical Documents or Knowledge Leakage? Rethinking LLM-based Query Expansion"/>
