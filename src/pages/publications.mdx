@@ -16,6 +16,20 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
+            <features.ConferenceItem conference="submitted to APSIPA ASC"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2605.17443" title="Analyzing Error Propagation in Korean Spoken QA with ASR-LLM Cascades"/>
+            <features.AuthorItem authors={["Donghyuk Jung", "Youngwon Choi"]} numFirstAuthor={2} isBrainTeam={[false, true]}/>
+            <features.PaperDescription preview="We analyze how automatic speech recognition (ASR) errors propagate through ASR-LLM cascades in Korean spoken question answering (SQA), focusing on downstream semantic failures that conventional ASR metrics cannot fully capture. "
+            description="Our analysis shows that the relative downstream degradation caused by ASR errors is consistent across LLMs with different absolute performance, suggesting that cascade degradation largely tracks ASR-stage information loss. We further identify single-character Korean ASR errors as a distinct semantic-failure channel, where the gold answer becomes entirely absent from the downstream prediction despite only a minimal transcription difference. Finally, an auxiliary comparison shows that a large audio language model outperforms an ASR-LLM pipeline with a matched language backbone in noisy Korean SQA, indicating the potential of direct audio input to mitigate transcript-induced information loss."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="accepted to INTERSPEECH"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2603.04219" title="ZeSTA: Zero-Shot TTS Augmentation with Domain-Conditioned Training for Data-Efficient Personalized Speech Synthesis"/>
+            <features.AuthorItem authors={["Youngwon Choi", "Jinwoo Oh", "Hwayeon Kim", "Hyeonyu Kim"]} numFirstAuthor={1} isBrainTeam={[true, false, true, true]}/>
+            <features.PaperDescription preview="We investigate the use of zero-shot text-to-speech (ZS-TTS) as a data augmentation source for low-resource personalized speech synthesis. "
+            description="While synthetic augmentation can provide linguistically rich and phonetically diverse speech, naively mixing large amounts of synthetic speech with limited real recordings often leads to speaker similarity degradation during fine-tuning. To address this issue, we propose ZeSTA, a simple domain-conditioned training framework that distinguishes real and synthetic speech via a lightweight domain embedding, combined with real-data oversampling to stabilize adaptation under extremely limited target data, without modifying the base architecture. Experiments on LibriTTS and an in-house dataset with two ZS-TTS sources demonstrate that our approach improves speaker similarity over naive synthetic augmentation while preserving intelligibility and perceptual quality."/>
+        </li>
+        <li>
             <features.ConferenceItem conference="CVPR Workshop, Under Review"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2511.20216" title="CostNav: A Navigation Benchmark for Cost-Aware Evaluation of Embodied Agents"/>
             <features.AuthorItem authors={["Haebin Seong", "Sungmin Kim", "Yongjun Cho", "Myunchul Joe", "Geunwoo Kim", "Yubeen Park", "Sunhoo Kim", "Yoonshik Kim", "Suhwan Choi", "Jaeyoon Jung", "Jiyong Youn", "Jinmyung Kwak", "Sunghee Ahn", "Jaemin Lee", "Younggil Do", "Seungyeop Yi", "Woojin Cheong", "Minhyeok Oh", "Minchan Kim", "Seongjae Kang", "Samwoo Seong", "Youngjae Yu", "Yunsung Lee"]} numFirstAuthor={3} isBrainTeam={[true, true, true, true, false, true, true, true, true, true, false, false, false, false, false, false, false, false, true, false, true, false, true]}/>
@@ -34,7 +48,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.DemoItem link="https://cvlab-kaist.github.io/WorldCam/" />
         </li>
         <li>
-            <features.ConferenceItem conference="CVPR Workshop"/>
+            <features.ConferenceItem conference="CVPR Workshop (Oral)"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2604.00383" title="Mine-JEPA: In-Domain Self-Supervised Learning for Mine-Like Object Classification in Side-Scan Sonar"/>
             <features.AuthorItem authors={["Taeyoun Kwon", "Youngwon Choi", "Hyeonyu Kim", "Myeongkyun Cho", "Junhyeok Choi", "Moon Hwan Kim"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true, true]}/>
             <features.PaperDescription preview="Side-scan sonar (SSS) mine classification is a challenging maritime vision problem characterized by extreme data scarcity and a large domain gap from natural images. "
