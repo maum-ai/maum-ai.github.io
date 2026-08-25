@@ -4,23 +4,44 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 7rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../../static/img/algo-session.jpg);
+  background: linear-gradient(rgba(4, 10, 22, 0.55), rgba(4, 10, 22, 0.88)), url(../../static/img/algo-session.jpg);
   background-position: center;
   background-size: cover;
 }
 
 html[data-theme='dark'] .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.7)), url(../../static/img/algo-session.jpg);
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(rgba(4, 10, 22, 0.58), rgba(4, 10, 22, 0.9)), url(../../static/img/algo-session.jpg);
+}
+
+.heroContent {
+  max-width: 900px;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heroBanner h1 {
+  color: #fff;
+  font-size: clamp(2.7rem, 7vw, 5.4rem);
+  line-height: 1.02;
+}
+
+.heroBanner p {
+  max-width: 700px;
+  margin: 1.5rem auto 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 @media screen and (max-width: 996px) {
@@ -33,6 +54,85 @@ html[data-theme='dark'] .heroBanner {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.processFlow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+  margin: 2rem 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+
+.processFlow li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 150px;
+  padding: 1.5rem;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+}
+
+.processFlow li:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  top: 50%;
+  right: -1.85rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  transform: translateY(-50%);
+}
+
+.processNumber {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.processFlow strong {
+  font-size: 1.1rem;
+}
+
+.processDescription {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.85rem;
+}
+
+.processNote {
+  padding: 1rem 1.25rem;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 3px solid var(--ifm-color-primary);
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 996px) {
+  .processFlow {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .processFlow li {
+    min-height: 120px;
+  }
+
+  .processFlow li:not(:last-child)::after {
+    content: '↓';
+    top: auto;
+    right: 50%;
+    bottom: -1.95rem;
+    transform: translateX(50%);
+  }
 }
 
 .mapResponsive {

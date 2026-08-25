@@ -10,7 +10,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'maum.ai BRAIN Team',
-  tagline: 'AI in Brain',
+  tagline: 'Research to Real-World Autonomy',
   url: 'https://maum-ai.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -31,15 +31,7 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          remarkPlugins: [math],
-          rehypePlugins: [katex],
-          blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'All posts',
-          showReadingTime: true,
-          // Please change this to your repo.
-          postsPerPage: 10,
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -79,11 +71,6 @@ const config = {
           //   label: 'Tutorial',
           // },
           {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left'
-          },
-          {
             href: '/publications',
             label: 'Publications',
             position: 'left',
@@ -99,11 +86,6 @@ const config = {
             position: 'right',
           },
           {
-            href: '/internship',
-            label: 'Internship',
-            position: 'right',
-          },
-          {
             href: 'https://github.com/maum-ai',
             label: 'GitHub',
             position: 'right',
@@ -116,10 +98,6 @@ const config = {
           {
             title: 'Contents',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'Publications',
                 to: '/publications',
@@ -145,10 +123,6 @@ const config = {
               {
                 label: 'Careers',
                 to: '/careers',
-              },
-              {
-                label: 'Tags',
-                to: '/blog/tags',
               },
             ],
           },
