@@ -1,26 +1,173 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 5rem 0 6rem;
   width: 100%;
-}
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
 }
 
 .pageContents {
   margin: 0 auto;
-  max-width: 750px;
-  align-items: center;
-  justify-content: center;
+  max-width: 1080px;
 }
-
 
 html[data-theme='dark'] .pageContents {
   margin: 0 auto;
-  max-width: 750px;
-  align-items: center;
-  justify-content: center;
+  max-width: 1080px;
+}
+
+.intro {
+  max-width: 780px;
+}
+
+.intro h1 {
+  margin: 0.4rem 0 1.5rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.15;
+}
+
+.intro p {
+  color: var(--ifm-color-emphasis-800);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.intro .lead {
+  color: var(--ifm-font-color-base);
+  font-size: 1.2rem;
+}
+
+.focusGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+.focusCard {
+  min-height: 260px;
+  padding: 1.75rem;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 14px;
+}
+
+.focusCard h2 {
+  margin: 1.75rem 0 1rem;
+  font-size: 1.35rem;
+}
+
+.focusCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.focusNumber {
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionHeader h2 {
+  margin: 0.3rem 0 0;
+}
+
+.eyebrow {
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.viewAll {
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.publicationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.publicationCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 1.5rem;
+  color: var(--ifm-font-color-base);
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(20, 28, 45, 0.06);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.publicationCard:hover {
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 12px 30px rgba(20, 28, 45, 0.1);
+  transform: translateY(-3px);
+}
+
+.publicationCard h3 {
+  margin: 0.75rem 0;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.publicationCard p {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.venue {
+  color: var(--ifm-color-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.paperLink {
+  margin-top: auto;
+  color: var(--ifm-color-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 996px) {
+  .focusGrid,
+  .publicationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .focusCard {
+    min-height: auto;
+  }
+
+  .publicationCard {
+    min-height: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sectionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

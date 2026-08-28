@@ -10,14 +10,17 @@ function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+      <div className={clsx('container', styles.heroContent)}>
+        <span className={styles.heroEyebrow}>{siteConfig.title}</span>
+        <h1 className="hero__title">AI for the Physical World</h1>
+        <p className="hero__subtitle">
+          온디바이스 AI와 자율지능을 로보틱스·산업·국방 현장으로 연결합니다.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/blog">
-            Blog 글 보러가기😎
+            to="/careers">
+            채용 중인 포지션
           </Link>
         </div>
       </div>
@@ -29,7 +32,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title="Blog"
+      title="Brain Team"
       description={`${siteConfig.tagline}`}>
       <HomepageHeader />
       <main>

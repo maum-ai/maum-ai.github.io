@@ -2,6 +2,7 @@
 title: maum.ai Brain팀 채용
 description: maum.ai Brain팀에 지원하세요!
 image: img/maumai_Symbol.png
+toc_max_heading_level: 2
 ---
 
 import Link from '@docusaurus/Link';
@@ -19,11 +20,15 @@ import figHome from './image/maum-home.png';
 
 ## We're hiring!
 
-안녕하세요? maum.ai Brain팀에서 함께 할 분들을 기다립니다.
+maum.ai Brain팀에서 함께 할 분들을 기다립니다.
 
-지원 가능한 직군은 아래와 같습니다. (현재 Vision / NLP AI Scientist, ML Engineer는 지원을 받고 있지 않습니다.)
-- Audio AI Scientist (Brain팀)
-- ~~ML Engineer (Brain팀)~~
+현재 **AI Research Engineer** 직군을 아래와 같이 모집하고 있습니다. 자세한 내용은 아래 업무 및 지원 자격을 확인해주세요.
+
+- Advanced Research
+- Agentic LLM
+- Audio Intelligence
+- Robotics AI Engineer
+- Physical World Modeling Engineer
 
 문의 사항이 있을 경우, brain-hr@maum.ai 로 문의주시면 최대한 빠르게 답변드릴 수 있도록 하겠습니다.
 
@@ -32,79 +37,185 @@ import figHome from './image/maum-home.png';
 <div className={styles.buttons}>
     <Link
         className="button button--secondary button--lg"
-        to="https://forms.gle/szytvUCyd9eKuL4F8">
+        to="https://forms.gle/HhBYq5u8oqsMmhkL9">
         Brain팀 지원하기✍
     </Link>
 </div>
 
 <br/><br/>
 
-
-
 ## 업무 및 지원 자격
+
+<Tabs groupId="job-position">
+<TabItem value="advanced-research" label="Advanced Research" default>
 
 ### 핵심 업무
 
-<Tabs groupId="job-position">
-<TabItem value="requirements" label="ML Engineer">
+- 로봇개, 로봇팔 등 실제 로봇을 활용하는 Embodied AI 시스템의 연구 및 개발
+- VLM/VLA 기반으로 로봇이 환경과 사용자의 instruction을 이해하고, 계획을 수립하며 실제 행동으로 연결하도록 모델 및 architecture 고도화
+- 시뮬레이션 및 실제 로봇 환경에서 모델을 평가하고 failure case를 분석하여 성능 개선
+- 연구 결과를 실제 로봇 시스템에 통합하고, perception–reasoning–action으로 이어지는 전체 pipeline을 고도화
 
-- ML/DL 모델을 효율적으로 서빙하기 위한 시스템 개발 및 설계
-- ML/DL 모델의 학습 및 서빙 성능을 높이는 최신 최적화/양자화 기법 탐색 및 적용
-- 기존 학습/서빙 시스템의 성능을 높이기 위한 개선 방안 연구 및 구현
+### 필수 역량
+
+- VLM, VLA, Multimodal Agent, Robot Learning 중 하나 이상의 분야에 대한 연구 또는 개발 경험
+- 복잡한 문제를 정량 지표, Benchmark, Ablation Study 등으로 정의하고 실험적으로 검증할 수 있는 연구 역량
+- 모델의 성능 저하 또는 failure case를 분석하고, 가설 수립과 반복 실험을 통해 개선할 수 있는 문제 해결 능력
+- AI 관련 기술 논문 및 문서를 읽고 이해하는 데 무리가 없는 수준의 영어 능력
+
+### 우대 사항
+
+- VLM/VLA/VLN 또는 Multimodal Agent의 학습 경험
+- Manipulation, Navigation 등 실제 로봇 task 관련 연구·개발 경험
+- Isaac Sim, Habitat 등 시뮬레이터 활용 경험
+- Sim-to-Real 또는 실제 로봇 대상 policy/model deployment 경험
+- 관련 분야 학회 논문 제출/게재 또는 의미 있는 Open Source Contribution 경험
 
 </TabItem>
-<TabItem value="ai-scientist" label="AI Scientist" default>
+<TabItem value="agentic-llm" label="Agentic LLM">
 
-- 현실 세계의 문제를 해결하기 위한 최적의 ML/DL 알고리즘을 설계
-- 기존 알고리즘 및 모델의 상업적 가치와 성능을 높이기 위한 개선 연구
-- 주 연구 분야: Audio(STT, TTS), ~~Vision(VLM, VLA), NLP(LLM, Retrieval, Dialog)~~
+### 핵심 업무
+
+- 로봇개, 챗봇 시스템 등 실제 프로젝트와 과제에 적용되는 Agentic AI 기술 연구 개발
+- Language Model을 활용한 Agentic Workflow 개발 및 로봇이 주변 환경을 잘 이해하게 하기 위한 Embodied Scene Understanding 연구
+- 다수 Agent의 역할 분담·의사소통을 위한 Multi-agent Collaboration 설계 및 모니터링과 성능 검증/개선을 위한 Agent Harness 구현
+
+### 필수 역량
+
+- Language Model · Agent 시스템의 동작 원리를 이해하고, 최신 연구를 실제 시스템으로 구현할 수 있는 역량
+- Agentic Workflow를 설계·구현할 수 있는 개발 능력
+- 복잡한 문제를 Agent, Tool, Memory, Environment 간의 상호작용으로 구조화하고 end-to-end로 분석할 수 있는 문제 해결 능력
+- 정량 지표, Benchmark, Ablation Study 등을 설계하고 실험 결과를 논리적으로 해석할 수 있는 연구 역량
+- AI 관련 기술 논문과 문서를 읽고 이해하는 데 무리가 없는 수준의 영어 능력
+
+### 우대 사항
+
+- LLM/VLM 기반 Agent의 Planning, Tool Use, RAG, Long-term Memory 또는 Agentic Workflow 개발 경험
+- Embodied AI, 로보틱스, Scene Graph, 공간 추론 또는 시뮬레이션 환경을 활용한 연구·개발 경험
+- Multi-agent System의 Task Allocation, Communication, Coordination 또는 Distributed System 개발 경험
+- Agent 실행 Trace, 자동 평가, Benchmark, LLM-as-a-Judge 또는 실험·관측 플랫폼 구축 경험
+- Language Model의 Fine-tuning, Preference Optimization, Distillation 또는 Inference/Serving 최적화 경험
+- 유관 전공 석사 이상의 경력, 관련 학회 논문 제출 또는 Open Source Contribution 경험
+
+</TabItem>
+<TabItem value="audio-intelligence" label="Audio Intelligence">
+
+### 핵심 업무
+
+- 로봇 및 엣지 디바이스 환경에서 활용되는 STT, TTS, 전처리 등 Conversational AI 기술 연구개발
+- 음성뿐만 아니라 SONAR를 포함한 다양한 음향·센서 신호를 이해하고 추론하는 Audio LLM 및 Agent 연구개발
+- 개발한 Speech / Audio AI 모델의 온디바이스·온프레미스 디플로이 및 서비스/로봇 시스템 연동
+
+### 필수 역량
+
+- 신호처리, 음성 신호처리, 오디오 신호처리, 멀티모달 LLM 중 하나 이상의 분야에 대한 연구 또는 개발 경험
+- 복잡한 문제를 정량 지표, Benchmark, Ablation Study 등으로 정의하고 실험적으로 검증할 수 있는 연구 역량
+- 모델의 성능 저하 또는 failure case를 분석하고, 가설 수립과 반복 실험을 통해 개선할 수 있는 문제 해결 능력
+- AI 관련 기술 논문 및 문서를 읽고 이해하는 데 무리가 없는 수준의 영어 능력
+
+### 우대 사항
+
+- SONAR, 수중음향, Acoustic Event Detection 등 비음성 음향 신호 처리 경험
+- 로봇, IoT, 임베디드 시스템 등 실제 디바이스와 AI 모델을 연동한 경험
+- 딥러닝 모델의 온디바이스 / 온프레미스 디플로이 및 최적화 경험
+- Qualcomm, NVIDIA Jetson 등 엣지 AI 플랫폼 활용 경험
+- 유관 전공 석사 이상의 학위 또는 관련 연구 수행·논문 게재 및 발표 경험
+- 딥러닝·음성·오디오 관련 오픈소스 기여 경험
+
+</TabItem>
+<TabItem value="robotics-ai-engineer" label="Robotics AI Engineer">
+
+**Physical AI · Robotics Integration · Edge AI**
+
+Brain팀은 로봇 시스템을 담당하는 팀과 협업해 연구 모델을 실제 로봇에 연결하고 있습니다. 이 통합 역량을 함께 강화하고, 현실 세계에서 AI가 실시간으로 보고·판단하고·행동하도록 만드는 Robotics AI Engineer를 찾습니다.
+
+### 핵심 업무
+
+- VLM/VLA 등 AI 모델을 실제 로봇에 탑재 및 연동
+- ROS/ROS2 기반 로봇 소프트웨어 및 AI–Robot Interface 개발
+- 카메라·LiDAR·IMU 등 센서와 AI 모델의 실시간 연동
+- Navigation, Manipulation, Locomotion 등 Robot Skill과 AI Action 연결
+- GPU/NPU 기반 On-device AI 추론 환경 구축
+- TensorRT, ONNX Runtime 등을 활용한 AI 모델 최적화
+- Latency, Memory, Power 등 로봇 환경에서의 추론 성능 최적화
+- 4족보행·휴머노이드·모바일 로봇 등 실제 로봇 Deployment 및 현장 검증
+
+### 필수 역량
+
+- Python 또는 C++ 개발 역량
+- ROS/ROS2 또는 실제 로봇 시스템 개발 경험
+- Deep Learning 모델의 Deployment 및 Inference에 대한 이해
+- Linux 기반 개발 경험
+
+### 우대 사항
+
+- NVIDIA Jetson, GPU/NPU 기반 Edge AI 경험
+- TensorRT / ONNX Runtime / CUDA 경험
+- SLAM / Navigation / Motion Planning 경험
+- VLM / VLA / Multimodal AI 모델 적용 경험
+- 4족보행 로봇 또는 휴머노이드 개발 경험
+
+AI 모델을 만드는 데서 끝나지 않고, 그 AI를 실제 로봇 안에서 실시간으로 작동시키고 움직이게 만드는 엔지니어
+
+</TabItem>
+<TabItem value="physical-world-modeling-engineer" label="Physical World Modeling Engineer">
+
+**Physics · Simulation · World Model · Physical AI**
+
+로봇이 현실 세계의 물리 법칙을 이해하고, 행동의 결과를 예측할 수 있도록 물리 환경과 시뮬레이션을 구축하는 엔지니어
+
+### 핵심 업무
+
+- 로봇과 객체 간 Collision, Contact, Friction, Force, Dynamics 모델링
+- 실제 환경의 물리적 특성을 Simulation 환경으로 재현
+- Synthetic Data 및 Robot Behavior Data 생성
+- Simulation과 실제 로봇 데이터 간 차이를 줄이는 Sim-to-Real 개발
+- AI World Model 학습을 위한 물리 환경·데이터 구축
+- 로봇의 Action → Physical State 변화 예측 및 검증
+
+### 필수 역량
+
+- C++ 또는 Python 개발 역량
+- Robotics / Physics Simulation / Computer Graphics 중 하나 이상의 경험
+- 3D Geometry, Rigid Body Dynamics, Collision/Contact 등에 대한 이해
+- 실제 로봇 또는 Simulation 환경 개발 경험
+
+### 우대 사항
+
+- NVIDIA Isaac Sim / Isaac Lab 경험
+- CUDA / GPU Computing 경험
+- Reinforcement Learning / Imitation Learning 경험
+- Digital Twin / Synthetic Data 생성 경험
+- Sim-to-Real / Domain Randomization 경험
 
 </TabItem>
 </Tabs>
 
-<br/>
+<br/><br/>
 
+## 채용 프로세스
 
-### 자격 요건
+<ol className={styles.processFlow} aria-label="채용 프로세스">
+    <li>
+        <span className={styles.processNumber}>01</span>
+        <strong>서류 전형</strong>
+        <span className={styles.processDescription}>지원서·포트폴리오 검토</span>
+    </li>
+    <li>
+        <span className={styles.processNumber}>02</span>
+        <strong>기술진 면접</strong>
+        <span className={styles.processDescription}>대면 면접</span>
+    </li>
+    <li>
+        <span className={styles.processNumber}>03</span>
+        <strong>임원진 면접</strong>
+        <span className={styles.processDescription}>최종 면접</span>
+    </li>
+</ol>
 
-<Tabs groupId="job-position">
-<TabItem value="requirements" label="ML Engineer">
-
-- Python, C++에 능숙하여 원하는 것을 구현할 수 있는 능력
-- Docker를 사용하여 서비스를 구성할 수 있는 능력
-- PyTorch 기반의 프레임워크로 작성된 코드를 이해하고 모델 아키텍처를 파악할 수 있는 능력
-
-</TabItem>
-<TabItem value="ai-scientist" label="AI Scientist" default>
-
-- ML/DL 알고리즘을 깊이 이해할 수 있는 수준의 수학적 능력 및 모델링 능력
-- TensorFlow, PyTorch 등 DL framework 활용 및 모델 구현에 자유로울 수 있는 수준의 개발 능력
-- AI 관련 기술 논문을 읽고 내용을 충분히 이해하는데 무리가 없는 수준의 영어 능력
-
-</TabItem>
-</Tabs>
-
-<br/>
-
-
-### 우대 요건
-
-<Tabs groupId="job-position">
-<TabItem value="requirements" label="ML Engineer">
-
-- 유관 전공 석사 이상의 경력 또는 관련 학회 논문 제출 경험
-- OpenMP, MPI, CUDA 등 multi-core CPU나 가속기를 활용하여 프로그램의 성능을 최적화 해본 경험
-- ONNX, ONNX Runtime을 사용해 PyTorch 모델을 변환하고 edge device에서 실행 해본 경험
-
-</TabItem>
-<TabItem value="ai-scientist" label="AI Scientist" default>
-
-- 유관 전공 석사 이상의 경력 또는 관련 학회 논문 제출 경험
-- 금융, 의료, 교육, 패션 등 산업별 실제 데이터 기반 AI 프로젝트 경험
-- ML/DL 연구 논문 Implementation 또는 관련 Repository의 Contribution 경험
-
-</TabItem>
-</Tabs>
+<p className={styles.processNote}>
+    <strong>서류 전형 합격 이후</strong> 면접 전에 과제가 주어질 수 있으며, 전달되는 안내에 따라 진행해주시면 됩니다. 전형별 자세한 사항은 <Link to="https://forms.gle/HhBYq5u8oqsMmhkL9">지원 페이지</Link>에서 확인하실 수 있습니다.
+</p>
 
 
 <br/><br/>
@@ -123,30 +234,25 @@ Brain팀은 시차출퇴근제를 진행하고 있습니다.
 **코어타임은 10시 30분부터 17시까지**로, 오전 8시 ~ 오전 10시 30분 사이에 각자가 정한 시간에 출근합니다.  
 **산업기능요원, 전문연구요원으로 복무하시는 분들도 시차출퇴근제 적용이 가능**합니다!
 
-병역이 아니신 정규직 분들은 **재택과 병행**하여 하이브리드 근무가 가능합니다. 😉
-
 <br/>
 
 ### 근무 환경
 
-Brain팀 구성원에게는 **입사 시 GPU 탑재 데스크탑부터 MacBook까지 원하는 기기를 지원**해드리며, **모니터 및 모니터암을 기본으로 제공**하여 Brain팀 구성원분들의 목 건강도 책임집니다! 💪
-
-Brain팀에는 **연구용으로만 On-premise로 V100 10대, A100 30대, H100 96대 이상을 운용**하고 있고, 인원당 On-premise GPU를 최소 2대 이상 사용하실 수 있게끔 연구 및 개발환경을 구축하고 있습니다. (2025년 5월 기준)
+모델 학습과 실험을 위한 **넉넉한(H100 96장 이상) 온프레미스 GPU 인프라**를 운영하고 있으며, 프로젝트의 규모와 우선순위에 따라 컴퓨팅 자원을 배정합니다.
 
 <img className={styles.figCenter} src={figBrainRoom} alt="brain-room" />
 
 <br/>
 
-Brain팀 AI Scientist는 회사의 사업 방향에 따른 연구인 **Strategic Research**와 ~~개인 관심 주제에 따른 자유 연구인 **General Research**를~~(회사 사정에 따라 현재는 중단) **일과 중 절반씩 진행**하는 것을 권장하는 등 최적의 연구 환경을 마련해드리기 위해 노력하고 있습니다. 
+Brain팀은 프로젝트 목표 달성을 우선으로 하되, 업무와 연결되는 주제의 학회 제출 연구를 장려합니다. 프로젝트 일정과 자원 상황을 고려하여 가용 컴퓨팅 자원을 연구와 실험에 활용할 수 있습니다.
 
-**NeurIPS, ICLR, CVPR, ECCV, Interspeech, ACL 등 학회 참석 및 학회 논문 제출**을 희망하실 경우, 적극적으로 지원해드리고 있습니다! 💸 (현재까지 채택된 논문 현황에 대해서는 **[Publications](/publications)** 탭을 참고해주세요!)  
+학회 참석 및 학회 논문 제출을 희망하실 경우, 최소 저자 2인의 학회 출장 지원 등을 포함해 적극적으로 지원하고 있습니다. 연구 성과는 **[Publications](/publications)** 페이지에서 확인하실 수 있습니다.
 <br/>
 
 <img className={styles.figCenter} src={figHome} alt="home" />
 
-maum.ai는 전 직원 **점심 식사 식대를 제공**합니다.(1일 10000원) 판교 사옥 근처의 많은 식당을 자유롭게 이용할 수 있습니다!
-
-또한 사옥 내에도 로봇 바리스타가 비치되어 있어 자유롭게 음료 음용이 가능합니다. 🍹
+maum.ai는 전 직원 **식대를 제공**합니다(1일 10000원). 판교 사옥 근처의 많은 식당을 자유롭게 이용할 수 있습니다!
+또한 사옥 내에 로봇 바리스타가 비치되어 있어 자유롭게 음료 음용이 가능합니다. 🍹
 
 
 
@@ -154,17 +260,15 @@ maum.ai는 전 직원 **점심 식사 식대를 제공**합니다.(1일 10000원
 
 ### 처우
 
-maum.ai Brain팀의 AI Scientist / ML Engineer 로 함께 하시게 될 경우, Brain팀과의 Fit이 맞는 지 확인하는 기간으로 **3개월의 수습 기간**을 갖습니다. (학위 및 경력 무관) 🧑‍💻
+maum.ai Brain팀의 AI Research Engineer로 함께 하시게 될 경우, Brain팀과의 Fit이 맞는 지 확인하는 기간으로 **3개월의 수습 기간**을 갖습니다. (학위 및 경력 무관) 🧑‍💻
 
 이후 수습 기간 중 보여주신 역량에 따라 평가를 진행하며, Brain팀 정식 구성원으로서 **최소 5,000만원의 연봉**으로 처우를 결정합니다 (석사의 경우 **최소 5,500만원**).
-
-이후에도 근무 중 보여주시는 역량과 기여도에 따라 **파격적인 연봉 인상**을 진행하고 있습니다.
 
 <br/>
 
 ### 사무실 위치
 
-maum.ai Brain팀에서 함께 하시게 될 경우, **판교 본사 오피스 및 연구소**에서 근무하시게 됩니다. (*재택근무는 집에서 😎)
+maum.ai Brain팀에서 함께 하시게 될 경우, **판교 본사 오피스 및 연구소**에서 근무하시게 됩니다.
 
 maum.ai 판교 본사 오피스는 **판교IT센터 4층**에 위치하고 있습니다.
 
