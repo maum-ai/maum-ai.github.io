@@ -16,7 +16,7 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="ECCV Workshop"/>
+            <features.ConferenceItem conference="ECCV Workshops"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2608.04483" title="Not All Redundant Tokens Are Alike: Analyzing Visual Token Pruning through Token Roles"/>
             <features.AuthorItem authors={["Hyeonyu Kim", "Sehwan Lim", "Youngwon Choi", "Taeyoun Kwon", "Jaejin Kim"]} numFirstAuthor={1} isBrainTeam={[true, false, true, true, false]}/>
             <features.PaperDescription preview="We analyze visual token pruning in vision-language models through the functional roles of visual tokens. "
@@ -44,7 +44,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             description="While synthetic augmentation can provide linguistically rich and phonetically diverse speech, naively mixing large amounts of synthetic speech with limited real recordings often leads to speaker similarity degradation during fine-tuning. To address this issue, we propose ZeSTA, a simple domain-conditioned training framework that distinguishes real and synthetic speech via a lightweight domain embedding, combined with real-data oversampling to stabilize adaptation under extremely limited target data, without modifying the base architecture. Experiments on LibriTTS and an in-house dataset with two ZS-TTS sources demonstrate that our approach improves speaker similarity over naive synthetic augmentation while preserving intelligibility and perceptual quality."/>
         </li>
         <li>
-            <features.ConferenceItem conference="CVPR Workshop (Oral)"/>
+            <features.ConferenceItem conference="CVPR Workshops (Oral)"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2604.00383" title="Mine-JEPA: In-Domain Self-Supervised Learning for Mine-Like Object Classification in Side-Scan Sonar"/>
             <features.AuthorItem authors={["Taeyoun Kwon", "Youngwon Choi", "Hyeonyu Kim", "Myeongkyun Cho", "Junhyeok Choi", "Moon Hwan Kim"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true, true]}/>
             <features.PaperDescription preview="Side-scan sonar (SSS) mine classification is a challenging maritime vision problem characterized by extreme data scarcity and a large domain gap from natural images. "
@@ -64,14 +64,14 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="CIKM Workshop, Under Review"/>
+            <features.ConferenceItem conference="CIKM Workshops, Under Review"/>
             <features.PaperTitle paperLink="" title="Is a Picture Worth a Thousand Words? Agentic Multimodal Fact-Checking for Adaptive Use of Visual Evidence"/>
             <features.AuthorItem authors={["Jaeyoon Jung", "Yejun Yoon", "Kunwoo Park"]} numFirstAuthor={1} isBrainTeam={[true, false, false]}/>
             <features.PaperDescription preview="Automated fact-checking is a crucial task not only in journalism but also across web platforms, where it underpins a responsible web ecosystem and mitigates the harms of misinformation. "
             description="While recent research has advanced from text-only to multimodal fact-checking, a prevailing assumption is that incorporating visual evidence universally enhances performance. In this work, we challenge that assumption and show that indiscriminate use of multimodal evidence can reduce accuracy, as quantitative and qualitative analyses reveal that the usefulness of visual evidence varies across claims. To address this gap, we propose AMuFC—Adaptive Agentic Multimodal Fact-Checking with Visual Evidence Necessity—a novel agentic fact-verification framework. AMuFC employs a VLM-based Analyzer that determines whether visual evidence is essential for claim verification, and a Verifier that predicts claim veracity conditioned on both the retrieved evidence and the Analyzer's judgment. Experimental results demonstrate that incorporating the Analyzer's assessment of visual evidence necessity into the Verifier's prediction substantially improves verification accuracy. A case study using web search highlights the retriever-agnostic effectiveness of the approach and supports its generalizability in real-world contexts."/>
         </li>
         <li>
-            <features.ConferenceItem conference="ACL Workshop FEVER"/>
+            <features.ConferenceItem conference="ACL Workshops FEVER"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2507.11004" title="Team HUMANE at AVeriTeC 2025: HerO 2 for Efficient Fact Verification"/>
             <features.AuthorItem authors={["Yejun Yoon", "Jaeyoon Jung", "Seunghyun Yoon", "Kunwoo Park"]} numFirstAuthor={1} isBrainTeam={[false, true, false, false]}/>
             <features.PaperDescription preview="This paper presents HerO 2, Team HUMANE's system for the AVeriTeC shared task at the FEVER-25 workshop. "
@@ -100,7 +100,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             description="These methods assume that LLMs can generate hypothetical documents that, when incorporated into a query vector, enhance the retrieval of real evidence. However, we challenge this assumption by investigating whether knowledge leakage in benchmarks contributes to the observed performance gains. Using fact verification as a testbed, we analyzed whether the generated documents contained information entailed by ground truth evidence and assessed their impact on performance. Our findings indicate that performance improvements occurred consistently only for claims whose generated documents included sentences entailed by ground truth evidence. This suggests that knowledge leakage may be present in these benchmarks, inflating the perceived performance of LLM-based query expansion methods, particularly in real-world scenarios that require retrieving niche or novel knowledge."/>
         </li>
         <li>
-            <features.ConferenceItem conference="CVPR Workshop"/>
+            <features.ConferenceItem conference="CVPR Workshops"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2503.23730" title="KOFFVQA: An Objectively Evaluated Free-form VQA Benchmark for Large Vision-Language Models in the Korean Language"/>
             <features.AuthorItem authors={["Yoonshik Kim", "Jaeyoon Jung"]} numFirstAuthor={4} isBrainTeam={[true, true]}/>
             <features.PaperDescription preview="The recent emergence of Large Vision-Language Models(VLMs) has resulted in a variety of different benchmarks for evaluating such models. "
@@ -115,7 +115,7 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="EMNLP Workshop FEVER (Oral)"/>
+            <features.ConferenceItem conference="EMNLP Workshops FEVER (Oral)"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2410.12377" title="HerO at AVeriTeC: The Herd of Open Large Language Models for Verifying Real-World Claims"/>
             <features.AuthorItem authors={["Yejun Yoon", "Jaeyoon Jung", "Seunghyun Yoon", "Kunwoo Park"]} numFirstAuthor={2} isBrainTeam={[false, true, false, false]}/>
             <features.PaperDescription preview="To tackle the AVeriTeC shared task hosted by the FEVER-24, we introduce a system that only employs publicly available large language models (LLMs) "
@@ -123,7 +123,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.GithubItem link="https://github.com/ssu-humane/HerO" />
         </li>
         <li>
-            <features.ConferenceItem conference="DCASE2024 Workshop"/>
+            <features.ConferenceItem conference="DCASE2024 Workshops"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2409.01201" title="EnCLAP++: Analyzing the EnCLAP Framework for Optimizing Automated Audio Captioning Performance"/>
             <features.AuthorItem authors={["Jaeyeon Kim", "Minjeong Jeon", "Jaeyoon Jung", "Jinjoo Lee", "Sang Hoon Woo"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, false]}/>
             <features.PaperDescription preview="In this work, we aim to analyze and optimize the EnCLAP framework, a state-of-the-art model in automated audio captioning. "
@@ -160,7 +160,7 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="ICML Workshop"/>
+            <features.ConferenceItem conference="ICML Workshops"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2302.12391" title="PITS: Variational Pitch Inference without Fundamental Frequency for End-to-End Pitch-controllable TTS"/>
             <features.AuthorItem authors={["Junhyeok Lee", "Wonbin Jung", "Hyungjae Cho", "Jaeyeon Kim", "Jaehwan Kim"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true]}/>
             <features.PaperDescription preview="Previous pitch-controllable text-to-speech (TTS) models rely on directly modeling fundamental frequency, leading to low variance in synthesized speech."
@@ -169,7 +169,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.DemoItem link="https://huggingface.co/spaces/anonymous-pits/pits" />
         </li>
         <li>
-            <features.ConferenceItem conference="ICML Workshop"/>
+            <features.ConferenceItem conference="ICML Workshops"/>
             <features.PaperTitle paperLink="https://openreview.net/forum?id=qL47xtuEuv" title="E3-VITS: Emotional End-to-End TTS with Cross-speaker Style Transfer"/>
             <features.AuthorItem authors={["Wonbin Jung", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
             <features.PaperDescription preview="Since previous emotional TTS models are based on a two-stage pipeline or additional labels, their training process is complex and requires a high labeling cost. "
@@ -252,7 +252,7 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="NeurIPS Workshop (Oral)"/>
+            <features.ConferenceItem conference="NeurIPS Workshops (Oral)"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2110.12676" title="Controllable and Interpretable Singing Voice Decomposition via Assem-VC"/>
             <features.AuthorItem authors={["Kang-wook Kim", "Junhyeok Lee"]} numFirstAuthor={1} isBrainTeam={[true, true]}/>
             <features.PaperDescription preview="We propose a singing decomposition system that encodes time-aligned linguistic content, pitch, and source speaker identity via Assem-VC. "
@@ -270,7 +270,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.DemoItem link="https://maum-ai.github.io/nuwave" />
         </li>
         <li>
-            <features.ConferenceItem conference="CVPR Workshop"/>
+            <features.ConferenceItem conference="CVPR Workshops"/>
             <features.PaperTitle paperLink="" title="Sharp Edge Recovery via SE(3)-Equivariant Network"/>
             <features.AuthorItem authors={["Youseong Lee"]} numFirstAuthor={1} isBrainTeam={[true]}/>
             <features.MiscItem link="https://youtu.be/UVYQzQ-mH1w?t=9231" customName="Talk"/>
@@ -284,7 +284,7 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="NeurIPS Workshop"/>
+            <features.ConferenceItem conference="NeurIPS Workshops"/>
             <features.PaperTitle paperLink="" title="DS4C Patient Policy Province Dataset: A Comprehensive COVID-19 Dataset for Causal and Epidemiological Analysis"/>
             <features.AuthorItem authors={["Jimi Kim", "DongHwan Jang", "Seojin Jang", "Woncheol Lee", "Joong Kun Lee"]} numFirstAuthor={1} isBrainTeam={[false, true, false, false, true]}/>
             <features.MiscItem link="https://www.cmu.edu/dietrich/causality/neurips20ws/" customName="Workshop"/>
@@ -300,7 +300,7 @@ import * as features from '@site/src/components/PublicationFeatures';
             <features.MiscItem link="https://youtu.be/lnNuL8hqoh4" customName="Talk"/>
         </li>
         <li>
-            <features.ConferenceItem conference="ECCV Workshop"/>
+            <features.ConferenceItem conference="ECCV Workshops"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2009.02857" title="3D Room Layout Estimation Beyond the Manhattan World Assumption"/>
             <features.AuthorItem authors={["Dongho Choi"]} numFirstAuthor={1} isBrainTeam={[true]}/>
             <features.PaperDescription preview="Predicting 3D room layout from single image is a challenging task with many applications. "
