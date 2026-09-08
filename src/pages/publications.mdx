@@ -16,14 +16,28 @@ import * as features from '@site/src/components/PublicationFeatures';
 <section id="activities" className={styles.category}>
     <ul className={styles.publications}>
         <li>
-            <features.ConferenceItem conference="submitted to APSIPA ASC"/>
+            <features.ConferenceItem conference="ECCV Workshop"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2608.04483" title="Not All Redundant Tokens Are Alike: Analyzing Visual Token Pruning through Token Roles"/>
+            <features.AuthorItem authors={["Hyeonyu Kim", "Sehwan Lim", "Youngwon Choi", "Taeyoun Kwon", "Jaejin Kim"]} numFirstAuthor={1} isBrainTeam={[true, false, true, true, false]}/>
+            <features.PaperDescription preview="We analyze visual token pruning in vision-language models through the functional roles of visual tokens. "
+            description="The study shows that representative pruning methods have distinct token-role biases, but these biases do not directly explain downstream performance. By refining token-role assignment and evaluating role-protected pruning variants, we find that preserving non-alive tokens can sometimes maintain or improve performance, suggesting that tokens with weak direct semantic alignment may still influence model behavior under pruning."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="EMNLP Findings"/>
+            <features.PaperTitle paperLink="https://arxiv.org/abs/2608.22908" title="Do Spoken Language Models Hear Speech as They Read Text? Bridging Structural Gaps Between Speech and Text"/>
+            <features.AuthorItem authors={["Hyeonyu Kim", "Hwayeon Kim", "Youngwon Choi", "Myeongkyun Cho", "Huu-Kim Nguyen"]} numFirstAuthor={1} isBrainTeam={[true, true, true, true, true]}/>
+            <features.PaperDescription preview="We examine whether spoken language models align speech and text representations in ways that support robust instruction following. "
+            description="Our analysis shows that speech and text representations in current spoken language models remain weakly aligned despite strong downstream performance, suggesting that structural differences between continuous speech and discrete text are still insufficiently addressed. We propose a simple framework that decouples length mismatch from semantic alignment and encourages closer correspondence between speech and text representations, achieving competitive performance across multiple benchmarks."/>
+        </li>
+        <li>
+            <features.ConferenceItem conference="accepted to APSIPA ASC"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2605.17443" title="Analyzing Error Propagation in Korean Spoken QA with ASR-LLM Cascades"/>
             <features.AuthorItem authors={["Donghyuk Jung", "Youngwon Choi"]} numFirstAuthor={2} isBrainTeam={[false, true]}/>
             <features.PaperDescription preview="We analyze how automatic speech recognition (ASR) errors propagate through ASR-LLM cascades in Korean spoken question answering (SQA), focusing on downstream semantic failures that conventional ASR metrics cannot fully capture. "
             description="Our analysis shows that the relative downstream degradation caused by ASR errors is consistent across LLMs with different absolute performance, suggesting that cascade degradation largely tracks ASR-stage information loss. We further identify single-character Korean ASR errors as a distinct semantic-failure channel, where the gold answer becomes entirely absent from the downstream prediction despite only a minimal transcription difference. Finally, an auxiliary comparison shows that a large audio language model outperforms an ASR-LLM pipeline with a matched language backbone in noisy Korean SQA, indicating the potential of direct audio input to mitigate transcript-induced information loss."/>
         </li>
         <li>
-            <features.ConferenceItem conference="accepted to INTERSPEECH"/>
+            <features.ConferenceItem conference="INTERSPEECH (Oral)"/>
             <features.PaperTitle paperLink="https://arxiv.org/abs/2603.04219" title="ZeSTA: Zero-Shot TTS Augmentation with Domain-Conditioned Training for Data-Efficient Personalized Speech Synthesis"/>
             <features.AuthorItem authors={["Youngwon Choi", "Jinwoo Oh", "Hwayeon Kim", "Hyeonyu Kim"]} numFirstAuthor={1} isBrainTeam={[true, false, true, true]}/>
             <features.PaperDescription preview="We investigate the use of zero-shot text-to-speech (ZS-TTS) as a data augmentation source for low-resource personalized speech synthesis. "

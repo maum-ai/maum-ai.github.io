@@ -4,13 +4,13 @@ import styles from './styles.module.css';
 
 const recentPublications = [
   {
-    venue: 'CVPR Workshop · Oral',
-    title: 'Mine-JEPA: In-Domain Self-Supervised Learning for Mine-Like Object Classification in Side-Scan Sonar',
-    authors: 'Taeyoun Kwon, Youngwon Choi, Hyeonyu Kim, Myeongkyun Cho, Junhyeok Choi, Moon Hwan Kim',
-    href: 'https://arxiv.org/abs/2604.00383',
+    venue: 'EMNLP Findings',
+    title: 'Do Spoken Language Models Hear Speech as They Read Text? Bridging Structural Gaps Between Speech and Text',
+    authors: 'Hyeonyu Kim, Hwayeon Kim, Youngwon Choi, Myeongkyun Cho, Huu-Kim Nguyen',
+    href: 'https://arxiv.org/abs/2608.22908',
   },
   {
-    venue: 'INTERSPEECH · Poster',
+    venue: 'INTERSPEECH · Oral',
     title: 'ZeSTA: Zero-Shot TTS Augmentation with Domain-Conditioned Training for Data-Efficient Personalized Speech Synthesis',
     authors: 'Youngwon Choi, Jinwoo Oh, Hwayeon Kim, Hyeonyu Kim',
     href: 'https://arxiv.org/abs/2603.04219',
