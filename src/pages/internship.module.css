@@ -1,0 +1,38 @@
+.details {
+  margin: 0 0 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.details > div {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.25rem 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.details dt {
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 600;
+}
+
+.details dd {
+  margin: 0;
+  word-break: keep-all;
+}
+
+.steps {
+  margin-top: 1rem;
+}
+
+ol.steps > li {
+  min-height: 0;
+  padding: 1rem 1.25rem;
+  word-break: keep-all;
+}
+
+@media (max-width: 600px) {
+  .details > div {
+    grid-template-columns: 1fr;
+  }
+}
